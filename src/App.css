@@ -1,38 +1,164 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
+  background: #eee;
 }
-
-.App-link {
-  color: #61dafb;
+.seaturtle {
+  position: relative;
+  z-index: 3;
+  transform: rotateY(180deg);
 }
-
-@keyframes App-logo-spin {
+.seaturtle .head {
+  margin-top: -30px;
+  width: 70px;
+  height: 75px;
+  background: #82af2a;
+  border-radius: 100%;
+  position: relative;
+  right: 30px;
+  animation: swimAlt ease 0.85s infinite forwards;
+}
+.seaturtle .head:before {
+  content: "";
+  position: absolute;
+  border-radius: 60px 0 60px 0;
+  transform: rotate(-10deg);
+  transform-origin: top left;
+  -webkit-backface-visibility: hidden;
+  width: 20px;
+  height: 8px;
+  position: absolute;
+  bottom: 10px;
+  left: 5px;
+  border: 3px solid #57751c;
+  border-width: 0px 3px 0px 0px;
+}
+.seaturtle .head:after {
+  content: "";
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  background: transparent;
+  right: -60px;
+  bottom: 25px;
+  border-radius: 0 0 70% 50%;
+  border: 15px solid;
+  border-color: transparent transparent #82af2a transparent;
+}
+.seaturtle .eye {
+  width: 15px;
+  height: 15px;
+  background: #000;
+  border-radius: 50% 50% 0 0;
+  position: absolute;
+  top: 25px;
+  left: 20px;
+  border-top: -2px solid #000;
+}
+.seaturtle .eye:before {
+  content: "";
+  width: 10px;
+  height: 10px;
+}
+.seaturtle {
+  display: flex;
+}
+.casc {
+  position: relative;
+  animation: swim ease-in 1.2s infinite normal;
+  width: 170px;
+  height: 90px;
+  background: #8bbb2d;
+  transform: rotate(-32deg) scale(1.7);
+  width: 70px;
+  height: 70px;
+  background-color: #50632a;
+  border-radius: 0 46px;
+  z-index: 1;
+  margin-left: 10px;
+  overflow: hidden;
+}
+.casc:before {
+  content: "";
+  width: 218px;
+  height: 300px;
+  border-radius: 50%;
+  transform: rotate(-68deg);
+  position: absolute;
+  right: -130px;
+  top: -177%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3), inset 0 0 0 15px rgba(0, 0, 0, 0.05), inset 0 0 0 30px rgba(0, 0, 0, 0.05), inset 0 0 0 45px rgba(0, 0, 0, 0.05), inset 0 0 0 60px rgba(0, 0, 0, 0.05), inset 0 0 0 75px rgba(0, 0, 0, 0.05), inset 0 0 0 90px rgba(0, 0, 0, 0.05);
+}
+.hands, .feets {
+  width: 50px;
+  height: 70px;
+  background-color: #82af2a;
+  border-radius: 0 46px;
+  position: absolute;
+  left: 34px;
+  bottom: -28px;
+  transform: scale(0.8) rotate(-5deg);
+  box-shadow: 16px -15px #638620;
+  animation: swimHands ease 1.2s infinite forwards;
+}
+.feets {
+  left: inherit;
+  right: -30px;
+  bottom: -45px;
+  transform: scale(0.8) rotate(-28deg);
+  animation: swimHandsAlt ease 1s infinite forwards;
+}
+@keyframes circle {
   from {
-    transform: rotate(0deg);
-  }
+    transform: translate3d(-50%, 65%, 0) rotate(0deg);
+ }
   to {
-    transform: rotate(360deg);
-  }
+    transform: translate3d(-50%, 65%, 0) rotate(-360deg);
+ }
+}
+@keyframes swim {
+  0% {
+    transform: rotate(-32deg) scale(1.8) translate(0, 0);
+ }
+  50% {
+    transform: rotate(-32deg) scale(1.8) translate(0, -3px);
+ }
+  100% {
+    transform: rotate(-32deg) scale(1.8) translate(0, 0);
+ }
+}
+@keyframes swimAlt {
+  0% {
+    transform: translate(0, 0);
+ }
+  50% {
+    transform: translate(0, -7px);
+ }
+  100% {
+    transform: translate(0, 0);
+ }
+}
+@keyframes swimHands {
+  0% {
+    transform: scale(0.8) rotate(30deg) translate(0, 0);
+ }
+  50% {
+    transform: scale(0.8) rotate(-5deg) translate(5px, -6px);
+ }
+  100% {
+    transform: scale(0.8) rotate(-5deg) translate(0, 0);
+ }
+}
+@keyframes swimHandsAlt {
+  0% {
+    transform: scale(0.8) rotate(-28deg) translate(0, 0);
+ }
+  50% {
+    transform: scale(0.8) rotate(-32deg) translate(8px, -6px);
+ }
+  100% {
+    transform: scale(0.8) rotate(-28deg) translate(0, 0);
+ }
 }

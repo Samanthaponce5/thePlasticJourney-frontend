@@ -30,9 +30,9 @@ import '../Nav.css';
   </div>
   
     <ul className="nav-list">
-      <li className='nav-item'><a href='#' className='nav-link'>Home</a></li>
-         <li className='nav-item'><a href='#' className='nav-link'>About</a></li>
-          <li className='nav-item'><a href='#' className='nav-link'>How to help</a></li>
+            <Link className='nav-link' to='/'><li className='nav-item'>Home</li></Link>
+            <Link className='nav-link' to='/about'><li className='nav-item'>About</li></Link>
+            <Link className='nav-link' to='/howtohelp'><li className='nav-item'>How to help</li></Link>
     </ul>
   </nav>
 </div>

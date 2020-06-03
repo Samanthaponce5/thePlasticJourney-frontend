@@ -32,7 +32,7 @@ import '../Nav.css';
     <ul className="nav-list">
             <Link className='nav-link' to='/'><li className='nav-item'>Home</li></Link>
             <Link className='nav-link' to='/about'><li className='nav-item'>About</li></Link>
-            <Link className='nav-link' to='/howtohelp'><li className='nav-item'>How to help</li></Link>
+            <Link className='nav-link' to='/howtohelp'><li className='nav-item'>Resources</li></Link>
     </ul>
   </nav>
 </div>

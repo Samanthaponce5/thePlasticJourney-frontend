@@ -10,7 +10,7 @@
     justify-content:center;
     align-items:center;
 
-    border-radius:5% 0 0 100%;
+    border-radius:0 0 0 100%;
     transition:right .8s cubic-bezier(1, 0, 0, 1);
   }
 

@@ -5,10 +5,21 @@ import Home from './components/Home';
 import Help from './components/Help';
 import Navbar from './components/Navbar';
 import './App.css';
+import './Turtle.css';
+
 import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
+import Journey from './components/Journey';
 
 
  class App extends React.Component{
+  state={
+    name:''
+  }
+  handleChange=(e)=>{
+    let {value, name}= e.target
+    this.setState({[name]:value})
+  }
+  
 
   render(){
   return (
@@ -16,9 +27,14 @@ import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
 <Router >
 <Navbar/>
 <Switch>
-<Route exact path="/"><Home /></Route>
-<Route exact path='/about'><About/></Route>
-<Route exact path='/howtohelp'><Help/></Route>
+<Route exact path="/" render={(routerProps)=><Home handleChange={this.handleChange} name={this.state.name} routerProps={routerProps} />}/>
+<Route exact path='/about' render={(routerProps)=><About/>}/>
+<Route exact path='/howtohelp' render={(routerProps)=><Help/>}/>
+{/* {this.state.name.length>0? */}
+<Route exact path="/journey"  render={(routerProps)=><Journey />}/>
+{/* <h1>Not Found</h1>
+  } */}
+
 </Switch>
 </Router >
     

@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.slide{
+    width: 100vw;
+    height: 100vh;
+}
+/* .outer-wrapper{
+    border:solid red;
+
+} */
+.wrapper{
+    display:flex;
+    flex-direction: row;
+    width: 1200vw;
+    transform: rotate(90deg) translateY(-100vh);
+    transform-origin: top left;
+    scroll-behavior: smooth;
+}
+
+.one{
+    background: rgb(224, 115, 64);
+}
+.two{
+    background: rgb(151, 142, 13);
+}
+.three{
+    background: rgb(64, 224, 149);
+}
+.four{
+    background: rgb(155, 224, 64);
+}
+.five{
+    background: rgb(224, 64, 216);
+}
+.six{
+    background: rgb(224, 64, 72);
+}
+.seven{
+    background: rgb(64, 101, 224);
+}
+.eight{
+    background: rgb(165, 64, 224);
+}
+.nine{
+    background: rgb(173, 64, 224);
+}
+.ten{
+    background: rgb(12, 201, 169);
+}
+.eleven{
+    background: rgb(26, 119, 65);
+}
+.twelve{
+    background: rgb(177, 13, 89);
+}
+
+.outer-wrapper{
+    width:100vh;
+    height: 100vw;
+    transform: rotate(-90deg) translateX(-100vh);
+    transform-origin: top left;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: absolute;
+    scrollbar-width:none;
+    -ms-overflow-style: none;
+}
+::-webkit-scrollbar{display: none;}
+
+
+

@@ -1,6 +1,9 @@
 import React from 'react'
 
-export default function Turtle(){
+export default class Turtle extends React.Component{
+
+
+render(){
     return(
         
      <div className="background">  
@@ -15,4 +18,5 @@ export default function Turtle(){
     </div>
     </div>
     )
+}
 }

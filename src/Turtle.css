@@ -12,7 +12,7 @@
     z-index: 3;
     transform: rotateY(180deg);
     /* transform: rotateY(360deg); */
-    top: 300px;
+    top: 500px;
 }
 .seaturtle .head {
     margin-top: -30px;

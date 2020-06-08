@@ -24,23 +24,24 @@
     scroll-behavior: smooth;
 }
 
-.one{
-    background: rgb(4, 247, 234);
+.one{ 
+/* background-image: radial-gradient(#65c6c4, #113f67); */
+background-image: linear-gradient(0deg, #022244, #58c8da);
 }
-.two{
-    background: rgb(11, 175, 197);
+    .two{
+  background-image: linear-gradient(0deg, #022244, #58c8da);
 }
 .three{
-    background: rgb(37, 182, 170);
+  background-image: linear-gradient(0deg, #022244, #58c8da);
 }
 .four{
-    background: rgb(31, 145, 139);
+  background-image: linear-gradient(0deg, #022244, #58c8da);
 }
 .five{
-    background: rgb(35, 207, 193);
+  background-image: linear-gradient(0deg, #022244, #58c8da);
 }
 .six{
-    background: rgb(117, 241, 245);
+      background-image: linear-gradient(0deg, #022244, #58c8da);
 }
 
 
@@ -96,3 +97,6 @@
 
 
 
+h1{
+    text-align: center;
+}

@@ -4,9 +4,12 @@
 }
 
 
+
 .slide{
-    width: 100vw;
+    width: 600vw;
     height: 100vh;
+    scroll-behavior: smooth;
+
 }
 /* .outer-wrapper{
     border:solid red;
@@ -22,24 +25,44 @@
 }
 
 .one{
-    background: rgb(224, 115, 64);
+    background: rgb(4, 247, 234);
 }
 .two{
-    background: rgb(151, 142, 13);
+    background: rgb(11, 175, 197);
 }
 .three{
-    background: rgb(64, 224, 149);
+    background: rgb(37, 182, 170);
 }
 .four{
-    background: rgb(155, 224, 64);
+    background: rgb(31, 145, 139);
 }
 .five{
-    background: rgb(224, 64, 216);
+    background: rgb(35, 207, 193);
 }
 .six{
-    background: rgb(224, 64, 72);
+    background: rgb(117, 241, 245);
 }
-.seven{
+
+
+.text{
+    border: solid white;
+    position: relative;
+    left: 50%;
+    top: 40%;
+    width: 25%;
+    z-index: 3;
+    opacity: 0;
+
+    transition: width 1.5s, height 2s, opacity 900ms ease-in-out;
+
+}
+
+.text.appear{
+    opacity: 1;
+    width: 300px;
+    height: 300px;
+}
+/* .seven{
     background: rgb(64, 101, 224);
 }
 .eight{
@@ -56,7 +79,7 @@
 }
 .twelve{
     background: rgb(177, 13, 89);
-}
+} */
 
 .outer-wrapper{
     width:100vh;

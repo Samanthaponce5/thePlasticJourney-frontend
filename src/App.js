@@ -19,6 +19,32 @@ import Journey from './components/Journey';
     let {value, name}= e.target
     this.setState({[name]:value})
   }
+
+
+
+  componentDidMount(){
+    let options = {
+        // threshold:.25,
+         rootMargin: "-150px"
+    
+    }
+    let sections=document.querySelectorAll('.donut-chart')
+    let observer=  new IntersectionObserver(function(entries, observer){
+        entries.forEach(entry=>{
+            if(!entry.isIntersecting){
+                return
+            }
+            console.log(entry.target);
+            entry.target.classList.add("chart1");
+            observer.unobserve(entry.target)
+        })
+    },options)
+
+    
+    sections.forEach(section=>{
+        observer.observe(section)
+    })
+  }
   
 
   render(){

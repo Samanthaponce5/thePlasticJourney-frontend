@@ -1,0 +1,125 @@
+.card {
+    float: left;
+    background:  rgb(31, 145, 139);
+    padding: 20px;
+    margin: 0 20px 0 0;
+    opacity: 1;
+}
+.donut-chart {
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.donut-chart .quad {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.donut-chart .chart-center {
+    position: absolute;
+    border-radius: 50%;
+}
+.donut-chart .chart-center span {
+    display: block;
+    text-align: center;
+}
+@keyframes chart1 {
+    0% {
+        -webkit-transform: rotate(0deg);
+   }
+    100% {
+        -webkit-transform: rotate(187.2deg);
+   }
+}
+@keyframes chartRotate2 {
+    0% {
+        -webkit-transform: rotate(0deg);
+   }
+    100% {
+        -webkit-transform: rotate(90deg);
+   }
+}
+@keyframes chartRotate3 {
+    0% {
+        -webkit-transform: rotate(0deg);
+   }
+    100% {
+        -webkit-transform: rotate(180deg);
+   }
+}
+@keyframes chartRotate4 {
+    0% {
+        -webkit-transform: rotate(0deg);
+   }
+    100% {
+        -webkit-transform: rotate(270deg);
+   }
+}
+@keyframes chartCover {
+    0%, 90% {
+        opacity: 1;
+   }
+    91%, 100% {
+        opacity: 0;
+   }
+}
+.donut-chart.chart1 {
+    width: 300px;
+    height: 300px;
+    background: #fff;
+}
+.donut-chart.chart1 .quad {
+    width: 150px;
+    height: 150px;
+    top: 0;
+    left: 0;
+    border-radius: 100% 0 0 0;
+    display: none;
+}
+.donut-chart.chart1 .quad.one {
+    transform: rotate(187.2deg);
+    transform-origin: bottom right;
+    background: red;
+    animation: chart1 1s linear;
+    display: block;
+}
+.donut-chart.chart1 .quad.two {
+    transform: rotate(90deg);
+    transform-origin: bottom right;
+    background: red;
+    animation: chartRotate2 1s linear;
+    display: block;
+}
+.donut-chart.chart1 .quad.three {
+    transform: rotate(180deg);
+    transform-origin: bottom right;
+    background: red;
+    animation: chartRotate3 1s linear;
+    display: block;
+}
+.donut-chart.chart1 .quad.four {
+    transform: rotate(270deg);
+    transform-origin: bottom right;
+    background: #48b2c1;
+    animation: chartRotate4 1s linear;
+}
+.donut-chart.chart1 .quad.top {
+    display: block;
+    background: #fff;
+}
+.donut-chart.chart1 .chart-center {
+    top: 25px;
+    left: 25px;
+    width: 250px;
+    height: 250px;
+    background:  rgb(31, 145, 139);
+}
+.donut-chart.chart1 .chart-center:after {
+    display: inline-block;
+    width: 100%;
+    font-size: 60px;
+    color: #f2f7f8;
+    text-align: center;
+    line-height: 250px;
+    content: "52%";
+}

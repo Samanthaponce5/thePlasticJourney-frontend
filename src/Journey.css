@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.slide{
+    width: 600vw;
+    height: 100vh;
+    scroll-behavior: smooth;
+
+}
+/* .outer-wrapper{
+    border:solid red;
+
+} */
+.wrapper{
+    display:flex;
+    flex-direction: row;
+    width: 1200vw;
+    transform: rotate(90deg) translateY(-100vh);
+    transform-origin: top left;
+    scroll-behavior: smooth;
+}
+
+.one{ 
+/* background-image: radial-gradient(#65c6c4, #113f67); */
+background-image: linear-gradient(0deg, #022244, #58c8da);
+}
+    .two{
+  background-image: linear-gradient(0deg, #022244, #58c8da);
+}
+.three{
+  background-image: linear-gradient(0deg, #022244, #58c8da);
+}
+.four{
+  background-image: linear-gradient(0deg, #022244, #58c8da);
+}
+.five{
+  background-image: linear-gradient(0deg, #022244, #58c8da);
+}
+.six{
+      background-image: linear-gradient(0deg, #022244, #58c8da);
+}
+
+
+.text{
+    border: solid white;
+    position: relative;
+    left: 50%;
+    top: 40%;
+    width: 25%;
+    z-index: 3;
+    opacity: 0;
+
+    transition: width 1.5s, height 2s, opacity 900ms ease-in-out;
+
+}
+
+.text.appear{
+    opacity: 1;
+    width: 300px;
+    height: 300px;
+}
+/* .seven{
+    background: rgb(64, 101, 224);
+}
+.eight{
+    background: rgb(165, 64, 224);
+}
+.nine{
+    background: rgb(173, 64, 224);
+}
+.ten{
+    background: rgb(12, 201, 169);
+}
+.eleven{
+    background: rgb(26, 119, 65);
+}
+.twelve{
+    background: rgb(177, 13, 89);
+} */
+
+.outer-wrapper{
+    width:100vh;
+    height: 100vw;
+    transform: rotate(-90deg) translateX(-100vh);
+    transform-origin: top left;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: absolute;
+    scrollbar-width:none;
+    -ms-overflow-style: none;
+}
+::-webkit-scrollbar{display: none;}
+
+
+
+h1{
+    text-align: center;
+}

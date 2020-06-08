@@ -1,26 +1,51 @@
 import React from 'react';
-import logo from './logo.svg';
+import Turtle from './components/Turtle';
+import About from './components/About';
+import Home from './components/Home';
+import Help from './components/Help';
+import Navbar from './components/Navbar';
 import './App.css';
+import './Turtle.css';
 
-function App() {
+import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
+import Journey from './components/Journey';
+
+
+ class App extends React.Component{
+  state={
+    name:''
+  }
+  handleChange=(e)=>{
+    let {value, name}= e.target
+    this.setState({[name]:value})
+  }
+
+
+
+
+  
+
+  render(){
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+<Router >
+<Navbar/>
+<Switch>
+<Route exact path="/" render={(routerProps)=><Home handleChange={this.handleChange} name={this.state.name} routerProps={routerProps} />}/>
+<Route exact path='/about' render={(routerProps)=><About/>}/>
+<Route exact path='/howtohelp' render={(routerProps)=><Help/>}/>
+{/* {this.state.name.length>0? */}
+<Route exact path="/journey"  render={(routerProps)=><Journey />}/>
+{/* <h1>Not Found</h1>
+  } */}
+
+</Switch>
+</Router >
+    
+    
+  
+    );
+  }
 }
 
 export default App;

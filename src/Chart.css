@@ -1,0 +1,142 @@
+.card {
+	 float: left;
+	 background: transparent;
+	 padding: 20px;
+	 margin: 0 20px 0 0;
+}
+ .donut-chart {
+	 position: relative;
+	 border-radius: 50%;
+     overflow: hidden;
+     opacity: 0;
+     transition: width 4s, height 2s, opacity 900ms ease-in-out;
+}
+ .donut-chart .quad {
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+}
+ .donut-chart .chart-center {
+	 position: absolute;
+	 border-radius: 50%;
+}
+ .donut-chart .chart-center span {
+	 display: block;
+	 text-align: center;
+}
+ @keyframes chart3 {
+	 0% {
+		 -webkit-transform: rotate(0deg);
+	}
+	 100% {
+		 -webkit-transform: rotate(187.2deg);
+	}
+}
+ @keyframes chartRotate2 {
+	 0% {
+		 -webkit-transform: rotate(0deg);
+	}
+	 100% {
+		 -webkit-transform: rotate(90deg);
+	}
+}
+ @keyframes chartRotate3 {
+	 0% {
+		 -webkit-transform: rotate(0deg);
+	}
+	 100% {
+		 -webkit-transform: rotate(180deg);
+	}
+}
+ @keyframes chartRotate4 {
+	 0% {
+		 -webkit-transform: rotate(0deg);
+	}
+	 100% {
+		 -webkit-transform: rotate(270deg);
+	}
+}
+ @keyframes chartCover {
+	 0%, 90% {
+		 opacity: 1;
+	}
+	 91%, 100% {
+		 opacity: 0;
+	}
+}
+ .donut-chart.chart3 {
+	 width: 150px;
+	 height: 150px;
+     background: #e1e1e1;
+     opacity: 1;
+}
+ .donut-chart.chart3 .quad {
+	 width: 75px;
+	 height: 75px;
+	 top: 0;
+	 left: 0;
+	 border-radius: 100% 0 0 0;
+	 display: none;
+}
+ .donut-chart.chart3 .quad.one {
+	 transform: rotate(187.2deg);
+	 transform-origin: bottom right;
+	 background: #4b97b9;
+	 animation: chart3 1.5s linear;
+	 display: block;
+}
+ .donut-chart.chart3 .quad.two {
+	 transform: rotate(90deg);
+	 transform-origin: bottom right;
+	 background: #4b97b9;
+	 animation: chartRotate2 1.5s linear;
+	 display: block;
+}
+ .donut-chart.chart3 .quad.three {
+	 transform: rotate(180deg);
+	 transform-origin: bottom right;
+	 background: #4b97b9;
+	 animation: chartRotate3 1.5s linear;
+	 display: block;
+}
+ .donut-chart.chart3 .quad.four {
+	 transform: rotate(270deg);
+	 transform-origin: bottom right;
+	 background: #4b97b9;
+	 animation: chartRotate4 1.5s linear;
+}
+ .donut-chart.chart3 .quad.top {
+	 display: block;
+	 background: #e1e1e1;
+}
+ .donut-chart.chart3 .chart-center {
+	 top: 10px;
+	 left: 10px;
+	 width: 130px;
+     height: 130px;
+     /* background-image: linear-gradient(0deg, #022244, #58c8da); */
+     background: #58c8da;
+     
+    }
+ .donut-chart.chart3 .chart-center::after {
+    display: block;
+    width: 100%;
+    font-size: 22.9px;
+    color: #fdfcfc;
+    text-align: center;
+    line-height: 20px;
+    content:  '                             52% of all sea turtles have eaten plastic particles' ;
+    white-space: pre-wrap;
+
+  
+}
+/* .donut-chart.chart3 .chart-center::before{
+    display: inline-block;
+    width: 100%;
+    font-size: 15px;
+    color: #fdfcfc;
+    text-align: center;
+    line-height: 20px;
+    content:  ' 52% of all sea turtles have eaten plastic particles' ;
+    white-space: pre-wrap;
+} */

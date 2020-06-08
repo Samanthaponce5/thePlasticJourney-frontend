@@ -1,0 +1,12 @@
+.userform{
+    /* border: solid rgb(47, 0, 255); */
+    position: relative;;
+    top:500px;
+    left: 45%;
+}
+.userbtn{
+    /* border: solid red; */
+    position: absolute;
+    top:80px;
+    left: 6%;
+}

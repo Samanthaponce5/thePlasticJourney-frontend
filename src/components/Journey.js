@@ -71,16 +71,17 @@ listenScrollEvent=()=> {
            
                    
                     <div className='slide one'><h1>slide 1</h1>  <Ocean/></div>
+                    <hr/>
 
                     <div className='slide two'><h1>slide 2</h1>  <Ocean/></div>
-                    
+                    <hr/>
                     <div className='slide three'><h1>slide 3</h1>  <Ocean/></div>
-                    
-                    <div className='slide four'><h1>slide 4</h1><Charts/><Jelly/>  <Ocean/></div>
-                    
+                    <hr/>
+                    <div className='slide four'><h1>slide 4</h1><Charts/> <Ocean/></div>
+                    <hr/>
                     <div className='slide five'><h1>slide 5</h1>  <Ocean/></div>
-                    
-                    <div className='slide six'><h1>slide 6</h1>  <Ocean/></div>
+                    <hr/>
+                    <div className='slide six'><h1>slide 6</h1>  </div>
                     
 
                 </div>

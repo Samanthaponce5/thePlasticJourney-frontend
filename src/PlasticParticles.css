@@ -1,5 +1,5 @@
 .plastic{
-    z-index: 999;
+    z-index: 99;
     
     position: absolute;
     color:blue;
@@ -20,26 +20,49 @@
     position: absolute;
     top: 32%;
     left: 33%;
+    /* top: 34%;
+    left: 93.3%; */
   }
   .plastic.bottle{
     position: absolute;
     top: 39%;
     left: 22%;
+    /* top: 62%;
+    left: 92.3%; */
   }
   .plastic.straw{
     position: absolute;
     top: 82%;
     left: 62%;
+    /* top: 34%;
+    left: 96.5%; */
   }
   .plastic.cups{
     position: absolute;
     top: 57%;
     left: 77%;
+    /* top: 62%;
+    left: 97.6%; */
   }
-  .plastic.microBeads{
+  .plastic.can{
     position: absolute;
     top: 66%;
     left: 42%;
+    /* top: 23%;
+    left: 95%; */
+  }
+
+  .b-bag{
+    transform: rotate(190deg);
+
+  }
+  .b-cup{
+    width:60px;
+    height:50px;
+ margin-top:6%;
+ transform: rotate(40deg);
+ /*Scale down will take the necessary specified space that is 100px x 100px without stretching the image*/
+     object-fit:scale-down;
   }
   
   

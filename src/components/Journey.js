@@ -77,29 +77,54 @@ listenScrollEvent=()=> {
     handleClick=(e)=>{
         // e.target.style.opacity = "0";
         // this.setState({collect:false, collected:true})
-        if(e.target.className==='plastic bottle'){
+        if(e.target.className==='plastic bottle' ||e.target.className=== "img b-bottle " ){
             console.log('plastic2')
+            document.body.querySelector('.plastic.bottle').style.left = "92.3%";
+
+            document.body.querySelector('.plastic.bottle').style.top = "62%";
+
         }
-        if(e.target.className==='plastic microBeads'){
-            console.log('plastic5')
+        if(e.target.className==='plastic can' || e.target.className === "img b-can"){
+            console.log('plastic5',e.target)
+            document.body.querySelector('.plastic.can').style.left = " 95%";
+
+            document.body.querySelector('.plastic.can').style.top = "23%";
+
         }
 
-        if(e.target.className==='plastic cups'){
-            console.log('plastic4')
+        if(e.target.className==='plastic cups' ||e.target.className=== "img b-cup" ){
+            console.log('plastic4',e.target)
+            document.body.querySelector('.plastic.cups').style.left = "97.6%";
+
+            document.body.querySelector('.plastic.cups').style.top = "62%";
+
         }
 
-        if(e.target.className==='plastic straw'){
-            console.log('plastic3')
+        if(e.target.className==='plastic straw' ||e.target.className=== "img b-straw" ){
+            console.log('plastic3', e.target)
+            document.body.querySelector('.plastic.straw').style.left = " 96.5%";
+
+            document.body.querySelector('.plastic.straw').style.top = "34%";
+
         }
 
-        if(e.target.className==='plastic bag'){
-            console.log('plastic1')
+        if(e.target.className==='plastic bag'||e.target.className=== "img b-bag " ){
+            console.log(e.target)
+            document.body.querySelector('.plastic.bag').style.left = "93.3%";
+
+            document.body.querySelector('.plastic.bag').style.top = " 34%";
+
         }
         
 
     }
     
     render(){
+        let bottle=require("../img/bottle.png")
+        let bag=require("../img/bag.png")
+        let can=require("../img/can.png")
+        let cup=require("../img/cup.png")
+        let straw=require("../img/straw.png")
    
         return(
             <>
@@ -108,12 +133,11 @@ listenScrollEvent=()=> {
             <div className='outer-wrapper' onScroll={this.listenScrollEvent}>
                 <div className='wrapper'>
 
-                <div className='plastic bag' onClick={this.handleClick}>Plastic1</div><br/>
-                <div className='plastic bottle' onClick={this.handleClick}>Plastic2</div><br/>
-                <div className='plastic straw' onClick={this.handleClick}>Plastic3</div><br/>
-                <div className='plastic cups' onClick={this.handleClick}>Plastic4</div><br/>
-                <div className='plastic microBeads'onClick={this.handleClick}>Plastic5</div>
-           
+                   <div className='plastic bag' onClick={this.handleClick}>Plastic1<img className="img b-bag " src={bag} alt=""/></div><br/>
+                <div className='plastic bottle' onClick={this.handleClick}>Plastic2 <img className="img b-bottle " src={bottle} alt=""/></div><br/>
+                <div className='plastic straw' onClick={this.handleClick}>Plastic3 <img className="img b-straw" src={straw} alt=""/></div><br/>
+                <div className='plastic cups' onClick={this.handleClick}>Plastic4 <img className="img b-cup" src={cup} alt=""/></div><br/>
+                <div className='plastic can'onClick={this.handleClick}>Plastic5 <img className="img b-can" src={can} alt=""/></div>
                    
                     <div className='slide one'><h1>slide 1</h1> <Jelly/><Ocean/></div>
                     <hr/>
@@ -135,3 +159,12 @@ listenScrollEvent=()=> {
         )
     }
 }
+
+
+
+
+{/* <div className='plastic bag' onClick={this.handleClick}>Plastic1</div><br/>
+<div className='plastic bottle' onClick={this.handleClick}>Plastic2</div><br/>
+<div className='plastic straw' onClick={this.handleClick}>Plastic3</div><br/>
+<div className='plastic cups' onClick={this.handleClick}>Plastic4</div><br/>
+<div className='plastic microBeads'onClick={this.handleClick}>Plastic5</div> */}

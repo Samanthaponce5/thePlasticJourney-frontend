@@ -3,6 +3,15 @@
     padding: 0;
 }
 
+.img{
+    z-index: 90;
+    width:90px;
+    height:90px;
+ margin-top:-9%;
+ transform: rotate(-40deg);
+ /*Scale down will take the necessary specified space that is 100px x 100px without stretching the image*/
+     object-fit:scale-down;
+}
 
 
 .slide{

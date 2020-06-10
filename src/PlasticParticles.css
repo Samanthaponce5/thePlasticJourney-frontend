@@ -1,6 +1,6 @@
 .plastic{
     z-index: 99;
-    
+    opacity: .6;
     position: absolute;
     color:blue;
     text-align:center;
@@ -13,20 +13,22 @@
   
       padding-top: 4px;
 
-    box-shadow: 0px 0px 9px 4px #F5F5F5;
+    /* box-shadow: 0px 0px 9px 4px #F5F5F5; */
+    box-shadow: 0px 0px 9px 4px rgba(245, 245, 245, 0.212);
+
     animation: glow 1.5s linear infinite alternate;
   }
   .plastic.bag{
     position: absolute;
-    top: 32%;
-    left: 33%;
+    top: 34%;
+    left: 42.7%;
     /* top: 34%;
     left: 93.3%; */
   }
   .plastic.bottle{
     position: absolute;
     top: 39%;
-    left: 22%;
+    left: 27%;
     /* top: 62%;
     left: 92.3%; */
   }
@@ -46,8 +48,9 @@
   }
   .plastic.can{
     position: absolute;
-    top: 66%;
-    left: 42%;
+    top: 32%;
+    left: 33%;
+   
     /* top: 23%;
     left: 95%; */
   }
@@ -59,7 +62,7 @@
   .b-cup{
     width:60px;
     height:50px;
- margin-top:6%;
+ margin-top:19%;
  transform: rotate(40deg);
  /*Scale down will take the necessary specified space that is 100px x 100px without stretching the image*/
      object-fit:scale-down;
@@ -68,6 +71,7 @@
   
   @keyframes glow{
     to {
-      box-shadow: 0px 0px 20px 6px #F5F5F5;
+      /* box-shadow: 0px 0px 20px 6px #F5F5F5; */
+      box-shadow: 0px 0px 20px 6px rgba(255, 255, 255, 0.644);
     }
   }

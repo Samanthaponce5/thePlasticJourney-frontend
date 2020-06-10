@@ -17,6 +17,41 @@
     
 }
 
+#containers2 {
+    position: relative;
+    width: 500px;
+    right: 0;
+    left: 15%;
+    margin: auto;
+    -webkit-animation: fish1 18s linear infinite;
+    animation: containers 18s linear infinite;
+}
+.fish2 {
+    position: absolute;
+    left: 40%;
+    width: 200px;
+    -webkit-transform:scale(.8);
+    transform: scale(.8);
+    
+}
+#containers3 {
+    position: relative;
+    width: 500px;
+    right: 0;
+    left: -12%;
+    margin: auto;
+    -webkit-animation: fish1 9s linear infinite;
+    animation: containers3 9s linear infinite;
+}
+.fish3 {
+    position: absolute;
+    left: 40%;
+    width: 200px;
+    -webkit-transform:scale(.8);
+    transform: scale(.8);
+    
+}
+
 
 .bell {
     position: absolute;
@@ -34,7 +69,7 @@
     -webkit-animation: bellMove 2s ease-in-out infinite;
     animation: bellMove 2s ease-in-out infinite;
 }
-.bell:after {
+/* .bell:after {
     content: "";
     position: absolute;
     width: 30px;
@@ -46,7 +81,7 @@
     box-shadow: -1px -1px rgba(255,255,255,0.5);
     top: 20px;
     left: -20px;
-}
+} */
 .tentacle {
     position: absolute;
     width: 40px;
@@ -55,7 +90,7 @@
     background: transparent;
     border-style: solid;
     border-color: rgba(255,255,255,1);
-    border-width: 0 0 0 2px;
+    border-width: 0 0 0 1px;
     box-shadow: -1px 0px rgba(255,255,255,0.5);
     top: 200px;
 }
@@ -198,7 +233,7 @@
     }
 }
 
-@-webkit-keyframes containers {
+@keyframes containers {
     0%, 100% {
         top: 200px;
   
@@ -207,7 +242,7 @@
         top: 0px;
     }
 }
-@keyframes containers {
+@keyframes containers3 {
     0%, 100% {
         top: 200px;
   

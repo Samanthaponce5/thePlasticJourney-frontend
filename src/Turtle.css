@@ -9,7 +9,7 @@
 .seaturtle {
     
     position: relative;
-    z-index: 3;
+    z-index: 1;
     transform: rotateY(180deg);
     /* transform: rotateY(360deg); */
     top: 500px;

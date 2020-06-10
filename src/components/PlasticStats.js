@@ -8,10 +8,15 @@ export default class PlasticStats extends React.Component{
 
     render(){
         
-      
+      let filtered = this.props.plastics.filter((plastic)=> {
+        if(plastic.id === 5 || plastic.id===6 || plastic.id===7){
+            return plastic
+        }
+      })
+     
         return(
             <>
-                 { this.props.plastics.map((plastic)=>{ return <>  <h3><CountUp delay={1} end={plastic.stats} /> {plastic.info}</h3><br/> </>})}
+                 { filtered.map((plastic)=>{ return <>  <h1><CountUp delay={3} end={plastic.stats} /> {plastic.info}</h1><br/> </>})}
             </>
         )
     }

@@ -1,4 +1,9 @@
+@import url(https://fonts.googleapis.com/css?family=Lemon);
+
 body {
+  font-family: 'Lemon', cursive;
+
+  color: white;
   position: absolute;
   top: 0;
   left: 0;

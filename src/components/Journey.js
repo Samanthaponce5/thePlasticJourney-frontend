@@ -13,7 +13,13 @@ export default class Journey extends React.Component{
 
     state={
         lastScroll:null,
-        plastics:[]
+        plastics:[],
+
+        collect:true,
+        collected:false,
+
+     
+
     }
 
 
@@ -69,19 +75,39 @@ listenScrollEvent=()=> {
 }
 
     handleClick=(e)=>{
-        e.target.style.opacity = "0";
+        // e.target.style.opacity = "0";
+        // this.setState({collect:false, collected:true})
+        if(e.target.className==='plastic bottle'){
+            console.log('plastic2')
+        }
+        if(e.target.className==='plastic microBeads'){
+            console.log('plastic5')
+        }
+
+        if(e.target.className==='plastic cups'){
+            console.log('plastic4')
+        }
+
+        if(e.target.className==='plastic straw'){
+            console.log('plastic3')
+        }
+
+        if(e.target.className==='plastic bag'){
+            console.log('plastic1')
+        }
+        
+
     }
     
     render(){
-        // console.log(this.sections)
-        
+   
         return(
             <>
            
              <Turtle/>
             <div className='outer-wrapper' onScroll={this.listenScrollEvent}>
-                
                 <div className='wrapper'>
+
                 <div className='plastic bag' onClick={this.handleClick}>Plastic1</div><br/>
                 <div className='plastic bottle' onClick={this.handleClick}>Plastic2</div><br/>
                 <div className='plastic straw' onClick={this.handleClick}>Plastic3</div><br/>
@@ -89,7 +115,7 @@ listenScrollEvent=()=> {
                 <div className='plastic microBeads'onClick={this.handleClick}>Plastic5</div>
            
                    
-                    <div className='slide one'><h1>slide 1</h1> <Ocean/></div>
+                    <div className='slide one'><h1>slide 1</h1> <Jelly/><Ocean/></div>
                     <hr/>
 
                     <div className='slide two'><h1>slide 2</h1><PlasticStats plastics={this.state.plastics}/>  <Ocean/></div>

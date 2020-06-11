@@ -94,7 +94,7 @@ listenScrollEvent=()=> {
         // e.target.style.opacity = "0";
         // this.setState({collect:false, collected:true})
         if(e.target.className==='plastic bottle' ||e.target.className=== "img b-bottle " ){
-            console.log('plastic2')
+            // console.log('plastic2')
             document.body.querySelector('.plastic.bottle').style.left = "92.3%";
             document.body.querySelector('.plastic.bottle').style.top = "62%";
             document.body.querySelector('.plastic.bottle').classList.add('afterBottle')
@@ -103,7 +103,7 @@ listenScrollEvent=()=> {
 
         }
         if(e.target.className==='plastic can' || e.target.className === "img b-can"){
-            console.log('plastic5',e.target)
+            // console.log('plastic5',e.target)
             document.body.querySelector('.plastic.can').style.left = " 95%";
             document.body.querySelector('.plastic.can').style.top = "23%";
 
@@ -113,7 +113,7 @@ listenScrollEvent=()=> {
         }
 
         if(e.target.className==='plastic cups' ||e.target.className=== "img b-cup" ){
-            console.log('plastic4',e.target)
+            // console.log('plastic4',e.target)
             document.body.querySelector('.plastic.cups').style.left = "97.6%";
             document.body.querySelector('.plastic.cups').style.top = "62%";
 
@@ -123,7 +123,7 @@ listenScrollEvent=()=> {
         }
 
         if(e.target.className==='plastic straw' ||e.target.className === "img b-straw" ){
-            console.log('plastic3', e.target)
+            // console.log('plastic3', e.target)
             document.body.querySelector('.plastic.straw').style.left = " 96.5%";
             document.body.querySelector('.plastic.straw').style.top = "34%";
 
@@ -133,7 +133,7 @@ listenScrollEvent=()=> {
         }
 
         if(e.target.className==='plastic bag'|| e.target.className=== "img b-bag " ){
-            console.log(e.target)
+            // console.log(e.target)
             document.body.querySelector('.plastic.bag').style.left = "93.3%";
             document.body.querySelector('.plastic.bag').style.top = " 34%";
 
@@ -145,10 +145,11 @@ listenScrollEvent=()=> {
 
     }
 
-    handleHover=(e)=>{
+    handleMousedown=(e)=>{
          if(e.target.className==='plastic bottle afterBottle' ||e.target.className=== "img b-bottle afterBottleImg" ){
             this.setState({modalIsOpen:true})
-            this.state.comparePlastics.filter(plastic=> plastic.id===3? this.setState({mapPlastic:plastic}):null)
+           this.state.comparePlastics.filter(plastic=> plastic.id===3? this.setState({mapPlastic:plastic}):null)
+          
         }
 
         if(e.target.className==='plastic bag afterBag' ||e.target.className=== "img b-bag afterBagImg" ){
@@ -171,40 +172,56 @@ listenScrollEvent=()=> {
 
         if(e.target.className==='plastic can afterCan' ||e.target.className=== "img b-can afterCanImg" ){
             this.setState({modalIsOpen:true})
+            this.state.comparePlastics.filter(plastic=> plastic.id===5? this.setState({mapPlastic:plastic}):null)
+
             // this.state.comparePlastics.filter(plastic=> plastic.id===3? this.setState({mapPlastic:plastic}):null)
 
         }
     }
  
     render(){
-        console.log(this.state.mapPlastic.name
-            )
+        let plasticInfo=this.state.mapPlastic.plasticInfo + ""
+        let alternativeInfo=this.state.mapPlastic.alternativeInfo + ""
+
         let bottle=require("../img/bottle.png")
         let bag=require("../img/bag.png")
         let can=require("../img/can.png")
         let cup=require("../img/cup.png")
         let straw=require("../img/straw.png")
-        console.log('compare',this.state.comparePlastics)
+        console.log('compare',this.state.mapPlastic)
+        let turtleStyle=document.body.getElementsByClassName('seaturtle')[0]
+//Style isn't working??????
         return(
             <>
-             <Modal  className="Modal" isOpen={this.state.modalIsOpen} onRequestClose={this.handleClose}>
+             <Modal overlayClassName="Overlay" className="Modal" isOpen={this.state.modalIsOpen} onRequestClose={this.handleClose}>
                       
-                       <h2>{this.state.mapPlastic.plastic}</h2>
-                       <p>{this.state.mapPlastic.info1}</p>
+                       <h2 className='plasticName'>{this.state.mapPlastic.plastic}</h2>
+
+            <div className='main'>
+                <div className='inner'>
+        <div className='plasticInfo'><img className="img b-bottle " src={bottle} alt=""/> {plasticInfo.split("/").map(plastic=><li>{plastic}</li>)}</div>
+        <div className="vl"></div>
+        <div className='alternativeInfo'><img className="img b-bag " src={bag} alt=""/> { alternativeInfo.split("/").map(plastic=><li>{plastic}</li>)}</div>
+        </div>
+        </div>
+
+
                        <div>
-                           <button onClick={this.handleClose}>Close</button>
+                           <button className='modalbtn' onClick={this.handleClose}>X</button>
                        </div>
                       </Modal>
 
-                {this.state.modalIsOpen ? null:<Turtle/>}
+
+                <Turtle/>
+
             <div className='outer-wrapper' onScroll={this.listenScrollEvent}>
                 <div className='wrapper'>
 
-                <div className='plastic bag'onMouseDown={this.handleHover} onClick={this.handleClick}><img className="img b-bag " src={bag} alt=""/></div><br/>
-                <div className='plastic bottle' onMouseDown={this.handleHover} onClick={this.handleClick}>  <img className="img b-bottle " src={bottle} alt=""/></div><br/>
-                <div className='plastic straw' onMouseDown={this.handleHover} onClick={this.handleClick}>  <img className="img b-straw" src={straw} alt=""/></div><br/>
-                <div className='plastic cups' onMouseDown={this.handleHover} onClick={this.handleClick}>  <img className="img b-cup" src={cup} alt=""/></div><br/>
-                <div className='plastic can'onMouseDown={this.handleHover} onClick={this.handleClick}> <img className="img b-can" src={can} alt=""/></div>
+                <div className='plastic bag'onMouseDown={this.handleMousedown} onClick={this.handleClick}><img className="img b-bag " src={bag} alt=""/></div><br/>
+                <div className='plastic bottle' onMouseDown={this.handleMousedown} onClick={this.handleClick}>  <img className="img b-bottle " src={bottle} alt=""/></div><br/>
+                <div className='plastic straw' onMouseDown={this.handleMousedown} onClick={this.handleClick}>  <img className="img b-straw" src={straw} alt=""/></div><br/>
+                <div className='plastic cups' onMouseDown={this.handleMousedown} onClick={this.handleClick}>  <img className="img b-cup" src={cup} alt=""/></div><br/>
+                <div className='plastic can'onMouseDown={this.handleMousedown} onClick={this.handleClick}> <img className="img b-can" src={can} alt=""/></div>
                    
                     <div className='slide one'><h1>slide 1</h1><Ocean/></div>
                     <hr/>

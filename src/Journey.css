@@ -138,13 +138,61 @@ li{
      background-image: linear-gradient(0deg, #102b47, #74ccda);
      border-radius: 50%
  }
- .uno,.dos,.tres{
+
+ .seaone,.seatwo, .seathree{
+     position: absolute;
+     height: 120px;
+ }
+ .seaone{
+     height: 380px;
+     width: 170px;
+    left: 10.2%;
+    bottom: -1.2em;
+ }
+.seatwo{
+  
+    height: 400px;
+    width: 170px;
+    bottom: -1.7em;
+    left: 16.9%;
+}
+.seathree{
+    left: 91.1%;
+    bottom: -.8em;
+    height: 400px;
+    width: 150px;
+}
+
+ .uno,.dos,.thirdgrass,.fourthgrass,.fifthgrass,.sixthgrass{
      z-index: 3;
      position: absolute;
      width: 200px;
      height: 389px;
      transform: rotate(-6deg);
  }
+ .thirdgrass,.fourthgrass,.fifthgrass,.sixthgrass{
+    z-index: 3;
+    position: absolute;
+    height: 270px;
+    transform: rotate(-6deg);
+ }
+ .thirdgrass{
+     left: 47.5%;
+     bottom: 1em;
+ }
+ .fourthgrass{
+    left: 97.9%;
+    bottom: 1em;
+}
+.fifthgrass{
+    height: 380px;
+    left: 75.9%;
+    bottom: -3em;
+}
+.sixthgrass{
+    left: 76.9%;
+    bottom: .4em;
+}
  .uno{
     bottom: -4.5em;
     left: -.2%;
@@ -161,14 +209,54 @@ li{
      height: 50px;
      opacity: .5;
  }
- .single{
-     position:absolute;
-     height: 350px;
-     bottom:.3em;
-     left: .1%;
-     transform: rotate(-5deg);
+ .single,.single2, .single3, .single4{
+    position:absolute;
+    height: 350px;
+    bottom:.3em;
 
  }
+ .single{
+  
+     left: .1%;
+     transform: rotate(-5deg);
+ }
+.single2{
+    left: 48%;
+
+}
+.single3{
+    
+    left: 91.3%;
+}
+.sing1,.sing2,.sing3,.sing4,.sing5{
+    position: absolute;
+
+}
+.sing1{
+    left: 91.2%;
+    bottom:.6em;
+
+}
+.sing2{
+    left: 71%;
+    bottom:-2em;
+    height: 400px;
+    width:250px;
+    transform: rotate(-20deg);
+}
+.sing3{
+    left: 71.6%;
+    bottom:-4em;
+    height: 400px;
+    width:250px;
+    transform: rotate(35deg);
+}
+.sing4{
+    left: -.1%;
+    bottom:-.2em;
+   
+}
+
  .crab{
      position: absolute;
      height: 150px;
@@ -211,11 +299,12 @@ li{
     bottom: -1em;
     left: 51%;
 }
-
-.frock,.srock,.trock{
+/* Rocks with plants on them */
+.frock,.srock,.trock,.fourthrock,.fifthrock,.sixrock{
     position:absolute;
     height: 140px;
     bottom: 1.6em;
+    transform: rotate(8deg);
 
 
 }
@@ -226,15 +315,30 @@ li{
 .srock{
     left: 33.8%;
     width: 170px;
-
-    transform: rotate(8deg);
-
 }
 .trock{
     left: 21%;
-    transform: rotate(8deg);
     width: 210px;
 }
+.fourthrock{
+    left: 98.7%;
+    height: 160px;
+    width: 200px;
+}
+.fifthrock{
+
+    left: 83%;
+    height: 160px;
+    width: 200px;
+    bottom: 1.1em;
+
+}
+.sixrock{
+    left: 58%;
+
+
+}
+
 .p,.e,.b,.v,.l,.i,.s{
     position: absolute;
 height: 190px;
@@ -260,7 +364,7 @@ bottom: 1.6em;
 
 /* group  one of pebblessss */
 .v{
-    left: 10.4%;
+    left: 10.3%;
     /* border: solid rgb(255, 0, 34); */
 }
 
@@ -270,8 +374,8 @@ bottom: 1.6em;
 }
 .s{
     bottom: 3.4em;
-    transform: rotate(50deg);
-    left: 10.6%;  
+    transform: rotate(48deg);
+    left: 10.5%;  
     /* border: solid rgb(102, 255, 0); */
 }
 
@@ -334,25 +438,11 @@ bottom: 1.6em;
     scroll-behavior: smooth;
 }
 
-.one{ 
+.one,.two,.three,.four,.five,.six{ 
 /* background-image: radial-gradient(#65c6c4, #113f67); */
 background-image: linear-gradient(0deg, #022244, #58c8da);
 }
-    .two{
-  background-image: linear-gradient(0deg, #022244, #58c8da);
-}
-.three{
-  background-image: linear-gradient(0deg, #022244, #58c8da);
-}
-.four{
-  background-image: linear-gradient(0deg, #022244, #58c8da);
-}
-.five{
-  background-image: linear-gradient(0deg, #022244, #58c8da);
-}
-.six{
-      background-image: linear-gradient(0deg, #022244, #58c8da);
-}
+ 
 
 
 .text{
@@ -373,24 +463,7 @@ background-image: linear-gradient(0deg, #022244, #58c8da);
     width: 300px;
     height: 300px;
 }
-/* .seven{
-    background: rgb(64, 101, 224);
-}
-.eight{
-    background: rgb(165, 64, 224);
-}
-.nine{
-    background: rgb(173, 64, 224);
-}
-.ten{
-    background: rgb(12, 201, 169);
-}
-.eleven{
-    background: rgb(26, 119, 65);
-}
-.twelve{
-    background: rgb(177, 13, 89);
-} */
+
 
 .outer-wrapper{
     width:100vh;

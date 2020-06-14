@@ -105,7 +105,7 @@ export default class Charts extends React.Component{
     <div className="quad2 top"></div>
     {this.props.plastics.map((plastic)=> {
        if(plastic.id ===4){
-        {inf3=plastic.stats +'%' + ' ' + plastic.info}
+        {inf3='Only' + ' ' + plastic.stats +'%' + ' ' + plastic.info}
          return <div className="chart-center2" onMouseOut={this.handleMouseOut} onMouseEnter={this.handleMouseEnter}>{plastic.stats}%</div>
      }})}
   </div>

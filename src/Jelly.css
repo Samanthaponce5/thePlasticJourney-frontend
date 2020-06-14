@@ -1,5 +1,46 @@
 
+.fact{
+    position: absolute;
+    width: 7%;
+    top: 1%;
+    left: 38.5%;
+    transition:  opacity 1s ease-in-out;
+}
+.fact.factone{
+opacity: 0;
+
+}
+.fact.facttwo{
+opacity: 0;
+}
+.fact.factthree{
+opacity: 0;
+}
+
+.fact {
+    -webkit-animation: action 2.5s infinite  alternate;
+    animation: action 2.5s infinite  alternate;
+}
+@-webkit-keyframes action {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-15px); }
+}
+@keyframes action {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-15px); }
+}
+
+
+
+
+.jellyletters{
+    font-size: 30.9px;
+    position: relative;
+    top: -.1em;
+    left: -.8em;
+}
 #containers {
+    z-index: 1000;
     position: relative;
     width: 500px;
     right: 0;
@@ -9,15 +50,21 @@
     animation: container 12s linear infinite;
 }
 .fish {
+    z-index: 1000;
     position: absolute;
     left: 40%;
+    height: 350px;
     width: 200px;
     -webkit-transform:scale(.8);
     transform: scale(.8);
+    /* border:solid red; */
+   
     
 }
 
 #containers2 {
+    z-index: 1000;
+
     position: relative;
     width: 500px;
     right: 0;
@@ -26,38 +73,47 @@
     -webkit-animation: fish1 18s linear infinite;
     animation: containers 18s linear infinite;
     /* border: solid red; */
+ 
 
 }
 .fish2 {
+    z-index: 1000;
     position: absolute;
     left: 40%;
     width: 200px;
     -webkit-transform:scale(.8);
     transform: scale(.8);
+    height: 350px;
+
 
 }
 #containers3 {
+    z-index: 1000;
     position: relative;
     width: 500px;
     right: 0;
     left: -12%;
     margin: auto;
-    -webkit-animation: fish1 9s linear infinite;
-    animation: containers3 9s linear infinite;
+    -webkit-animation: fish1 19s linear infinite;
+    animation: containers3 19s linear infinite;
 }
 .fish3 {
+    z-index: 1000;
     position: absolute;
     left: 40%;
     width: 200px;
     -webkit-transform:scale(.8);
     transform: scale(.8);
-    
+    height: 350px;
+
 }
 
 
 .bell {
+
+    z-index: 1000;
     position: absolute;
-    background: rgba(255,255,255,0.1);
+    background: transparent;
     width: 100px;
     height: 50px;
     border-radius: 100px 100px 30px 30px;
@@ -126,6 +182,12 @@
     -webkit-animation: tent4 2s infinite;
     animation: tent4 2s infinite;
 }
+
+.bell:hover{
+
+    cursor: pointer;
+  }
+
 @-webkit-keyframes bellMove {
     0%, 100% {
         width: 100px;
@@ -237,11 +299,11 @@
 
 @keyframes containers {
     0%, 100% {
-        top: 200px;
+        top: 0px;
   
     }
     50% {
-        top: 0px;
+        top: 200px;
     }
 }
 @keyframes containers3 {

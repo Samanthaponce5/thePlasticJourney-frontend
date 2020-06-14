@@ -184,7 +184,7 @@ listenScrollEvent=()=> {
     render(){
         let plasticInfo=this.state.mapPlastic.plasticInfo + ""
         let alternativeInfo=this.state.mapPlastic.alternativeInfo + ""
-        let singleRock=<img className='single' src={require("../img/singlerock.png")}/>
+        let singleRock=require("../img/singlerock.png")
         let greenRock=require("../img/grassrocks.png")
         let seaRock=require("../img/searock.png")
         let bluecoral=require("../img/bluecoral.png")
@@ -196,18 +196,24 @@ listenScrollEvent=()=> {
         let straw=require("../img/straw.png")
         let pebble=require('../img/pebble.png')
         let crab=<img className='crab' src={require("../img/crab.gif")}/>
-
+        let three=require('../img/three.png')
+        let nobttm = require('../img/nobottom.png')
+        let leaves = ['seaone','seatwo', 'seathree']
+        let threesingles = ['single', 'single2', 'single3', 'single4']
+        let thethrees = threesingles.map((name)=><img className={name} src={singleRock}/>)
+        let allthree = leaves.map((name)=><img className={name} src={three}/>)
 let pebbles = ['p','e','b','v','l','i','s']
 let allpebbles = pebbles.map((name)=><img className={name} src={pebble}/>)
-
-        let seaRocks=["frock","srock","trock"]
+            let nobottomr = ['sing1','sing2','sing3','sing4']
+            let sings = nobottomr.map((name)=><img className={name} src={nobttm}/>)
+        let seaRocks=["frock","srock","trock",'fourthrock','fifthrock',"sixrock"]
         let seaRocksthree = seaRocks.map((name)=> <img className={name} src={seaRock}/>)
         let baginfo = this.state.plastics.map((plastic)=>{if(plastic.name==='Plastic bag info'){
         return<h1 className='bageffect'>{plastic.info}</h1>
         }})
         let turtleStyle=document.body.getElementsByClassName('seaturtle')[0]
         //Style isn't working??????
-        let greenrocks= ['uno','dos']
+        let greenrocks= ['uno','dos','thirdgrass','fourthgrass','fifthgrass','sixthgrass']
        let firstpg= greenrocks.map((name)=>{
         return <img className={name} src={greenRock}/>
         })
@@ -249,18 +255,18 @@ let allpebbles = pebbles.map((name)=><img className={name} src={pebble}/>)
                 <div className='plastic cups' onMouseDown={this.handleMousedown} onClick={this.handleClick}>  <img className="img b-cup" src={cup} alt=""/></div><br/>
                 <div className='plastic can'onMouseDown={this.handleMousedown} onClick={this.handleClick}> <img className="img b-can" src={can} alt=""/></div>
                    
-                    <div className='slide one'>{firstpg} {greyfish} {singleRock}{allpebbles}<Ocean/></div>
-                    <hr/>
+                    <div className='slide one'>{firstpg} {greyfish} {thethrees}{allpebbles}<Ocean/></div>
+                    {/* <hr/> */}
 
-                    <div className='slide two'>{crab} {bluecorals} {seaRocksthree} <PlasticStats plastics={this.state.plastics}/>  <Ocean/></div>
-                    <hr/>
-                    <div className='slide three'> <Jelly/> {baginfo}  <Ocean/></div>
-                    <hr/>
+        <div className='slide two'>{allthree}{crab} {bluecorals} {seaRocksthree} <PlasticStats plastics={this.state.plastics}/>  <Ocean/></div>
+                    {/* <hr/> */}
+                    <div className='slide three'> <Jelly {...this.state}/>   <Ocean/></div>
+                    {/* <hr/> */}
                     <div className='slide four'><Charts  {...this.state} /> <Ocean/></div>
-                    <hr/>
+                    {/* <hr/> */}
                     <div className='slide five'>  <Ocean/></div>
-                    <hr/>
-                    <div className='slide six'>  </div>
+                    {/* <hr/> */}
+                    <div className='slide six'> {sings} </div>
                     
 
                 </div>

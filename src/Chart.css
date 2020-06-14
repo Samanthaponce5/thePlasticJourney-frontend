@@ -6,13 +6,65 @@
 
 }
 .donut-chart {
-    
+    z-index: 99;
     position: relative;
     border-radius: 50%;
     overflow: hidden;
     opacity: 0;
     transition:  opacity 2s ease-in-out;
 }
+/* ===================floating=========================== */
+.donut-chart.f {
+    -webkit-animation: action 1.3s infinite  alternate;
+    animation: action 1.3s infinite  alternate;
+}
+@-webkit-keyframes action {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-25px); }
+}
+@keyframes action {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-25px); }
+}
+
+.donut-chart.s {
+    -webkit-animation: action 2.3s infinite  alternate;
+    animation: action 2.3s infinite  alternate;
+}
+@-webkit-keyframes action {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-25px); }
+}
+@keyframes action {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-25px); }
+}
+.donut-chart.t {
+    -webkit-animation: action 2.6s infinite  alternate;
+    animation: action 2.6s infinite  alternate;
+}
+@-webkit-keyframes action {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-25px); }
+}
+@keyframes action {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-25px); }
+}
+.donut-chart.fo {
+    -webkit-animation: action 2s infinite  alternate;
+    animation: action 2s infinite  alternate;
+}
+@-webkit-keyframes action {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-25px); }
+}
+@keyframes action {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-25px); }
+}
+/* ========================================================== */
+
 .donut-chart .quad1 {
     position: absolute;
     top: 0;

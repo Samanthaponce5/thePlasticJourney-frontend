@@ -8,6 +8,72 @@ li{
     list-style: none;
     list-style-type:square
 }
+.sand {
+    position:absolute;
+    background: #F79E51;
+    height: 8%;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    animation:animate 30s linear infinite;
+
+	animation-delay:0s;
+    /* border-radius: 20% 20% 0 0; */
+}
+
+     
+
+
+.plasinfo{
+    position: absolute;;
+    /* border: solid red; */
+    top: 41%;
+    left: 51%;
+    width: 5%; 
+    opacity: 0 ;
+    transition:  opacity 1.3s ease-in-out;
+    
+}
+.plasinfo {
+    -webkit-animation: action 2.5s infinite  alternate;
+    animation: action 2.5s infinite  alternate;
+}
+@-webkit-keyframes action {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-15px); }
+}
+@keyframes action {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-15px); }
+}
+
+.bageffect{
+    /* border: solid red; */
+    position:absolute;
+    width: 1.5%;
+    height: 25%;
+    font-size: 15px;
+    left: 44.9%;
+    top: 10%;
+
+}
+.bageffect{
+    -webkit-animation: action 2s infinite  alternate;
+    animation: action 2s infinite  alternate;
+}
+@-webkit-keyframes action {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-25px); }
+}
+@keyframes action {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-25px); }
+}
+
+
 
 
 .vl {
@@ -72,6 +138,145 @@ li{
      background-image: linear-gradient(0deg, #102b47, #74ccda);
      border-radius: 50%
  }
+ .uno,.dos,.tres{
+     z-index: 3;
+     position: absolute;
+     width: 200px;
+     height: 389px;
+     transform: rotate(-6deg);
+ }
+ .uno{
+    bottom: -4.5em;
+    left: -.2%;
+ }
+ .dos{
+     position: absolute;
+     left: 7.4%;
+     bottom: -4.3em;
+     transform: rotate(1deg);
+   
+ }
+ .fishy{
+     position:absolute;
+     height: 50px;
+     opacity: .5;
+ }
+ .single{
+     position:absolute;
+     height: 350px;
+     bottom:.3em;
+     left: .1%;
+     transform: rotate(-5deg);
+
+ }
+ .crab{
+     position: absolute;
+     height: 150px;
+     bottom: .1em;
+     left: 28.3%;
+     animation-name: crabs;
+  animation-duration: 14s;
+  animation-iteration-count: infinite;
+ }
+ @keyframes crabs {
+    0%   { left:28.3%; }
+    25%  {left:26.3%; }
+    50%  {left:23%; }
+    75%  { left:26.3%; }
+    100% { left:28.3%; }
+  }
+
+ .unoazul,.dosazul,.tresazul{
+     position: absolute;
+     height: 160px;
+   
+
+
+ }
+.unoazul{
+    left: 28%;
+    bottom: 2.3em;
+    
+}
+.dosazul{
+    bottom: 1.6em;
+    left: 21.2%;
+    height: 260px;
+    width: 150px;
+
+}
+.tresazul{
+    height: 270px;
+    width: 170px;
+    bottom: -1em;
+    left: 51%;
+}
+
+.frock,.srock,.trock{
+    position:absolute;
+    height: 140px;
+    bottom: 1.6em;
+
+
+}
+.frock{
+    left: 33.5%;
+    transform: rotate(-13deg);
+}
+.srock{
+    left: 33.8%;
+    width: 170px;
+
+    transform: rotate(8deg);
+
+}
+.trock{
+    left: 21%;
+    transform: rotate(8deg);
+    width: 210px;
+}
+.p,.e,.b,.v,.l,.i,.s{
+    position: absolute;
+height: 190px;
+bottom: 1.6em;
+
+}
+.p{
+    left: 50.8%;
+}
+.b{
+    left: 17%;
+}
+.l{
+    bottom: -1.8em;
+    left: 16.7%;
+    transform: rotate(-48deg);
+    
+}
+.i{
+    left: 16.7%; 
+}
+
+
+/* group  one of pebblessss */
+.v{
+    left: 10.4%;
+    /* border: solid rgb(255, 0, 34); */
+}
+
+.e{
+    left: 10%;
+    /* border: solid rgb(89, 0, 255); */
+}
+.s{
+    bottom: 3.4em;
+    transform: rotate(50deg);
+    left: 10.6%;  
+    /* border: solid rgb(102, 255, 0); */
+}
+
+
+
     .Modal {
         position: absolute;
         top: 50%;

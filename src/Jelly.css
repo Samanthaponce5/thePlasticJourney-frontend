@@ -25,6 +25,8 @@
     margin: auto;
     -webkit-animation: fish1 18s linear infinite;
     animation: containers 18s linear infinite;
+    /* border: solid red; */
+
 }
 .fish2 {
     position: absolute;
@@ -32,7 +34,7 @@
     width: 200px;
     -webkit-transform:scale(.8);
     transform: scale(.8);
-    
+
 }
 #containers3 {
     position: relative;

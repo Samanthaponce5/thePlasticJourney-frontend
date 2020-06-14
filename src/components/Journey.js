@@ -178,19 +178,45 @@ listenScrollEvent=()=> {
 
         }
     }
+
+ 
  
     render(){
         let plasticInfo=this.state.mapPlastic.plasticInfo + ""
         let alternativeInfo=this.state.mapPlastic.alternativeInfo + ""
-
+        let singleRock=<img className='single' src={require("../img/singlerock.png")}/>
+        let greenRock=require("../img/grassrocks.png")
+        let seaRock=require("../img/searock.png")
+        let bluecoral=require("../img/bluecoral.png")
+        let greyfish=< img className='fishy' src={require("../img/greyFish.png")}/>
         let bottle=require("../img/bottle.png")
         let bag=require("../img/bag.png")
         let can=require("../img/can.png")
         let cup=require("../img/cup.png")
         let straw=require("../img/straw.png")
-        console.log('compare',this.state.mapPlastic)
+        let pebble=require('../img/pebble.png')
+        let crab=<img className='crab' src={require("../img/crab.gif")}/>
+
+let pebbles = ['p','e','b','v','l','i','s']
+let allpebbles = pebbles.map((name)=><img className={name} src={pebble}/>)
+
+        let seaRocks=["frock","srock","trock"]
+        let seaRocksthree = seaRocks.map((name)=> <img className={name} src={seaRock}/>)
+        let baginfo = this.state.plastics.map((plastic)=>{if(plastic.name==='Plastic bag info'){
+        return<h1 className='bageffect'>{plastic.info}</h1>
+        }})
         let turtleStyle=document.body.getElementsByClassName('seaturtle')[0]
-//Style isn't working??????
+        //Style isn't working??????
+        let greenrocks= ['uno','dos']
+       let firstpg= greenrocks.map((name)=>{
+        return <img className={name} src={greenRock}/>
+        })
+        let blue= ['unoazul','dosazul','tresazul']
+
+        let bluecorals= blue.map((name)=>{
+            return <img className={name} src={bluecoral}/>
+        })
+
         return(
             <>
              <Modal overlayClassName="Overlay" className="Modal" isOpen={this.state.modalIsOpen} onRequestClose={this.handleClose}>
@@ -210,10 +236,10 @@ listenScrollEvent=()=> {
                            <button className='modalbtn' onClick={this.handleClose}>X</button>
                        </div>
                       </Modal>
-
+                 
 
                 <Turtle/>
-
+            <div className='sand'></div>
             <div className='outer-wrapper' onScroll={this.listenScrollEvent}>
                 <div className='wrapper'>
 
@@ -223,18 +249,18 @@ listenScrollEvent=()=> {
                 <div className='plastic cups' onMouseDown={this.handleMousedown} onClick={this.handleClick}>  <img className="img b-cup" src={cup} alt=""/></div><br/>
                 <div className='plastic can'onMouseDown={this.handleMousedown} onClick={this.handleClick}> <img className="img b-can" src={can} alt=""/></div>
                    
-                    <div className='slide one'><h1>slide 1</h1><Ocean/></div>
+                    <div className='slide one'>{firstpg} {greyfish} {singleRock}{allpebbles}<Ocean/></div>
                     <hr/>
 
-                    <div className='slide two'><h1>slide 2</h1><PlasticStats plastics={this.state.plastics}/>  <Ocean/></div>
+                    <div className='slide two'>{crab} {bluecorals} {seaRocksthree} <PlasticStats plastics={this.state.plastics}/>  <Ocean/></div>
                     <hr/>
-                    <div className='slide three'><h1>slide 3</h1> <Jelly/>   <Ocean/></div>
+                    <div className='slide three'> <Jelly/> {baginfo}  <Ocean/></div>
                     <hr/>
-                    <div className='slide four'><h1>slide 4</h1><Charts {...this.state} /> <Ocean/></div>
+                    <div className='slide four'><Charts  {...this.state} /> <Ocean/></div>
                     <hr/>
-                    <div className='slide five'><h1>slide 5</h1>  <Ocean/></div>
+                    <div className='slide five'>  <Ocean/></div>
                     <hr/>
-                    <div className='slide six'><h1>slide 6</h1>  </div>
+                    <div className='slide six'>  </div>
                     
 
                 </div>
@@ -247,8 +273,3 @@ listenScrollEvent=()=> {
 
 
 
-{/* <div className='plastic bag' onClick={this.handleClick}>Plastic1</div><br/>
-<div className='plastic bottle' onClick={this.handleClick}>Plastic2</div><br/>
-<div className='plastic straw' onClick={this.handleClick}>Plastic3</div><br/>
-<div className='plastic cups' onClick={this.handleClick}>Plastic4</div><br/>
-<div className='plastic microBeads'onClick={this.handleClick}>Plastic5</div> */}

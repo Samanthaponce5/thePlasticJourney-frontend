@@ -9,7 +9,7 @@ export default class PlasticStats extends React.Component{
     render(){
         
       let filtered = this.props.plastics.filter((plastic)=> {
-        if(plastic.id === 5 || plastic.id===6 || plastic.id===7){
+        if(plastic.id === 6 || plastic.id===7 || plastic.id===8){
             return plastic
         }
       })

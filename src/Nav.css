@@ -2,7 +2,7 @@
 .navbar{
     width:300px;
     height:35%;
-    background-color:#5393cf5b;
+    background-color:#74e2f5;
       position:fixed;
     top:0;
     right:-300px;
@@ -69,7 +69,7 @@ z-index: 1000;
   .nav-link{
     text-decoration:none;
     font-size:22px;
-    color:#eee;
+    color:rgb(255, 255, 255);
     font-weight:300;
     letter-spacing:1px;
     text-transform:uppercase;

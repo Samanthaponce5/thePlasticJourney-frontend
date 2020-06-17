@@ -6,13 +6,66 @@
 
 }
 .donut-chart {
-    
+    z-index: 99;
     position: relative;
     border-radius: 50%;
     overflow: hidden;
     opacity: 0;
     transition:  opacity 2s ease-in-out;
+    cursor: pointer;
 }
+/* ===================floating=========================== */
+.donut-chart.f {
+    -webkit-animation: action 1.3s infinite  alternate;
+    animation: action 1.3s infinite  alternate;
+}
+@-webkit-keyframes action {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-25px); }
+}
+@keyframes action {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-25px); }
+}
+
+.donut-chart.s {
+    -webkit-animation: action 2.3s infinite  alternate;
+    animation: action 2.3s infinite  alternate;
+}
+@-webkit-keyframes action {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-25px); }
+}
+@keyframes action {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-25px); }
+}
+.donut-chart.t {
+    -webkit-animation: action 2.6s infinite  alternate;
+    animation: action 2.6s infinite  alternate;
+}
+@-webkit-keyframes action {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-25px); }
+}
+@keyframes action {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-25px); }
+}
+.donut-chart.fo {
+    -webkit-animation: action 2s infinite  alternate;
+    animation: action 2s infinite  alternate;
+}
+@-webkit-keyframes action {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-25px); }
+}
+@keyframes action {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-25px); }
+}
+/* ========================================================== */
+
 .donut-chart .quad1 {
     position: absolute;
     top: 0;
@@ -120,18 +173,31 @@
     width: 130px;
     height: 130px;
     background: #58c8da;
+    text-align: center;
+    line-height: 130px;
+    font-size: 30px;
+
+
 }
-.donut-chart.chart3 .chart-center1:after {
-    display: inline-block;
+/* .donut-chart.chart3 .chart-center1:after { */
+    /* display: inline-block;
     width: 100%;
     font-size: 17px;
     color: #ffffff;
     text-align: center;
-    /* text-align: right; */
     line-height: 24px;
     content: "       80% of       plastic litter in oceans comes from land-based sources";
-    white-space: pre-wrap;
-}
+    white-space: pre-wrap; */
+
+    /* display: inline-block;
+    width: 100%;
+    font-size: 30px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 130px; */
+    /* content: "80%";
+    white-space: pre-wrap; */
+/* } */
 
 /* ==============================================Second chart====================================================== */
 /* .donut-chart.chart3 .chart-center::before{
@@ -257,18 +323,28 @@
     width: 130px;
     height: 130px;
     background: #58c8da;
+    text-align: center;
+    line-height: 130px;
+    font-size: 30px;
 }
-.donut-chart.chart3 .chart-center2:after {
-    display: inline-block;
+/* .donut-chart.chart3 .chart-center2:after { */
+    /* display: inline-block;
     width: 100%;
     font-size: 16px;
     color: #ffffff;
     text-align: center;
     line-height: 26px;
     content: "         Ingesting           a single item of plastic has a 22%  chance of killing a sea turtle";
+    white-space: pre-wrap; */
+    /* display: inline-block;
+    width: 100%;
+    font-size: 30px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 130px;
+    content: "22%";
     white-space: pre-wrap;
-
-}
+} */
 /* ==================chart 3======================================= */
 .card3 {
     float: left;
@@ -384,17 +460,30 @@
     width: 130px;
     height: 130px;
     background: #58c8da;
+    text-align: center;
+    line-height: 130px;
+    font-size: 30px;
 }
-.donut-chart.chart3 .chart-center3:after {
-    display: inline-block;
+/* .donut-chart.chart3 .chart-center3:after { */
+    /* display: inline-block;
     width: 100%;
     font-size: 17px;
     color: #ffffff;
     text-align: center;
     line-height: 30px;
     content: "      52% of all      sea turtles have eaten plastic particles";
-    white-space:pre-wrap;
-}
+    white-space:pre-wrap; */
+/* 
+    display: inline-block;
+    width: 100%;
+    font-size: 30px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 130px; */
+    /* content: "   94% of the plastic that enters the ocean ends up on the seafloor"; */
+    /* content: "52%";
+    white-space: pre-wrap;
+} */
 
 
 /* ========================fourth chart============================= */
@@ -515,14 +604,27 @@
     width: 130px;
     height: 130px;
     background: #58c8da;
+    text-align: center;
+    line-height: 130px;
+    font-size: 30px;
 }
-.donut-chart.chart3 .chart-center4:after {
-    display: inline-block;
+/* .donut-chart.chart3 .chart-center4:after { */
+    /* display: inline-block;
     width: 100%;
     font-size: 16.7px;
     color: #ffffff;
     text-align: center;
     line-height: 29px;
     content: "   94% of the plastic that enters the ocean ends up on the seafloor";
+    white-space: pre-wrap; */
+
+    /* display: inline-block;
+    width: 100%;
+    font-size: 30px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 130px; */
+    /* content: "   94% of the plastic that enters the ocean ends up on the seafloor"; */
+    /* content: "94%";
     white-space: pre-wrap;
-}
+} */

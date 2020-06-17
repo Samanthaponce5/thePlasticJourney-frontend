@@ -5,19 +5,19 @@ export default class Feedback extends React.Component{
 
     state={
         text:'',
-        user:this.props.name
+        user_id:this.props.name.id
     }
 
 handlesubmit=(e)=>{
     e.preventDefault()
-    let {text,user} = this.state
+    let {text,user_id} = this.state
     fetch('http://localhost:3000/comments',{
         method:'POST',
         headers:{
             'Content-Type':'application/json',
             'Accept':'application/json'
         },
-        body: JSON.stringify({text,user})
+        body: JSON.stringify({text,user_id})
     })
     .then((resp)=>resp.json())
     .then((data)=>console.log('???????????????'))
@@ -31,11 +31,11 @@ handleChange=(e)=>{
 }
 
     render(){
-        console.log(this.state.user)
+        console.log(this.state.user_id)
         return(
             <>
             <h1>Comment Section</h1>
-        <h3>Hey {this.props.name} </h3>
+        <h3>Hey {this.props.name.name} </h3>
             <form onSubmit={this.handlesubmit}>
             <textarea onChange={this.handleChange} name='text' value={this.state.text}></textarea>
             <button type='submit'>Submit</button>

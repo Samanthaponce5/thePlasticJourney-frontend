@@ -21,7 +21,9 @@ import Feedback from './components/Feedback';
   }
 
 
-
+  setUser = (name) => {
+    this.setState({ name: name })
+  }
 
   
 
@@ -34,7 +36,7 @@ import Feedback from './components/Feedback';
 <Router >
 <Navbar/>
 <Switch>
-<Route exact path="/" render={(routerProps)=><Home handleChange={this.handleChange} name={this.state.name} routerProps={routerProps} />}/>
+<Route exact path="/" render={(routerProps)=><Home  setUser={this.setUser} handleChange={this.handleChange} name={this.state.name} routerProps={routerProps} />}/>
 <Route exact path='/about' render={(routerProps)=><About/>}/>
 <Route exact path='/sources' render={(routerProps)=><Resources/>}/>
 {/* {this.state.name.length>0? */}

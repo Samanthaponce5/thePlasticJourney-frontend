@@ -19,7 +19,9 @@ import Ocean from './Ocean'
        body:JSON.stringify({name})
      })
      .then((resp)=>resp.json())
-     .then(()=>this.props.routerProps.history.push('/journey'))
+     .then((data)=>{
+      this.props.setUser(data); 
+      this.props.routerProps.history.push('/journey')})
     }
    }
  

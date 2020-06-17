@@ -9,7 +9,7 @@
 .seaturtle {
     
     position: relative;
-    z-index: 3;
+    z-index: 1;
     transform: rotateY(180deg);
     /* transform: rotateY(360deg); */
     top: 500px;
@@ -51,20 +51,34 @@
     border: 15px solid;
     border-color: transparent transparent #82af2a transparent;
 }
+
 .seaturtle .eye {
-    width: 15px;
-    height: 15px;
+    width: 13px;
+    height: 13px;
     background: #000;
     border-radius: 50% 50% 0 0;
     position: absolute;
     top: 25px;
     left: 20px;
-    border-top: -2px solid #000;
+    border-top: 2px solid #000;
+    animation: eyeBlink 3s infinite;
 }
 .seaturtle .eye:before {
     content: "";
-    width: 10px;
+    width: 13px;
     height: 10px;
+}
+@keyframes eyeBlink {
+    0% {
+      height: 0;
+    }
+    10% {
+      height: 12px;
+    }
+  } 
+
+.seaturtle .eye::after{
+    animation: pupilBlink 3s infinite;
 }
 .seaturtle {
     display: flex;

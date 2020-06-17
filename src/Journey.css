@@ -3,6 +3,420 @@
     padding: 0;
 }
 
+li{
+    margin-bottom:1em ;
+    list-style: none;
+    list-style-type:square
+}
+.sand {
+    position:absolute;
+    background: #F79E51;
+    height: 8%;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    animation:animate 30s linear infinite;
+
+	animation-delay:0s;
+    /* border-radius: 20% 20% 0 0; */
+}
+
+     
+
+
+.plasinfo{
+    position: absolute;;
+    /* border: solid red; */
+    top: 41%;
+    left: 51%;
+    width: 5%; 
+    opacity: 0 ;
+    transition:  opacity 1.3s ease-in-out;
+    
+}
+.plasinfo {
+    -webkit-animation: action 2.5s infinite  alternate;
+    animation: action 2.5s infinite  alternate;
+}
+@-webkit-keyframes action {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-15px); }
+}
+@keyframes action {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-15px); }
+}
+
+.bageffect{
+    /* border: solid red; */
+    position:absolute;
+    width: 1.5%;
+    height: 25%;
+    font-size: 15px;
+    left: 44.9%;
+    top: 10%;
+
+}
+.bageffect{
+    -webkit-animation: action 2s infinite  alternate;
+    animation: action 2s infinite  alternate;
+}
+@-webkit-keyframes action {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-25px); }
+}
+@keyframes action {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-25px); }
+}
+
+
+
+
+.vl {
+    position: absolute;
+    border-left: 3px dotted rgb(245, 247, 248);
+    height: 500px;
+    top: 1em;
+    left: 51%;
+}
+  .plasticName{
+      /* border: solid red; */
+      /* position: relative;
+      width: 30%; */
+      /* left: 40%; */
+      text-align: center;
+    
+  }
+  .main{
+      /* border:solid rgb(0, 140, 255); */
+      position: relative;
+      width: 100%; 
+      /* overflow: hidden;  */
+    
+     
+  
+  }
+  .inner{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+     height: auto;
+  }
+ 
+.plasticInfo{
+    top: 1em;
+    /* border:solid rgb(0, 217, 255); */
+   position: absolute;
+   width: 50%;
+   height: 15em;
+   overflow:scroll;
+}
+
+.alternativeInfo{
+    top: 1em;
+    /* border:solid red; */
+    position: absolute;
+    height: 15em;
+    width: 50%;
+    left: 55%;
+   overflow: scroll;
+}
+ .modalbtn{
+     /* border: solid red; */
+     outline: none;
+     position:absolute;
+     height: 7.5%;
+     width: 3%;
+     left: 95.5%; 
+     top: .6em;
+     color: white;
+     font-weight: 800;
+     background-image: linear-gradient(0deg, #102b47, #74ccda);
+     border-radius: 50%
+ }
+
+ .seaone,.seatwo, .seathree{
+     position: absolute;
+     height: 120px;
+ }
+ .seaone{
+     height: 380px;
+     width: 170px;
+    left: 10.2%;
+    bottom: -1.2em;
+ }
+.seatwo{
+  
+    height: 400px;
+    width: 170px;
+    bottom: -1.7em;
+    left: 16.9%;
+}
+.seathree{
+    left: 91.1%;
+    bottom: -.8em;
+    height: 400px;
+    width: 150px;
+}
+
+ .uno,.dos,.thirdgrass,.fourthgrass,.fifthgrass,.sixthgrass{
+     z-index: 3;
+     position: absolute;
+     width: 200px;
+     height: 389px;
+     transform: rotate(-6deg);
+ }
+ .thirdgrass,.fourthgrass,.fifthgrass,.sixthgrass{
+    z-index: 3;
+    position: absolute;
+    height: 270px;
+    transform: rotate(-6deg);
+ }
+ .thirdgrass{
+     left: 47.5%;
+     bottom: 1em;
+ }
+ .fourthgrass{
+    left: 97.9%;
+    bottom: 1em;
+}
+.fifthgrass{
+    height: 380px;
+    left: 75.9%;
+    bottom: -3em;
+}
+.sixthgrass{
+    left: 76.9%;
+    bottom: .4em;
+}
+ .uno{
+    bottom: -4.5em;
+    left: -.2%;
+ }
+ .dos{
+     position: absolute;
+     left: 7.4%;
+     bottom: -4.3em;
+     transform: rotate(1deg);
+   
+ }
+ .fishy{
+     position:absolute;
+     height: 50px;
+     opacity: .5;
+ }
+ .single,.single2, .single3, .single4{
+    position:absolute;
+    height: 350px;
+    bottom:.3em;
+
+ }
+ .single{
+  
+     left: .1%;
+     transform: rotate(-5deg);
+ }
+.single2{
+    left: 48%;
+
+}
+.single3{
+    
+    left: 91.3%;
+}
+.sing1,.sing2,.sing3,.sing4,.sing5{
+    position: absolute;
+
+}
+.sing1{
+    left: 91.2%;
+    bottom:.6em;
+
+}
+.sing2{
+    left: 71%;
+    bottom:-2em;
+    height: 400px;
+    width:250px;
+    transform: rotate(-20deg);
+}
+.sing3{
+    left: 71.6%;
+    bottom:-4em;
+    height: 400px;
+    width:250px;
+    transform: rotate(35deg);
+}
+.sing4{
+    left: -.1%;
+    bottom:-.2em;
+   
+}
+
+ .crab{
+     position: absolute;
+     height: 150px;
+     bottom: .5em;
+     left: 28.3%;
+     animation-name: crabs;
+  animation-duration: 14s;
+  animation-iteration-count: infinite;
+ }
+ @keyframes crabs {
+    0%   { left:28.3%; }
+    25%  {left:26.3%; }
+    50%  {left:23%; }
+    75%  { left:26.3%; }
+    100% { left:28.3%; }
+  }
+
+ .unoazul,.dosazul,.tresazul{
+     position: absolute;
+     height: 160px;
+   
+
+
+ }
+.unoazul{
+    left: 28%;
+    bottom: 2.3em;
+    
+}
+.dosazul{
+    bottom: 1.6em;
+    left: 21.2%;
+    height: 260px;
+    width: 150px;
+
+}
+.tresazul{
+    height: 270px;
+    width: 170px;
+    bottom: -1em;
+    left: 51%;
+}
+/* Rocks with plants on them */
+.frock,.srock,.trock,.fourthrock,.fifthrock,.sixrock{
+    position:absolute;
+    height: 140px;
+    bottom: 1.6em;
+    transform: rotate(8deg);
+
+
+}
+.frock{
+    left: 33.5%;
+    transform: rotate(-13deg);
+}
+.srock{
+    left: 33.8%;
+    width: 170px;
+}
+.trock{
+    left: 21%;
+    width: 210px;
+}
+.fourthrock{
+    left: 98.7%;
+    height: 160px;
+    width: 200px;
+}
+.fifthrock{
+
+    left: 83%;
+    height: 160px;
+    width: 200px;
+    bottom: 1.1em;
+
+}
+.sixrock{
+    left: 58%;
+
+
+}
+
+.p,.e,.b,.v,.l,.i,.s{
+    position: absolute;
+height: 190px;
+bottom: 1.6em;
+
+}
+.p{
+    left: 50.8%;
+}
+.b{
+    left: 17%;
+}
+.l{
+    bottom: -1.8em;
+    left: 16.7%;
+    transform: rotate(-48deg);
+    
+}
+.i{
+    left: 16.7%; 
+}
+
+
+/* group  one of pebblessss */
+.v{
+    left: 10.3%;
+    /* border: solid rgb(255, 0, 34); */
+}
+
+.e{
+    left: 10%;
+    /* border: solid rgb(89, 0, 255); */
+}
+.s{
+    bottom: 3.4em;
+    transform: rotate(48deg);
+    left: 10.5%;  
+    /* border: solid rgb(102, 255, 0); */
+}
+
+
+
+    .Modal {
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        display: block;
+        padding: 2em;
+        height:18em;
+        min-width: 50em;
+        max-width: 70%;
+        color: rgb(255, 253, 253);
+       overflow: hidden;
+        background-image: linear-gradient(0deg, #102b47, #74ccda);
+        border-radius: 1.5em;
+        transform: translate(-50%, -50%);
+        outline: transparent;
+      }
+      .Overlay {
+
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(35, 86, 116, 0.884);
+      }
+
+
+.img{
+    z-index: 90;
+    width:90px;
+    height:90px;
+ margin-top:5%;
+ transform: rotate(-40deg);
+ /*Scale down will take the necessary specified space that is 100px x 100px without stretching the image*/
+     object-fit:scale-down;
+}
 
 
 .slide{
@@ -24,25 +438,11 @@
     scroll-behavior: smooth;
 }
 
-.one{ 
+.one,.two,.three,.four,.five,.six{ 
 /* background-image: radial-gradient(#65c6c4, #113f67); */
-background-image: linear-gradient(0deg, #022244, #58c8da);
+background-image: linear-gradient(0deg, #011d3a, #57b1be);
 }
-    .two{
-  background-image: linear-gradient(0deg, #022244, #58c8da);
-}
-.three{
-  background-image: linear-gradient(0deg, #022244, #58c8da);
-}
-.four{
-  background-image: linear-gradient(0deg, #022244, #58c8da);
-}
-.five{
-  background-image: linear-gradient(0deg, #022244, #58c8da);
-}
-.six{
-      background-image: linear-gradient(0deg, #022244, #58c8da);
-}
+ 
 
 
 .text{
@@ -63,24 +463,7 @@ background-image: linear-gradient(0deg, #022244, #58c8da);
     width: 300px;
     height: 300px;
 }
-/* .seven{
-    background: rgb(64, 101, 224);
-}
-.eight{
-    background: rgb(165, 64, 224);
-}
-.nine{
-    background: rgb(173, 64, 224);
-}
-.ten{
-    background: rgb(12, 201, 169);
-}
-.eleven{
-    background: rgb(26, 119, 65);
-}
-.twelve{
-    background: rgb(177, 13, 89);
-} */
+
 
 .outer-wrapper{
     width:100vh;

@@ -4,7 +4,7 @@ export default function Ocean(){
 
     return(
        
-        <div class="bubbles">
+        <div className="bubbles">
           <span></span>
           <span></span>
           <span></span>

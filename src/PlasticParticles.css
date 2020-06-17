@@ -1,6 +1,7 @@
 .plastic{
-    z-index: 999;
-    
+    z-index: 99;
+    opacity: .6;
+
     position: absolute;
     color:blue;
     text-align:center;
@@ -13,38 +14,97 @@
   
       padding-top: 4px;
 
-    box-shadow: 0px 0px 9px 4px #F5F5F5;
+    /* box-shadow: 0px 0px 9px 4px #F5F5F5; */
+    box-shadow: 0px 0px 5px 4px rgb(245, 245, 245);
+
     animation: glow 1.5s linear infinite alternate;
   }
+
+  @keyframes pulse {
+    0% {
+      border: 1px solid rgba(255, 0, 0, 1)
+    }
+    100% {
+      border: 1px solid rgba(255, 0, 0, 0)
+    }
+  }
+  .plastic {
+    -webkit-animation: action 1.5s infinite  alternate;
+    animation: action 1.5s infinite  alternate;
+}
+@-webkit-keyframes action {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-35px); }
+}
+@keyframes action {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-35px); }
+}
+
   .plastic.bag{
     position: absolute;
-    top: 32%;
-    left: 33%;
+    top: 34%;
+    left: 42.7%;
+    /* top: 34%;
+    left: 93.3%; */
   }
   .plastic.bottle{
     position: absolute;
     top: 39%;
-    left: 22%;
+    left: 15%;
+    /* top: 62%;
+    left: 92.3%; */
   }
   .plastic.straw{
     position: absolute;
-    top: 82%;
+    top: 75%;
     left: 62%;
+    /* top: 34%;
+    left: 96.5%; */
   }
   .plastic.cups{
     position: absolute;
     top: 57%;
     left: 77%;
+    /* top: 62%;
+    left: 97.6%; */
   }
-  .plastic.microBeads{
+  .plastic.can{
     position: absolute;
-    top: 66%;
-    left: 42%;
+    top: 32%;
+    left: 33%;
+   
+    /* top: 23%;
+    left: 95%; */
+  }
+
+  .b-bag{
+    transform: rotate(190deg);
+
+  }
+  .b-cup{
+    width:60px;
+    height:50px;
+ margin-top:19%;
+ transform: rotate(40deg);
+ /*Scale down will take the necessary specified space that is 100px x 100px without stretching the image*/
+     object-fit:scale-down;
   }
   
   
   @keyframes glow{
     to {
       box-shadow: 0px 0px 20px 6px #F5F5F5;
+      /* box-shadow: 0px 0px 20px 6px rgba(255, 255, 255, 0.986); */
     }
+  }
+  .collected{
+    position: absolute;
+    z-index: 100;
+    left: 94%;
+    top: 8%;
+    font-size: 35px;
+  }
+  .collected2{
+    font-size: 10px;
   }

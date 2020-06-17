@@ -10,7 +10,8 @@
   height: 100px;
   margin: auto;
   display: block;
-  
+  -webkit-animation: action 1s infinite  alternate;
+    animation: action 1s infinite  alternate;
   
   font-family: 'Lemon', cursive;
   font-size: 70px;

@@ -5,15 +5,23 @@ export default class Charts extends React.Component{
   handleMouseEnter=(e)=>{
     if(e.target.className==='chart-center1'){
       document.body.querySelector('.plasinfo.part1').style.opacity='1'
+      document.body.querySelector('.hover.char').style.opacity='0'
+
     }
     if(e.target.className==='chart-center3'){
       document.body.querySelector('.plasinfo.part2').style.opacity='1'
+      document.body.querySelector('.hover.char').style.opacity='0'
+
     }
     if(e.target.className==='chart-center4'){
       document.body.querySelector('.plasinfo.part3').style.opacity='1'
+      document.body.querySelector('.hover.char').style.opacity='0'
+
     }
     if(e.target.className==='chart-center2'){
       document.body.querySelector('.plasinfo.part4').style.opacity='1'
+      document.body.querySelector('.hover.char').style.opacity='0'
+
     }
   }
 
@@ -41,6 +49,7 @@ export default class Charts extends React.Component{
     return(
         <>
  
+ <h3 className='hover char'>Hover Over us!</h3>
 
  <div className="card1">
   <div className="donut-chart f">

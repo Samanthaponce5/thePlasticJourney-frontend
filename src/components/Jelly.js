@@ -9,14 +9,18 @@ export default class Jelly extends React.Component{
             // document.body.cursor = 'pointer'
             document.body.querySelector('.fact.facttwo').style.opacity='1'
 
-          document.body.querySelector('.fact.facttwo').style.opacity='1'
+          document.body.querySelector('.hover').style.opacity='0'
         }
         if(e.target.className==='jellyletters numerotres'){
           document.body.querySelector('.fact.factthree').style.opacity='1'
+          document.body.querySelector('.hover').style.opacity='0'
+
         }
         if(e.target.className==='jellyletters numerouno'){
             // document.body.querySelector('#containers3').style.animation='paused'
           document.body.querySelector('.fact.factone').style.opacity='1'
+          document.body.querySelector('.hover').style.opacity='0'
+
         }
         
       }
@@ -53,6 +57,7 @@ export default class Jelly extends React.Component{
         })
     return(
         <>
+        <h3 className='hover'>Hover Over us!</h3>
         <div  id="containers" >
     <div className="fish f1">
         <div  className="bell " ><h1 onMouseEnter={this.handleMouseEnter} onMouseOut={this.handleMouseOut} className='jellyletters numerodos'>Fact 2</h1></div>

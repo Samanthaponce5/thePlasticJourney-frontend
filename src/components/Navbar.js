@@ -32,7 +32,7 @@ import '../Nav.css';
     <ul className="nav-list">
             <Link className='nav-link' to='/'><li className='nav-item'>Home</li></Link>
             <Link className='nav-link' to='/about'><li className='nav-item'>About</li></Link>
-            <Link className='nav-link' to='/howtohelp'><li className='nav-item'>Resources</li></Link>
+            <Link className='nav-link' to='/sources'><li className='nav-item'>Sources</li></Link>
     </ul>
   </nav>
 </div>
@@ -47,12 +47,3 @@ import '../Nav.css';
 }
 
 export default Navbar;
-{/* <div class="menu">
-    <div class="title">MENU</div>
-    <ul class="nav">
-    <Link to='/'><li>Home</li></Link>
-    <Link to='/about'><li>About</li></Link>
-    <Link to='/howtohelp'><li>How to help</li></Link>
-    </ul>
-</div>
- */}

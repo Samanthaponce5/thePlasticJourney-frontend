@@ -11,6 +11,8 @@ import Jelly from './Jelly'
 import PlasticStats from './PlasticStats'
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
+import Intro from './Intro'
+import Collected from './Collected'
 
 
 export default class Journey extends React.Component{
@@ -20,7 +22,7 @@ export default class Journey extends React.Component{
         plastics:[],
         comparePlastics:[],
         collect:true,
-        collected:false,
+        collected:0,
         modalIsOpen:false,
         mapPlastic:[]
     
@@ -46,13 +48,13 @@ this.setState({modalIsOpen:false})
                 if(!entry.isIntersecting){
                     return
                 }
-                console.log(entry.target);
+                // console.log(entry.target);
                 entry.target.classList.toggle("chart3");
                 observer.unobserve(entry.target)
+
             })
         },options)
     
-        
         sections.forEach(section=>{
             observer.observe(section)
         })
@@ -82,24 +84,43 @@ listenScrollEvent=()=> {
         document.body.getElementsByClassName("seaturtle")[0].style.transform = "rotateY(180deg)";;
 
     // console.log('Scroll down event detected!', wrapper.scrollTop);
-    }else{
+    }else {
         document.body.getElementsByClassName("seaturtle")[0].style.transform = "rotateY(360deg)";;
 
         // console.log('Scroll up event detected!', wrapper.scrollTop);
-
     }
+    if(currentScroll> 50){
+        // console.log('greater')
+        document.body.querySelector('.blob').style.opacity = '0'
+        document.body.querySelector('.bubbletext').style.opacity = '0'
+    }else{
+         document.body.querySelector('.blob').style.opacity = '1'
+         document.body.querySelector('.bubbletext').style.opacity = '1'
+
+}
+if(currentScroll === 0 ){
+    document.body.getElementsByClassName("seaturtle")[0].style.transform = "rotateY(180deg)";;
+
 }
 
+
+}
+handleClickfeedback=()=>{
+    // console.log(this.props)
+    this.props.routerProps.history.push('/feedback')
+}
     handleClick=(e)=>{
+        const{ collected}=this.state
         // e.target.style.opacity = "0";
         // this.setState({collect:false, collected:true})
         if(e.target.className==='plastic bottle' ||e.target.className=== "img b-bottle " ){
             // console.log('plastic2')
+            document.body.querySelector('.firstinst').style.opacity='0'
             document.body.querySelector('.plastic.bottle').style.left = "92.3%";
             document.body.querySelector('.plastic.bottle').style.top = "62%";
             document.body.querySelector('.plastic.bottle').classList.add('afterBottle')
             document.body.querySelector('.img.b-bottle').classList.add('afterBottleImg')
-
+            this.setState({collected:collected+1})
 
         }
         if(e.target.className==='plastic can' || e.target.className === "img b-can"){
@@ -109,6 +130,7 @@ listenScrollEvent=()=> {
 
             document.body.querySelector('.plastic.can').classList.add('afterCan')
             document.body.querySelector('.img.b-can').classList.add('afterCanImg')
+            this.setState({collected:collected+1})
 
         }
 
@@ -119,6 +141,7 @@ listenScrollEvent=()=> {
 
             document.body.querySelector('.plastic.cups').classList.add('afterCup')
             document.body.querySelector('.img.b-cup').classList.add('afterCupImg')
+            this.setState({collected:collected+1})
 
         }
 
@@ -129,6 +152,7 @@ listenScrollEvent=()=> {
 
             document.body.querySelector('.plastic.straw').classList.add('afterStraw')
             document.body.querySelector('.img.b-straw').classList.add('afterStrawImg')
+            this.setState({collected:collected+1})
 
         }
 
@@ -139,6 +163,7 @@ listenScrollEvent=()=> {
 
             document.body.querySelector('.plastic.bag').classList.add('afterBag')
             document.body.querySelector('.img.b-bag').classList.add('afterBagImg')
+            this.setState({collected:collected+1})
 
         }
         
@@ -211,7 +236,7 @@ let allpebbles = pebbles.map((name)=><img className={name} src={pebble}/>)
         let baginfo = this.state.plastics.map((plastic)=>{if(plastic.name==='Plastic bag info'){
         return<h1 className='bageffect'>{plastic.info}</h1>
         }})
-        let turtleStyle=document.body.getElementsByClassName('seaturtle')[0]
+        let turtleStyle=document.body.querySelector('.seaturtle')
         //Style isn't working??????
         let greenrocks= ['uno','dos','thirdgrass','fourthgrass','fifthgrass','sixthgrass']
        let firstpg= greenrocks.map((name)=>{
@@ -242,31 +267,35 @@ let allpebbles = pebbles.map((name)=><img className={name} src={pebble}/>)
                            <button className='modalbtn' onClick={this.handleClose}>X</button>
                        </div>
                       </Modal>
+                
+                   <Collected {...this.state}/>  
                  
+                        
 
                 <Turtle/>
+
             <div className='sand'></div>
             <div className='outer-wrapper' onScroll={this.listenScrollEvent}>
                 <div className='wrapper'>
-
+            
                 <div className='plastic bag'onMouseDown={this.handleMousedown} onClick={this.handleClick}><img className="img b-bag " src={bag} alt=""/></div><br/>
                 <div className='plastic bottle' onMouseDown={this.handleMousedown} onClick={this.handleClick}>  <img className="img b-bottle " src={bottle} alt=""/></div><br/>
                 <div className='plastic straw' onMouseDown={this.handleMousedown} onClick={this.handleClick}>  <img className="img b-straw" src={straw} alt=""/></div><br/>
                 <div className='plastic cups' onMouseDown={this.handleMousedown} onClick={this.handleClick}>  <img className="img b-cup" src={cup} alt=""/></div><br/>
                 <div className='plastic can'onMouseDown={this.handleMousedown} onClick={this.handleClick}> <img className="img b-can" src={can} alt=""/></div>
                    
-                    <div className='slide one'>{firstpg} {greyfish} {thethrees}{allpebbles}<Ocean/></div>
+                    <div className='slide one'><Intro name={this.props.name}/> {firstpg} {greyfish} {thethrees}{allpebbles}<Ocean/></div>
                     {/* <hr/> */}
 
-        <div className='slide two'>{allthree}{crab} {bluecorals} {seaRocksthree} <PlasticStats plastics={this.state.plastics}/>  <Ocean/></div>
+        <div className='slide two'><p className='firstinst'>collect me!→</p> {allthree}{crab} {bluecorals} {seaRocksthree} <PlasticStats plastics={this.state.plastics}/>  <Ocean/></div>
                     {/* <hr/> */}
                     <div className='slide three'> <Jelly {...this.state}/>   <Ocean/></div>
                     {/* <hr/> */}
                     <div className='slide four'><Charts  {...this.state} /> <Ocean/></div>
                     {/* <hr/> */}
-                    <div className='slide five'>  <Ocean/></div>
+                    <div className='slide five'> section 5 <Ocean/></div>
                     {/* <hr/> */}
-                    <div className='slide six'> {sings} </div>
+                    <div className='slide six'> {sings} <button onClick={this.handleClickfeedback} >Continue</button></div>
                     
 
                 </div>

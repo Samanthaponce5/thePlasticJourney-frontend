@@ -2,13 +2,13 @@ import React from 'react';
 import Turtle from './components/Turtle';
 import About from './components/About';
 import Home from './components/Home';
-import Help from './components/Help';
+import Resources from './components/Resources';
 import Navbar from './components/Navbar';
 import './App.css';
-import './Turtle.css';
 
 import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
 import Journey from './components/Journey';
+import Feedback from './components/Feedback';
 
 
  class App extends React.Component{
@@ -36,11 +36,12 @@ import Journey from './components/Journey';
 <Switch>
 <Route exact path="/" render={(routerProps)=><Home handleChange={this.handleChange} name={this.state.name} routerProps={routerProps} />}/>
 <Route exact path='/about' render={(routerProps)=><About/>}/>
-<Route exact path='/howtohelp' render={(routerProps)=><Help/>}/>
+<Route exact path='/sources' render={(routerProps)=><Resources/>}/>
 {/* {this.state.name.length>0? */}
-<Route exact path="/journey"  render={(routerProps)=><Journey />}/>
+<Route exact path="/journey"  render={(routerProps)=><Journey {...this.state} routerProps={routerProps} />}/>
 {/* <h1>Not Found</h1>
   } */}
+<Route exact path='/feedback' render={(routerProps)=><Feedback {...this.state} routerProps={routerProps}/>}/>
 
 </Switch>
 </Router >

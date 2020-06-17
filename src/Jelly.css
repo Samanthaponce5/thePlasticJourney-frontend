@@ -1,4 +1,14 @@
+.hover{
+    position: relative;
+    left: 48%;
+    top: 10%;
+    transition: opacity 1.7s ease-in-out;
+}
+.hover.char{
+    left: 20%;
+    top: 40%;
 
+}
 .fact{
     position: absolute;
     width: 7%;

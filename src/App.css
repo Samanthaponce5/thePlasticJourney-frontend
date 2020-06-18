@@ -1,5 +1,130 @@
 @import url(https://fonts.googleapis.com/css?family=Lemon);
 
+.hover.f{
+  left: 65%;
+  top: 15em;
+}
+
+.par{
+  position: relative;
+  /* border: solid red ; */
+  height: 150px;
+  width: 150px;
+  left: 45%;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.par,.speech-bubble{  
+    animation-name: floating;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  
+}
+
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    55%  { transform: translate(0,20px); }
+    to   { transform: translate(0, -0px); }    
+}
+
+.par,.speech-bubble {
+    animation-name: tossing;
+    -webkit-animation-name: tossing;
+    
+   animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction : alternate-reverse;
+    -webkit-animation-direction : alternate-reverse;
+  
+  
+}
+
+@keyframes tossing {
+    0% {
+          transform: rotate(4.7deg);
+     
+    }
+
+    100% {
+        transform: rotate(-4.5deg); 
+    }                       
+        
+}
+/* first fish */
+.par.t52{
+  /* border: solid rgb(0, 255, 85) ; */
+  position: relative;
+  top: 10em;
+  
+}
+/* second fish */
+.par.t53{
+  /* border: solid rgb(255, 238, 0) ; */
+  position: relative;
+  left: 54%;
+
+}
+/* third fish */
+.par.t5{
+  /* border: solid rgb(25, 0, 255) ; */
+  position: relative;
+  top: 15em;
+  left: 77%;
+
+}
+
+
+.speech-bubble {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+	background: #48caf1e5;
+  border-radius: .6em;
+  width: 200px;
+  height: 100px;
+  color: white;
+  text-align: center;
+  
+}
+
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 35px solid transparent;
+	border-left-color: #48caf1e5;
+	border-right: 0;
+	border-top: 0;
+	margin-top: -17.5px;
+	margin-right: -35px;
+}
+.speech-bubble.fish1{
+  /* border: solid red; */
+  top: 25%;
+  left: 73.7%;
+}
+.speech-bubble.fish2{
+  left: 76.1%;
+  top: 5%;
+  width: 200px;
+  height: 100px;
+}
+.speech-bubble.fish3{
+  
+  left: 78.1%;
+  top: 35%;
+  width: 200px;
+  height: 150px;
+}
+
 .firstinst{
   position: absolute;
   left: 14.2%;
@@ -20,8 +145,18 @@
   padding: 24px;
   text-align: center;
   color: rgb(77, 135, 168);
-  left: 26%;
+  left: -30%;
   transition: opacity .5s ease-in-out;
+  -webkit-animation: slide 0.5s forwards;
+  -webkit-animation-delay: 2s;
+  animation: slidey 1.5s forwards;
+  animation-delay: 0.5s;
+}
+@-webkit-keyframes slidey {
+  100% { left: 26%; }
+}
+@keyframes slidey {
+  100% { left: 26%; }
 }
 
 .bubble-bottom-left:before {
@@ -36,6 +171,7 @@
   left: 32px;
   bottom: -24px;
 }
+
 
 .blob {
   position: relative;

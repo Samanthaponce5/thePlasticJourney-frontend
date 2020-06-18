@@ -8,7 +8,7 @@ export default class UserInput extends React.Component{
         return(
              <div className='homeform'>
             <form onSubmit={this.props.handleSubmit}>
-            <input  className='userform' name='name' type='text' placeholder='Enter Name' value={this.props.name} onChange={this.props.handleChange}  />
+            <input  className='userform' name='name' type='text' placeholder='Enter Name' value={this.props.name.name} onChange={this.props.handleChange}  />
             <button className='userbtn'>Start Journey</button>
             
             </form>

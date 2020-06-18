@@ -20,7 +20,8 @@ li{
     left: 0;
     animation:animate 30s linear infinite;
 
-	animation-delay:0s;
+    animation-delay:0s;
+    z-index: 1000;
     /* border-radius: 20% 20% 0 0; */
 }
 
@@ -482,4 +483,29 @@ background-image: linear-gradient(0deg, #011d3a, #57b1be);
 
 h1{
     text-align: center;
+}
+
+
+
+.bottlesb{
+    position: relative;
+    transform: rotate(1deg);
+    left: 8em;
+}
+.Bagsb{
+    position: relative;
+    transform: rotate(1deg);
+    left: 8em;
+}
+.Strawsb{
+    position: relative;
+    transform: rotate(-23deg);
+    left: 10em;
+    /* width: 250%; */
+    height: 80%;
+}
+.Styrofoamb{
+    position: relative;
+    transform: rotate(1deg);
+    left: 8em;
 }

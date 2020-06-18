@@ -509,3 +509,26 @@ h1{
     transform: rotate(1deg);
     left: 8em;
 }
+
+
+.lastmessage{
+    position: relative;
+    left: 64%;
+    width: 900px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.lastmessage.pa2{
+    /* border: solid red; */
+    position: relative;
+    left: 67.6%;
+
+    top: 5%;
+}
+.lastmessage.pa1{
+    /* border: solid red; */
+    top: 2.5%;
+    left: 71%;
+    width: 350px;
+
+}

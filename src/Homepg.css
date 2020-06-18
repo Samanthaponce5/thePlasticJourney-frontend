@@ -85,12 +85,17 @@ animation: aniblur 8.7s infinite;
 width: 90px;
 height: 90px;
 transform: scaleX(-1);
-top: 37%;
+top: 80%;
 z-index: 1004;
 /* -webkit-animation:fly-turn .5s linear infinite, go-left-right 4s infinite alternate; */
 /* -moz-animation:fly-turn .5s linear infinite, go-left-right 4s infinite alternate; */
 transition: all 1s ease-in-out;
 animation: ani 7.7s infinite;
+}
+
+.fish-sec-s.home{
+  top: 37%;
+
 }
 
 .another{
@@ -188,3 +193,20 @@ transform: scaleX(1);
 }
 /* ANIMATION */
 
+.seahorse{
+  position: absolute;
+  width:20%;
+  height:50%;
+  left: 82%;
+  top:30%;
+  filter: grayscale(50%) brightness(79%) hue-rotate(211deg);
+-webkit-filter: grayscale(50%) brightness(79%) hue-rotate(211deg);
+  
+}
+.seahorse.blues{
+  position: absolute;
+  top: 30%;
+  left:-4%;
+  transform: scaleX(-1);
+
+}

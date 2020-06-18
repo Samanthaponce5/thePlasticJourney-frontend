@@ -47,7 +47,7 @@ return (
  <div className="bg"></div>
 <h1 className='entrancetitle'>Jack's Journey</h1>
 <UserInput name={this.props.name} handleSubmit={this.handleSubmit} handleChange={this.props.handleChange}/>
- <img className='fish-sec-s'src={ require('../img/fish.png')}/>
+ <img className='fish-sec-s home'src={ require('../img/fish.png')}/>
 <Ocean/>
 </>
  );

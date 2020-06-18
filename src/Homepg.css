@@ -201,12 +201,52 @@ transform: scaleX(1);
   top:30%;
   filter: grayscale(50%) brightness(79%) hue-rotate(211deg);
 -webkit-filter: grayscale(50%) brightness(79%) hue-rotate(211deg);
-  
 }
 .seahorse.blues{
   position: absolute;
   top: 30%;
   left:-4%;
   transform: scaleX(-1);
+}
+.fam{
+  position: absolute;
+  left:67.2%;
+  width: 1%;
+  height: 20%;
+  top: 62%;
+  transform: scaleX(1);
+  transition: all 1s ease-in-out;
+  animation: ani-horse 7.7s infinite;
+  filter: grayscale(50%) brightness(79%) hue-rotate(211deg);
+  -webkit-filter: grayscale(50%) brightness(79%) hue-rotate(211deg);
+}
+.fam.triple{
+  left: 17.8%;
+  top: 58%;
+  /* border: solid red; */
 
+
+
+}
+.squid{
+  position: absolute;
+  width: 50px;
+  height: 40px;
+  left:75%;
+  top: 70%;
+  filter: grayscale(50%) brightness(70%) hue-rotate(88deg);
+  -webkit-filter: grayscale(50%) brightness(70%) hue-rotate(88deg);
+  animation: ani-squid 7.7s infinite;
+  transform: scaleX(-1)
+}
+@keyframes ani-squid {
+0% {
+left:75%;
+}
+50% {
+left: 80%;
+}
+100% {
+left: 75%;transform: scaleX(1);
+}
 }

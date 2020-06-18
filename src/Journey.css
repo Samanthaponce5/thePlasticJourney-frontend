@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -187,12 +188,33 @@ li{
 }
 .fifthgrass{
     height: 380px;
-    left: 75.9%;
+    left: 72.9%;
     bottom: -3em;
+
 }
 .sixthgrass{
-    left: 76.9%;
-    bottom: .4em;
+    left: 73.9%;
+    bottom: -1.5em;
+}
+
+
+.seventhgrass{
+   z-index: 3;
+   position: absolute;
+   width: 190px;
+   height: 325px;
+   transform: rotate(-6deg);
+   bottom: -7%;
+   left: 66%;
+}
+.eighthgrass{
+   z-index: 3;
+   position: absolute;
+   width: 190px;
+   height: 389px;
+   transform: rotate(-6deg);
+   bottom: -7%;
+   left: 59%;
 }
  .uno{
     bottom: -4.5em;
@@ -229,32 +251,22 @@ li{
     
     left: 91.3%;
 }
-.sing1,.sing2,.sing3,.sing4,.sing5{
+.sing1,.sing4,.sing5{
     position: absolute;
 
 }
 .sing1{
-    left: 91.2%;
-    bottom:.6em;
+    left: 91.5%;
+    bottom:2em;
+    height: 250px;
+
 
 }
-.sing2{
-    left: 71%;
-    bottom:-2em;
-    height: 400px;
-    width:250px;
-    transform: rotate(-20deg);
-}
-.sing3{
-    left: 71.6%;
-    bottom:-4em;
-    height: 400px;
-    width:250px;
-    transform: rotate(35deg);
-}
+
 .sing4{
-    left: -.1%;
-    bottom:-.2em;
+    left: .4%;
+    bottom:2em;
+    height: 200px;
    
 }
 
@@ -328,7 +340,7 @@ li{
 }
 .fifthrock{
 
-    left: 83%;
+    left: 81.4%;
     height: 160px;
     width: 200px;
     bottom: 1.1em;

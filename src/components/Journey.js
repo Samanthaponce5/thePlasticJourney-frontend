@@ -245,7 +245,7 @@ handleClickfeedback=()=>{
         let allthree = leaves.map((name)=><img className={name} src={three}/>)
 let pebbles = ['p','e','b','v','l','i','s']
 let allpebbles = pebbles.map((name)=><img className={name} src={pebble}/>)
-            let nobottomr = ['sing1','sing2','sing3','sing4']
+            let nobottomr = ['sing1','sing4']
             let sings = nobottomr.map((name)=><img className={name} src={nobttm}/>)
         let seaRocks=["frock","srock","trock",'fourthrock','fifthrock',"sixrock"]
         let seaRocksthree = seaRocks.map((name)=> <img className={name} src={seaRock}/>)
@@ -258,6 +258,10 @@ let allpebbles = pebbles.map((name)=><img className={name} src={pebble}/>)
     //    let firstpg= greenrocks.map((name)=>{
     //     return <img className={name} src={greenRock}/>
     //     })
+   let slide2 = < img className='fam' src={require("../img/fam.gif")}/>
+    let slide22 =< img className='fam triple'  src={require("../img/fam.gif")}/>
+    let grey =  < img className='squid' src={require("../img/greyFish.png")}/>
+
         let blue= ['unoazul','dosazul','tresazul']
         let bluecorals= blue.map((name)=>{
             return <img className={name} src={bluecoral}/>
@@ -310,7 +314,7 @@ let allpebbles = pebbles.map((name)=><img className={name} src={pebble}/>)
                 <div className='plastic can'onMouseDown={this.handleMousedown} onClick={this.handleClick}> <img className="img b-can" src={can} alt=""/></div>
                     <div className='slide one'><Intro name={this.props.name}/>  {thethrees}{allpebbles}<Ocean/></div>
                     {/* <hr/> */}
-        <div className='slide two'><p className='firstinst'>collect me!→</p> {greyfish} {allthree}{crab} {bluecorals} {seaRocksthree} <PlasticStats plastics={this.state.plastics}/>  <Ocean/></div>
+        <div className='slide two'><p className='firstinst'>collect me!→</p>{grey} {slide2} {slide22} {greyfish} {allthree}{crab} {bluecorals} {seaRocksthree} <PlasticStats plastics={this.state.plastics}/>  <Ocean/></div>
                     {/* <hr/> */}
                     <div className='slide three'> <Jelly {...this.state}/>   <Ocean/></div>
                     {/* <hr/> */}

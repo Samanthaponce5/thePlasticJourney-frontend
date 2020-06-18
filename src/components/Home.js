@@ -20,23 +20,37 @@ import Ocean from './Ocean'
      })
      .then((resp)=>resp.json())
      .then((data)=>{
-      this.props.setUser(data); 
+      // this.props.setUser(data); 
       this.props.routerProps.history.push('/journey')})
     }
    }
  
 
-  render(){
+//   render(){
     
+// // console.log('Home',this.props.name)
+
+//   return (
+//     <>
+// <h1 className='entrancetitle'>Jack's tales</h1>
+// <UserInput name={this.props.name} handleSubmit={this.handleSubmit} handleChange={this.props.handleChange}/>
+// </>
+//     );
+//   }
+// }
+
+render(){
+  let names=['firsts-s','seconds-s','thirds-s','fourths-s','fifths-s','sixths-s']
 // console.log('Home',this.props.name)
-
-  return (
-    <>
-<h1 className='entrancetitle'>Jack's tales</h1>
+return (
+ <>
+ <div className="bg"></div>
+<h1 className='entrancetitle'>Jack's Journey</h1>
 <UserInput name={this.props.name} handleSubmit={this.handleSubmit} handleChange={this.props.handleChange}/>
+ <img className='fish-sec-s'src={ require('../img/fish.png')}/>
+<Ocean/>
 </>
-    );
-  }
+ );
 }
-
+}
 export default Home;

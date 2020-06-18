@@ -21,9 +21,9 @@ import Feedback from './components/Feedback';
   }
 
 
-  setUser = (name) => {
-    this.setState({ name: name })
-  }
+  // setUser = (name) => {
+  //   this.setState({ name: name })
+  // }
 
   
 
@@ -41,8 +41,8 @@ import Feedback from './components/Feedback';
 <Route exact path='/sources' render={(routerProps)=><Resources/>}/>
 {/* {this.state.name.length>0? */}
 <Route exact path="/journey"  render={(routerProps)=><Journey {...this.state} routerProps={routerProps} />}/>
-{/* <h1>Not Found</h1>
-  } */}
+{/* //  <h1>Not Found</h1>
+//  } */}
 <Route exact path='/feedback' render={(routerProps)=><Feedback {...this.state} routerProps={routerProps}/>}/>
 
 </Switch>

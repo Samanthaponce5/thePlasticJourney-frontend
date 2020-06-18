@@ -14,6 +14,7 @@ import Modal from 'react-modal';
 import Intro from './Intro'
 import Collected from './Collected'
 import Fishes from './Fishes'
+import Lastpgmessage from './Lastpgmessage'
 
 
 export default class Journey extends React.Component{
@@ -100,11 +101,23 @@ listenScrollEvent=()=> {
 
 }
 if(currentScroll === 0 ){
-    document.body.getElementsByClassName("seaturtle")[0].style.transform = "rotateY(180deg)";;
+    document.body.getElementsByClassName("seaturtle")[0].style.transform = "rotateY(180deg)";
 
 }
-if(currentScroll >= 13092){
-    console.log('okur')
+if(currentScroll >= 15800){
+    document.body.getElementsByClassName("lastmessage")[0].style.opacity = "1";
+    document.body.querySelector(".lastmessage.pa2").style.opacity = "1";
+    document.body.querySelector(".lastmessage.pa1").style.opacity = "1";
+    document.body.querySelector(".collected2").style.opacity = "0";
+    document.body.querySelector(".collected").style.left = "37%";
+    document.body.querySelector(".collected").style.top = "4.7%";
+}else{
+    document.body.getElementsByClassName("lastmessage")[0].style.opacity = "0";
+    document.body.querySelector(".lastmessage.pa2").style.opacity = "0";
+    document.body.querySelector(".lastmessage.pa1").style.opacity = "0";
+    document.body.querySelector(".collected2").style.opacity = "1";
+    document.body.querySelector(".collected").style.left = "94%";
+    document.body.querySelector(".collected").style.top = "8%";
 }
 
 
@@ -232,7 +245,7 @@ handleClickfeedback=()=>{
         let allthree = leaves.map((name)=><img className={name} src={three}/>)
 let pebbles = ['p','e','b','v','l','i','s']
 let allpebbles = pebbles.map((name)=><img className={name} src={pebble}/>)
-            let nobottomr = ['sing1','sing2','sing3','sing4']
+            let nobottomr = ['sing1','sing4']
             let sings = nobottomr.map((name)=><img className={name} src={nobttm}/>)
         let seaRocks=["frock","srock","trock",'fourthrock','fifthrock',"sixrock"]
         let seaRocksthree = seaRocks.map((name)=> <img className={name} src={seaRock}/>)
@@ -245,6 +258,10 @@ let allpebbles = pebbles.map((name)=><img className={name} src={pebble}/>)
     //    let firstpg= greenrocks.map((name)=>{
     //     return <img className={name} src={greenRock}/>
     //     })
+   let slide2 = < img className='fam' src={require("../img/fam.gif")}/>
+    let slide22 =< img className='fam triple'  src={require("../img/fam.gif")}/>
+    let grey =  < img className='squid' src={require("../img/greyFish.png")}/>
+
         let blue= ['unoazul','dosazul','tresazul']
         let bluecorals= blue.map((name)=>{
             return <img className={name} src={bluecoral}/>
@@ -297,7 +314,7 @@ let allpebbles = pebbles.map((name)=><img className={name} src={pebble}/>)
                 <div className='plastic can'onMouseDown={this.handleMousedown} onClick={this.handleClick}> <img className="img b-can" src={can} alt=""/></div>
                     <div className='slide one'><Intro name={this.props.name}/>  {thethrees}{allpebbles}<Ocean/></div>
                     {/* <hr/> */}
-        <div className='slide two'><p className='firstinst'>collect me!→</p> {greyfish} {allthree}{crab} {bluecorals} {seaRocksthree} <PlasticStats plastics={this.state.plastics}/>  <Ocean/></div>
+        <div className='slide two'><p className='firstinst'>collect me!→</p>{grey} {slide2} {slide22} {greyfish} {allthree}{crab} {bluecorals} {seaRocksthree} <PlasticStats plastics={this.state.plastics}/>  <Ocean/></div>
                     {/* <hr/> */}
                     <div className='slide three'> <Jelly {...this.state}/>   <Ocean/></div>
                     {/* <hr/> */}
@@ -306,7 +323,7 @@ let allpebbles = pebbles.map((name)=><img className={name} src={pebble}/>)
         <div className='slide five'> <Fishes {...this.state}/>  <Ocean/></div>
         < img className='fishy twin' src={require("../img/greyFish.png")}/>
                     {/* <hr/> */}
-                    <div className='slide six'> {sings} </div>
+                    <div className='slide six'><Lastpgmessage name={this.props.name} /> {sings} </div>
                     {/* <button onClick={this.handleClickfeedback} >Continue</button> */}
                 </div>
             </div>

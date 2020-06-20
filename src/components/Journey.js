@@ -104,7 +104,7 @@ if(currentScroll === 0 ){
     document.body.getElementsByClassName("seaturtle")[0].style.transform = "rotateY(180deg)";
 
 }
-if(currentScroll >= 15800){
+if(currentScroll >= 15700){
     document.body.getElementsByClassName("lastmessage")[0].style.opacity = "1";
     document.body.querySelector(".lastmessage.pa2").style.opacity = "1";
     document.body.querySelector(".lastmessage.pa1").style.opacity = "1";
@@ -331,113 +331,5 @@ let allpebbles = pebbles.map((name)=><img className={name} src={pebble}/>)
         )
     }
 }
-
-
- 
-//     render(){
-//         let plasticInfo=this.state.mapPlastic.plasticInfo + ""
-//         let alternativeInfo=this.state.mapPlastic.alternativeInfo + ""
-//         let singleRock=require("../img/singlerock.png")
-//         let greenRock=require("../img/grassrocks.png")
-//         let seaRock=require("../img/searock.png")
-//         let bluecoral=require("../img/bluecoral.png")
-//         let greyfish=< img className='fishy' src={require("../img/greyFish.png")}/>
-//         let bottle=require("../img/bottle.png")
-//         let bag=require("../img/bag.png")
-//         let can=require("../img/can.png")
-//         let fish=require("../img/section5.png")
-
-//         let cup=require("../img/cup.png")
-//         let straw=require("../img/straw.png")
-//         let pebble=require('../img/pebble.png')
-//         let crab=<img className='crab' src={require("../img/crab.gif")}/>
-//         let three=require('../img/three.png')
-//         let nobttm = require('../img/nobottom.png')
-//         let leaves = ['seaone','seatwo', 'seathree']
-//         let threesingles = ['single', 'single2', 'single3', 'single4']
-//         let thethrees = threesingles.map((name)=><img className={name} src={singleRock}/>)
-//         let allthree = leaves.map((name)=><img className={name} src={three}/>)
-// let pebbles = ['p','e','b','v','l','i','s']
-// let allpebbles = pebbles.map((name)=><img className={name} src={pebble}/>)
-//             let nobottomr = ['sing1','sing2','sing3','sing4']
-//             let sings = nobottomr.map((name)=><img className={name} src={nobttm}/>)
-//         let seaRocks=["frock","srock","trock",'fourthrock','fifthrock',"sixrock"]
-//         let seaRocksthree = seaRocks.map((name)=> <img className={name} src={seaRock}/>)
-//         let baginfo = this.state.plastics.map((plastic)=>{if(plastic.name==='Plastic bag info'){
-//         return<h1 className='bageffect'>{plastic.info}</h1>
-//         }})
-//         let turtleStyle=document.body.querySelector('.seaturtle')
-//         //Style isn't working??????
-//         let greenrocks= ['uno','dos','thirdgrass','fourthgrass','fifthgrass','sixthgrass']
-//        let firstpg= greenrocks.map((name)=>{
-//         return <img className={name} src={greenRock}/>
-//         })
-//         let blue= ['unoazul','dosazul','tresazul']
-
-//         let bluecorals= blue.map((name)=>{
-//             return <img className={name} src={bluecoral}/>
-//         })
-
-//         let sec5= ['par t5','par t52','par t53']
-//         let fishys = sec5.map((name)=> <img className={name} src={fish}/>)
-
-//         return(
-//             <>
-//              <Modal overlayClassName="Overlay" className="Modal" isOpen={this.state.modalIsOpen} onRequestClose={this.handleClose}>
-                      
-//                        <h2 className='plasticName'>{this.state.mapPlastic.plastic}</h2>
-
-//             <div className='main'>
-//                 <div className='inner'>
-//         <div className='plasticInfo'><img className="img b-bottle " src={bottle} alt=""/> {plasticInfo.split("/").map(plastic=><li>{plastic}</li>)}</div>
-//         <div className="vl"></div>
-//         <div className='alternativeInfo'><img className="img b-bag " src={bag} alt=""/> { alternativeInfo.split("/").map(plastic=><li>{plastic}</li>)}</div>
-//         </div>
-//         </div>
-
-
-//                        <div>
-//                            <button className='modalbtn' onClick={this.handleClose}>X</button>
-//                        </div>
-//                       </Modal>
-                
-//                    <Collected {...this.state}/>  
-                 
-                        
-
-//                 <Turtle/>
-
-//             <div className='sand'></div>
-//             <div className='outer-wrapper' onScroll={this.listenScrollEvent}>
-//                 <div className='wrapper'>
-            
-//                 <div className='plastic bag'onMouseDown={this.handleMousedown} onClick={this.handleClick}><img className="img b-bag " src={bag} alt=""/></div><br/>
-//                 <div className='plastic bottle' onMouseDown={this.handleMousedown} onClick={this.handleClick}>  <img className="img b-bottle " src={bottle} alt=""/></div><br/>
-//                 <div className='plastic straw' onMouseDown={this.handleMousedown} onClick={this.handleClick}>  <img className="img b-straw" src={straw} alt=""/></div><br/>
-//                 <div className='plastic cups' onMouseDown={this.handleMousedown} onClick={this.handleClick}>  <img className="img b-cup" src={cup} alt=""/></div><br/>
-//                 <div className='plastic can'onMouseDown={this.handleMousedown} onClick={this.handleClick}> <img className="img b-can" src={can} alt=""/></div>
-                   
-//                     <div className='slide one'><Intro name={this.props.name}/> {firstpg}  {thethrees}{allpebbles}<Ocean/></div>
-//                     {/* <hr/> */}
-
-//         <div className='slide two'><p className='firstinst'>collect me!→</p> {allthree}{crab} {bluecorals} {seaRocksthree} <PlasticStats plastics={this.state.plastics}/>  <Ocean/></div>
-//                     {/* <hr/> */}
-//                     <div className='slide three'> <Jelly {...this.state}/>   <Ocean/></div>
-//                     {/* <hr/> */}
-//                     <div className='slide four'><Charts  {...this.state} /> <Ocean/></div>
-//                     <hr/>
-//                     <div className='slide five'><Fishes {...this.state}/> section 5 <Ocean/></div>
-//                     <hr/>
-//                     <div className='slide six'> {sings} </div>
-                    
-//                     {/* <button onClick={this.handleClickfeedback} >Continue</button> */}
-//                 </div>
-//             </div>
-//             </>
-//         )
-//     }
-// }
-
-
 
 

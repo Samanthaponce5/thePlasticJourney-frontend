@@ -62,11 +62,11 @@ this.setState({modalIsOpen:false})
         })
 
 
-        fetch('http://localhost:3000/plastics')
+        fetch('https://jacksjourney-backend.herokuapp.com/plastics')
         .then(resp=>resp.json())
         .then((plastics)=> this.setState({plastics}))
         .then(
-            fetch('http://localhost:3000/compare_plastics')
+            fetch('https://jacksjourney-backend.herokuapp.com/compare_plastics')
             .then((dta)=>dta.json())
             .then((plastic)=>this.setState({comparePlastics:plastic}))
         )

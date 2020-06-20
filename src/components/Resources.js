@@ -8,7 +8,7 @@ import '../App.css'
     sites:[]
    }
   componentDidMount(){
-    fetch('http://localhost:3000/sites')
+    fetch('https://jacksjourney-backend.herokuapp.com/sites')
     .then((resp)=>resp.json())
     .then((data)=>this.setState({sites:data}))
   }

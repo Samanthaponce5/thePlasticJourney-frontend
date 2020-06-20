@@ -10,7 +10,7 @@ import Ocean from './Ocean'
       e.preventDefault()
      let {name} = this.props
      if(name.length > 0){
-     fetch('http://localhost:3000/users',{
+     fetch('https://jacksjourney-backend.herokuapp.com/users',{
        method:'POST',
        headers:{
          'Content-Type':'application/json',

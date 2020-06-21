@@ -26,28 +26,13 @@ import Ocean from './Ocean'
    }
  
 
-//   render(){
-    
-// // console.log('Home',this.props.name)
-
-//   return (
-//     <>
-// <h1 className='entrancetitle'>Jack's tales</h1>
-// <UserInput name={this.props.name} handleSubmit={this.handleSubmit} handleChange={this.props.handleChange}/>
-// </>
-//     );
-//   }
-// }
-
 render(){
-  let names=['firsts-s','seconds-s','thirds-s','fourths-s','fifths-s','sixths-s']
-// console.log('Home',this.props.name)
 return (
  <>
  <div className="bg"></div>
 <h1 className='entrancetitle'>Jack's Journey</h1>
 <UserInput name={this.props.name} handleSubmit={this.handleSubmit} handleChange={this.props.handleChange}/>
- <img className='fish-sec-s home'src={ require('../img/fish.png')}/>
+ <img className='fish-sec-s home'src={ require('../img/fish.png')} alt=''/>
 <Ocean/>
 </>
  );

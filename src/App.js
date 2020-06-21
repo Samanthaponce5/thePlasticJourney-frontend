@@ -1,5 +1,4 @@
 import React from 'react';
-import Turtle from './components/Turtle';
 import About from './components/About';
 import Home from './components/Home';
 import Resources from './components/Resources';

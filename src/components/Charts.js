@@ -58,11 +58,11 @@ export default class Charts extends React.Component{
     <div className="quad1 three"></div>
     <div className="quad1 four"></div>
     <div className="quad1 top"></div>
-    {this.props.plastics.map((plastic)=> {
+    {this.props.plastics.map((plastic,index)=> {
        if(plastic.id ===1){
          {inf=plastic.stats +'%' + ' ' + plastic.info}
-         return(<><div onMouseOut={this.handleMouseOut} onMouseEnter={this.handleMouseEnter} className="chart-center1">{plastic.stats}%</div> 
-         </>)
+         return(<div key={index} onMouseOut={this.handleMouseOut} onMouseEnter={this.handleMouseEnter} className="chart-center1">{plastic.stats}%</div> 
+         )
      }})}
   </div>
 </div>
@@ -77,11 +77,11 @@ export default class Charts extends React.Component{
     <div className="quad3 three"></div>
     <div className="quad3 four"></div>
     <div className="quad3 top"></div>
-    {this.props.plastics.map((plastic)=> {
+    {this.props.plastics.map((plastic,index)=> {
        if(plastic.id ===2){
         {inf1=plastic.stats +'%' + ' ' + plastic.info}
 
-         return <div className="chart-center3" onMouseOut={this.handleMouseOut} onMouseEnter={this.handleMouseEnter}>{plastic.stats}%</div>
+         return <div key={index} className="chart-center3" onMouseOut={this.handleMouseOut} onMouseEnter={this.handleMouseEnter}>{plastic.stats}%</div>
      }})}
   </div>
 </div>
@@ -96,10 +96,10 @@ export default class Charts extends React.Component{
     <div className="quad4 three"></div>
     <div className="quad4 four"></div>
     <div className="quad4 top"></div>
-    {this.props.plastics.map((plastic)=> {
+    {this.props.plastics.map((plastic,index)=> {
        if(plastic.id ===3){
         {inf2=plastic.stats +'%' + ' ' + plastic.info}
-         return <div className="chart-center4" onMouseOut={this.handleMouseOut} onMouseEnter={this.handleMouseEnter}>{plastic.stats}%</div>
+         return <div key={index} className="chart-center4" onMouseOut={this.handleMouseOut} onMouseEnter={this.handleMouseEnter}>{plastic.stats}%</div>
      }})}
   </div>
 </div>
@@ -112,10 +112,10 @@ export default class Charts extends React.Component{
     <div className="quad2 three"></div>
     <div className="quad2 four"></div>
     <div className="quad2 top"></div>
-    {this.props.plastics.map((plastic)=> {
+    {this.props.plastics.map((plastic,index)=> {
        if(plastic.id ===4){
         {inf3='Only' + ' ' + plastic.stats +'%' + ' ' + plastic.info}
-         return <div className="chart-center2" onMouseOut={this.handleMouseOut} onMouseEnter={this.handleMouseEnter}>{plastic.stats}%</div>
+         return <div key={index} className="chart-center2" onMouseOut={this.handleMouseOut} onMouseEnter={this.handleMouseEnter}>{plastic.stats}%</div>
      }})}
   </div>
 </div>

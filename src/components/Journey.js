@@ -9,12 +9,12 @@ import Turtle from './Turtle'
 import Charts from './Charts'
 import Jelly from './Jelly'
 import PlasticStats from './PlasticStats'
-import ReactDOM from 'react-dom';
-import Modal from 'react-modal';
 import Intro from './Intro'
 import Collected from './Collected'
 import Fishes from './Fishes'
 import Lastpgmessage from './Lastpgmessage'
+import Plants from './Plants'
+import Modals from './Modals'
 
 
 export default class Journey extends React.Component{
@@ -27,10 +27,6 @@ export default class Journey extends React.Component{
         collected:0,
         modalIsOpen:false,
         mapPlastic:[]
-    
-        
-     
-
     }
   
 
@@ -223,107 +219,31 @@ handleClickfeedback=()=>{
 
  
     render(){
-        let plasticInfo=this.state.mapPlastic.plasticInfo + ""
-        let alternativeInfo=this.state.mapPlastic.alternativeInfo + ""
-        let singleRock=require("../img/singlerock.png")
-        // let greenRock=require("../img/grassrocks.png")
-        let seaRock=require("../img/searock.png")
-        let bluecoral=require("../img/bluecoral.png")
-        let greyfish=< img className='fishy' src={require("../img/greyFish.png")}/>
         let bottle=require("../img/bottle.png")
         let bag=require("../img/bag.png")
         let can=require("../img/can.png")
         let cup=require("../img/cup.png")
         let straw=require("../img/straw.png")
-        let pebble=require('../img/pebble.png')
-        let crab=<img className='crab' src={require("../img/crab.gif")}/>
-        let three=require('../img/three.png')
-        let nobttm = require('../img/nobottom.png')
-        let leaves = ['seaone','seatwo', 'seathree']
-        let threesingles = ['single', 'single2', 'single3', 'single4']
-        let thethrees = threesingles.map((name)=><img className={name} src={singleRock}/>)
-        let allthree = leaves.map((name)=><img className={name} src={three}/>)
-let pebbles = ['p','e','b','v','l','i','s']
-let allpebbles = pebbles.map((name)=><img className={name} src={pebble}/>)
-            let nobottomr = ['sing1','sing4']
-            let sings = nobottomr.map((name)=><img className={name} src={nobttm}/>)
-        let seaRocks=["frock","srock","trock",'fourthrock','fifthrock',"sixrock"]
-        let seaRocksthree = seaRocks.map((name)=> <img className={name} src={seaRock}/>)
-        let baginfo = this.state.plastics.map((plastic)=>{if(plastic.name==='Plastic bag info'){
-        return<h1 className='bageffect'>{plastic.info}</h1>
-        }})
-        let turtleStyle=document.body.querySelector('.seaturtle')
-        //Style isn't working??????
-    //     let greenrocks= ['uno','dos','thirdgrass','fourthgrass','fifthgrass','sixthgrass']
-    //    let firstpg= greenrocks.map((name)=>{
-    //     return <img className={name} src={greenRock}/>
-    //     })
-   let slide2 = < img className='fam' src={require("../img/fam.gif")}/>
-    let slide22 =< img className='fam triple'  src={require("../img/fam.gif")}/>
-    let grey =  < img className='squid' src={require("../img/greyFish.png")}/>
-
-        let blue= ['unoazul','dosazul','tresazul']
-        let bluecorals= blue.map((name)=>{
-            return <img className={name} src={bluecoral}/>
-        })
-        let garbage
-        if(this.state.mapPlastic.id===1)
-        garbage=require("../img/badstraw.png")
-        if(this.state.mapPlastic.id===2)
-        garbage=require("../img/goodbag.png")
-        if(this.state.mapPlastic.id===3)
-        garbage=require("../img/badbottle.png")
-        if(this.state.mapPlastic.id===4)
-        garbage=require("../img/badcup.png")
-        if(this.state.mapPlastic.id===5)
-        garbage=require("../img/badcan.png")
-        let trash
-        if(this.state.mapPlastic.id===1)
-        trash=require("../img/goodstraw.png")
-        if(this.state.mapPlastic.id===2)
-        trash=require("../img/badbag.png")
-        if(this.state.mapPlastic.id===3)
-        trash=require("../img/goodbottle.png")
-        if(this.state.mapPlastic.id===4)
-        trash=require("../img/goodcup.png")
-        if(this.state.mapPlastic.id===5)
-        trash=require("../img/goodcan.png")
         return(
             <>
-             <Modal overlayClassName="Overlay" className="Modal" isOpen={this.state.modalIsOpen} onRequestClose={this.handleClose}>
-                       <h2 className='plasticName'>{this.state.mapPlastic.plastic}</h2>
-            <div className='main'>
-                <div className='inner'>
-        <div className='plasticInfo'><img className={`img ${this.state.mapPlastic.plastic}b`} src={garbage} alt=""/> {plasticInfo.split("/").map(plastic=><li>{plastic}</li>)}</div>
-        <div className="vl"></div>
-        <div className='alternativeInfo'><img className={`img ${this.state.mapPlastic.plastic}b`}  src={trash} alt=""/> { alternativeInfo.split("/").map(plastic=><li>{plastic}</li>)}</div>
-        </div>
-        </div>
-                       <div>
-                           <button className='modalbtn' onClick={this.handleClose}>X</button>
-                       </div>
-                      </Modal>
+            <Modals {...this.state} handleClose={this.handleClose}/>
                    <Collected {...this.state}/>  
                 <Turtle/>
             <div className='outer-wrapper' onScroll={this.listenScrollEvent}>
                 <div className='wrapper'>
+                    <Plants {...this.state}/>
                 <div className='plastic bag'onMouseDown={this.handleMousedown} onClick={this.handleClick}><img className="img b-bag " src={bag} alt=""/></div><br/>
                 <div className='plastic bottle' onMouseDown={this.handleMousedown} onClick={this.handleClick}>  <img className="img b-bottle " src={bottle} alt=""/></div><br/>
                 <div className='plastic straw' onMouseDown={this.handleMousedown} onClick={this.handleClick}>  <img className="img b-straw" src={straw} alt=""/></div><br/>
                 <div className='plastic cups' onMouseDown={this.handleMousedown} onClick={this.handleClick}>  <img className="img b-cup" src={cup} alt=""/></div><br/>
                 <div className='plastic can'onMouseDown={this.handleMousedown} onClick={this.handleClick}> <img className="img b-can" src={can} alt=""/></div>
-                    <div className='slide one'><Intro name={this.props.name}/>  {thethrees}{allpebbles}<Ocean/></div>
-                    {/* <hr/> */}
-        <div className='slide two'><p className='firstinst'>collect me!→</p>{grey} {slide2} {slide22} {greyfish} {allthree}{crab} {bluecorals} {seaRocksthree} <PlasticStats plastics={this.state.plastics}/>  <Ocean/></div>
-                    {/* <hr/> */}
+                    <div className='slide one'><Intro name={this.props.name}/>  <Ocean/></div>
+        <div className='slide two'><p className='firstinst'>collect me!→</p> <PlasticStats plastics={this.state.plastics}/>  <Ocean/></div>
                     <div className='slide three'> <Jelly {...this.state}/>   <Ocean/></div>
-                    {/* <hr/> */}
                     <div className='slide four'><Charts  {...this.state} /> <Ocean/></div>
-                    {/* <hr/> */}
         <div className='slide five'> <Fishes {...this.state}/>  <Ocean/></div>
-        < img className='fishy twin' src={require("../img/greyFish.png")}/>
-                    {/* <hr/> */}
-                    <div className='slide six'><Lastpgmessage name={this.props.name} /> {sings} </div>
+        < img className='fishy twin' src={require("../img/greyFish.png")} alt=''/>
+                    <div className='slide six'><Lastpgmessage name={this.props.name} /> </div>
                     {/* <button onClick={this.handleClickfeedback} >Continue</button> */}
                 </div>
             </div>

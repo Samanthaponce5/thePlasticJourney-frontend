@@ -23,13 +23,13 @@ export default class PlasticStats extends React.Component{
      
         return(
             <>
-                 { filtered.map((plastic)=>{ return <>  <h2 className={'all' +' '+'text' + plastic.name}><CountUp  end={plastic.stats}>{({ countUpRef, start }) => (
+                 { filtered.map((plastic,index)=>{ return  <h2 key={index} className={'all' +' '+'text' + plastic.name}><CountUp  end={plastic.stats}>{({ countUpRef, start }) => (
     <div>
-      <span ref={countUpRef} />
+      <span  ref={countUpRef} />
       
-      <img className={'statstar' + ' ' + plastic.name} src={require("../img/starFish.png")} onMouseDown={this.handleMouseDown} onClick={start}/> 
+      <img  className={'statstar' + ' ' + plastic.name} src={require("../img/starFish.png")} onMouseDown={this.handleMouseDown} onClick={start} alt=''/> 
     </div>
-  )}</CountUp> {plastic.info}</h2> </>})}
+  )}</CountUp> {plastic.info}</h2> })}
             </>
         )
     }

@@ -17,9 +17,9 @@ import '../App.css'
     // console.log(this.state.sites)
   return (
     <>
-     <img className='seahorse blues'src={ require('../img/horse.gif')}/>
+     <img className='seahorse blues'src={ require('../img/horse.gif')} alt=''/>
     {names.map((name,index)=>
-<img className={`see ${name}`}key ={index}src={ require('../img/seeweed.gif')}/>
+<img className={`see ${name}`}key ={index}src={ require('../img/seeweed.gif')} alt=''/>
 )}
     {/* <img className='fish-sec-s'src={ require('../img/fish.png')}/> */}
     {/* <img className='fish-sec-s another'src={ require('../img/fish.png')}/> */}

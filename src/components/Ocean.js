@@ -6,8 +6,8 @@ export default class Ocean extends React.Component{
     // Green seaweed with Rocks
     let greenRock=require("../img/grassrocks.png")
     let greenrocks= ['uno','dos','thirdgrass','fourthgrass','fifthgrass','sixthgrass','seventhgrass','eighthgrass','ninethgrass','tethsgrass','eleventhgrass','twelvethgrass']
-       let firstpg= greenrocks.map((name)=>{
-        return <img className={name} src={greenRock}/>
+       let firstpg= greenrocks.map((name,index)=>{
+        return <img key={index} className={name} src={greenRock} alt=''/>
         })
 
         

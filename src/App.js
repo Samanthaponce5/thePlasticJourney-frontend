@@ -5,7 +5,7 @@ import Resources from './components/Resources';
 import Navbar from './components/Navbar';
 import './App.css';
 
-import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
+import {BrowserRouter as Router,Switch,Route,HashRouter} from 'react-router-dom';
 import Journey from './components/Journey';
 import Feedback from './components/Feedback';
 
@@ -32,7 +32,7 @@ import Feedback from './components/Feedback';
 
   return (
 
-<Router >
+<HashRouter >
 <Navbar/>
 <Switch>
 <Route exact path="/" render={(routerProps)=><Home  setUser={this.setUser} handleChange={this.handleChange} name={this.state.name} routerProps={routerProps} />}/>
@@ -45,7 +45,7 @@ import Feedback from './components/Feedback';
 <Route exact path='/feedback' render={(routerProps)=><Feedback {...this.state} routerProps={routerProps}/>}/>
 
 </Switch>
-</Router >
+</HashRouter >
     
     
   

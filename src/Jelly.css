@@ -1,33 +1,44 @@
+/* hover over me letters for opacity and position jellys in Chart,Fishes,Jelly.js*/
 .hover{
     position: relative;
     left: 48%;
     top: 10%;
     transition: opacity 1.7s ease-in-out;
 }
-.hover.char{
+
+/* hover over me letters for charts position in Chart.js*/
+.hover.forcharts{
     left: 20%;
     top: 40%;
 
 }
-.fact{
+
+/* hover over me letters for fishes position Fishes.js*/
+.hover.forfishes{
+    left: 65%;
+    top: 15em;
+  }
+
+/* =======================Opacity transition and positions for all facts hover for jellyfish=============================================== */
+.factsjelly{
     position: absolute;
     width: 7%;
     top: 1%;
     left: 38.5%;
     transition:  opacity 1s ease-in-out;
 }
-.fact.factone{
+.factsjelly.factone{
 opacity: 0;
 
 }
-.fact.facttwo{
+.factsjelly.facttwo{
 opacity: 0;
 }
-.fact.factthree{
+.factsjelly.factthree{
 opacity: 0;
 }
 
-.fact {
+.factsjelly {
     -webkit-animation: action 2.5s infinite  alternate;
     animation: action 2.5s infinite  alternate;
 }
@@ -39,16 +50,14 @@ opacity: 0;
     0% { transform: translateY(0); }
     100% { transform: translateY(-15px); }
 }
-
-
-
-
+/* ====================================================================================================================================== */
 .jellyletters{
     font-size: 30.9px;
     position: relative;
     top: -.1em;
     left: -.8em;
 }
+/* ============First jellyfish================ */
 #containers {
     z-index: 1000;
     position: relative;
@@ -59,6 +68,7 @@ opacity: 0;
     -webkit-animation: fish1 12s linear infinite;
     animation: container 12s linear infinite;
 }
+
 .fish {
     z-index: 1000;
     position: absolute;
@@ -71,7 +81,16 @@ opacity: 0;
    
     
 }
-
+@keyframes containers {
+    0%, 100% {
+        top: 0px;
+  
+    }
+    50% {
+        top: 200px;
+    }
+}
+/* ============Second jellyfish================ */
 #containers2 {
     z-index: 1000;
 
@@ -94,9 +113,8 @@ opacity: 0;
     -webkit-transform:scale(.8);
     transform: scale(.8);
     height: 350px;
-
-
 }
+/* ============Third jellyfish================ */
 #containers3 {
     z-index: 1000;
     position: relative;
@@ -117,7 +135,16 @@ opacity: 0;
     height: 350px;
 
 }
-
+@keyframes containers3 {
+    0%, 100% {
+        top: 200px;
+  
+    }
+    50% {
+        top: 0px;
+    }
+}
+/* ========================================================== */
 
 .bell {
 
@@ -137,19 +164,7 @@ opacity: 0;
     -webkit-animation: bellMove 2s ease-in-out infinite;
     animation: bellMove 2s ease-in-out infinite;
 }
-/* .bell:after {
-    content: "";
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    border-radius: 100% 0 100% 0; 
-    border-style: solid;
-    border-color: rgba(255,255,255,1);
-    border-width: 1px 0 0 1px;    
-    box-shadow: -1px -1px rgba(255,255,255,0.5);
-    top: 20px;
-    left: -20px;
-} */
+
 .tentacle {
     position: absolute;
     width: 40px;
@@ -304,24 +319,5 @@ opacity: 0;
     50% {
         height: 80px;
         left: 90px;
-    }
-}
-
-@keyframes containers {
-    0%, 100% {
-        top: 0px;
-  
-    }
-    50% {
-        top: 200px;
-    }
-}
-@keyframes containers3 {
-    0%, 100% {
-        top: 200px;
-  
-    }
-    50% {
-        top: 0px;
     }
 }

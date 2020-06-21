@@ -128,7 +128,7 @@ handleClickfeedback=()=>{
         // this.setState({collect:false, collected:true})
         if(e.target.className==='plastic bottle' ||e.target.className=== "img b-bottle " ){
             // console.log('plastic2')
-            document.body.querySelector('.firstinst').style.opacity='0'
+            document.body.querySelector('.collectfirstplastic').style.opacity='0'
             document.body.querySelector('.plastic.bottle').style.left = "92.3%";
             document.body.querySelector('.plastic.bottle').style.top = "62%";
             document.body.querySelector('.plastic.bottle').classList.add('afterBottle')
@@ -238,7 +238,7 @@ handleClickfeedback=()=>{
                 <div className='plastic cups' onMouseDown={this.handleMousedown} onClick={this.handleClick}>  <img className="img b-cup" src={cup} alt=""/></div><br/>
                 <div className='plastic can'onMouseDown={this.handleMousedown} onClick={this.handleClick}> <img className="img b-can" src={can} alt=""/></div>
                     <div className='slide one'><Intro name={this.props.name}/>  <Ocean/></div>
-        <div className='slide two'><p className='firstinst'>collect me!→</p> <PlasticStats plastics={this.state.plastics}/>  <Ocean/></div>
+        <div className='slide two'><p className='collectfirstplastic'>collect me!→</p> <PlasticStats plastics={this.state.plastics}/>  <Ocean/></div>
                     <div className='slide three'> <Jelly {...this.state}/>   <Ocean/></div>
                     <div className='slide four'><Charts  {...this.state} /> <Ocean/></div>
         <div className='slide five'> <Fishes {...this.state}/>  <Ocean/></div>

@@ -8,7 +8,7 @@ export default class Intro extends React.Component {
 			<div className="blob blue">
 				<div className="center">
 					<div className="mouseLayout"></div>
-					<p className="text2">Scroll To Explore</p>
+					<p className="scrolltextentrance">Scroll To Explore</p>
 				</div>
 			</div>
 

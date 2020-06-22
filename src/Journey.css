@@ -3,6 +3,44 @@
     margin: 0;
     padding: 0;
 }
+/* Horizontal Divs for journey */
+.slide{
+    width: 500vw;
+    height: 100vh;
+    scroll-behavior: smooth;
+
+}
+
+.wrapper{
+    display:flex;
+    flex-direction: row;
+    width: 1200vw;
+    transform: rotate(90deg) translateY(-100vh);
+    transform-origin: top left;
+    scroll-behavior: smooth;
+}
+
+.one,.two,.three,.four,.five,.six{ 
+/* background-image: radial-gradient(#65c6c4, #113f67); */
+background-image: linear-gradient(0deg, #011d3a, #57b1be);
+}
+
+
+.outer-wrapper{
+    width:100vh;
+    height: 100vw;
+    transform: rotate(-90deg) translateX(-100vh);
+    transform-origin: top left;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: absolute;
+    scrollbar-width:none;
+    -ms-overflow-style: none;
+}
+::-webkit-scrollbar{display: none;}
+/* =========================================== */
+
+
 
 li{
     margin-bottom:1em ;
@@ -15,23 +53,15 @@ li{
     height: 8%;
     position: absolute;
     width: 100%;
-    z-index: 1;
     right: 0;
     bottom: 0;
     left: 0;
-    animation:animate 30s linear infinite;
-
-    animation-delay:0s;
     z-index: 1000;
-    /* border-radius: 20% 20% 0 0; */
 }
 
-     
-
-
-.plasinfo{
+/* Info when hover over charts */
+.plasinfocharts{
     position: absolute;;
-    /* border: solid red; */
     top: 41%;
     left: 51%;
     width: 5%; 
@@ -51,95 +81,130 @@ li{
     0% { transform: translateY(0); }
     100% { transform: translateY(-15px); }
 }
+/* All Images in bubbles and in modal */
+.img{
+    z-index: 90;
+    width:90px;
+    height:90px;
+ margin-top:5%;
+ transform: rotate(-40deg);
+ /*Scale down will take the necessary specified space that is 100px x 100px without stretching the image*/
+     object-fit:scale-down;
+}
+/* ================================= */
+.Modal {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    display: block;
+    padding: 2em;
+    height:18em;
+    min-width: 50em;
+    max-width: 70%;
+    color: rgb(255, 253, 253);
+   overflow: hidden;
+    background-image: linear-gradient(0deg, #102b47, #74ccda);
+    border-radius: 1.5em;
+    transform: translate(-50%, -50%);
+    outline: transparent;
+  }
+  .Overlay {
 
-.bageffect{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(35, 86, 116, 0.884);
+  }
+
+
+.modalbtn{
     /* border: solid red; */
+    outline: none;
     position:absolute;
-    width: 1.5%;
-    height: 25%;
-    font-size: 15px;
-    left: 44.9%;
-    top: 10%;
-
+    height: 7.5%;
+    width: 3%;
+    left: 95.5%; 
+    top: .6em;
+    color: white;
+    font-weight: 800;
+    background-image: linear-gradient(0deg, #102b47, #74ccda);
+    border-radius: 50%
 }
-.bageffect{
-    -webkit-animation: action 2s infinite  alternate;
-    animation: action 2s infinite  alternate;
-}
-@-webkit-keyframes action {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-25px); }
-}
-@keyframes action {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-25px); }
-}
-
-
-
-
-.vl {
+/* Line that seperates info in the plastic modal popup */
+.vs {
     position: absolute;
     border-left: 3px dotted rgb(245, 247, 248);
     height: 500px;
     top: 1em;
     left: 51%;
 }
-  .plasticName{
-      /* border: solid red; */
-      /* position: relative;
-      width: 30%; */
-      /* left: 40%; */
-      text-align: center;
-    
-  }
-  .main{
-      /* border:solid rgb(0, 140, 255); */
-      position: relative;
-      width: 100%; 
-      /* overflow: hidden;  */
-    
-     
-  
-  }
-  .inner{
-    display: flex;
-    flex-direction: row;
+.main{
+    /* border:solid rgb(0, 140, 255); */
     position: relative;
-     height: auto;
-  }
- 
-.plasticInfo{
-    top: 1em;
-    /* border:solid rgb(0, 217, 255); */
-   position: absolute;
-   width: 50%;
-   height: 15em;
-   overflow:scroll;
-}
+    width: 100%; 
+    /* overflow: hidden;  */
+  
+   
 
-.alternativeInfo{
-    top: 1em;
-    /* border:solid red; */
-    position: absolute;
-    height: 15em;
-    width: 50%;
-    left: 55%;
-   overflow: scroll;
 }
- .modalbtn{
-     /* border: solid red; */
-     outline: none;
-     position:absolute;
-     height: 7.5%;
-     width: 3%;
-     left: 95.5%; 
-     top: .6em;
-     color: white;
-     font-weight: 800;
-     background-image: linear-gradient(0deg, #102b47, #74ccda);
-     border-radius: 50%
- }
+.inner{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+   height: auto;
+}
+/* title in modal */
+.plasticName{
+    text-align: center;
+}
+/* left info in modal */
+.plasticInfo{
+  top: 1em;
+  /* border:solid rgb(0, 217, 255); */
+ position: absolute;
+ width: 50%;
+ height: 15em;
+ overflow:scroll;
+}
+/* right info in modal */
+.alternativeInfo{
+  top: 1em;
+  /* border:solid red; */
+  position: absolute;
+  height: 15em;
+  width: 50%;
+  left: 55%;
+ overflow: scroll;
+}
+/* Images of plastic in Modal */
+.bottlesb{
+    position: relative;
+    transform: rotate(1deg);
+    left: 8em;
+}
+.Bagsb{
+    position: relative;
+    transform: rotate(1deg);
+    left: 8em;
+}
+.Strawsb{
+    position: relative;
+    transform: rotate(-23deg);
+    left: 10em;
+    /* width: 250%; */
+    height: 80%;
+}
+.Styrofoamb{
+    position: relative;
+    transform: rotate(1deg);
+    left: 8em;
+}
+/* =============================================== */
+
+
+/* ============All of three stem seaweed in journey on top of pebbles============================= */
 
  .seaone,.seatwo, .seathree{
      position: absolute;
@@ -164,6 +229,11 @@ li{
     height: 400px;
     width: 150px;
 }
+/* ============End of three stem seaweed in journey============================= */
+
+
+
+/* ================All of all big main seeweeds in journey and landing page============================== */
 
  .uno,.dos,.thirdgrass,.fourthgrass,.fifthgrass,.sixthgrass{
      z-index: 3;
@@ -196,8 +266,6 @@ li{
     left: 73.9%;
     bottom: -1.5em;
 }
-
-
 .seventhgrass{
    z-index: 3;
    position: absolute;
@@ -227,19 +295,15 @@ li{
      transform: rotate(1deg);
    
  }
- .fishy{
-     position:absolute;
-     height: 50px;
-     opacity: .5;
- }
+/* ================end of all big main seeweeds============================== */
+
+/* =============All single big rocks================== */
  .single,.single2, .single3, .single4{
     position:absolute;
     height: 350px;
     bottom:.3em;
-
  }
  .single{
-  
      left: .1%;
      transform: rotate(-5deg);
  }
@@ -259,17 +323,15 @@ li{
     left: 91.5%;
     bottom:2em;
     height: 250px;
-
-
 }
 
 .sing4{
     left: .4%;
     bottom:2em;
     height: 200px;
-   
 }
-
+/* ===============end of all songle big rocks============== */
+/* the crab */
  .crab{
      position: absolute;
      height: 150px;
@@ -287,12 +349,11 @@ li{
     100% { left:28.3%; }
   }
 
+
+/* Blue corals that have rock and green coral attached */
  .unoazul,.dosazul,.tresazul{
      position: absolute;
      height: 160px;
-   
-
-
  }
 .unoazul{
     left: 28%;
@@ -312,14 +373,14 @@ li{
     bottom: -1em;
     left: 51%;
 }
+/* ===================end=============================== */
+
 /* Rocks with plants on them */
 .frock,.srock,.trock,.fourthrock,.fifthrock,.sixrock{
     position:absolute;
     height: 140px;
     bottom: 1.6em;
     transform: rotate(8deg);
-
-
 }
 .frock{
     left: 33.5%;
@@ -351,7 +412,8 @@ li{
 
 
 }
-
+/* =================== */
+/*================= small pebbles====================== */
 .p,.e,.b,.v,.l,.i,.s{
     position: absolute;
 height: 190px;
@@ -391,106 +453,7 @@ bottom: 1.6em;
     left: 10.5%;  
     /* border: solid rgb(102, 255, 0); */
 }
-
-
-
-    .Modal {
-        position: absolute;
-        top: 35%;
-        left: 50%;
-        display: block;
-        padding: 2em;
-        height:18em;
-        min-width: 50em;
-        max-width: 70%;
-        color: rgb(255, 253, 253);
-       overflow: hidden;
-        background-image: linear-gradient(0deg, #102b47, #74ccda);
-        border-radius: 1.5em;
-        transform: translate(-50%, -50%);
-        outline: transparent;
-      }
-      .Overlay {
-
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-color: rgba(35, 86, 116, 0.884);
-      }
-
-
-.img{
-    z-index: 90;
-    width:90px;
-    height:90px;
- margin-top:5%;
- transform: rotate(-40deg);
- /*Scale down will take the necessary specified space that is 100px x 100px without stretching the image*/
-     object-fit:scale-down;
-}
-
-
-.slide{
-    width: 500vw;
-    height: 100vh;
-    scroll-behavior: smooth;
-
-}
-/* .outer-wrapper{
-    border:solid red;
-
-} */
-.wrapper{
-    display:flex;
-    flex-direction: row;
-    width: 1200vw;
-    transform: rotate(90deg) translateY(-100vh);
-    transform-origin: top left;
-    scroll-behavior: smooth;
-}
-
-.one,.two,.three,.four,.five,.six{ 
-/* background-image: radial-gradient(#65c6c4, #113f67); */
-background-image: linear-gradient(0deg, #011d3a, #57b1be);
-}
- 
-
-
-.text{
-    border: solid white;
-    position: relative;
-    left: 50%;
-    top: 40%;
-    width: 25%;
-    z-index: 3;
-    opacity: 0;
-
-    transition: width 1.5s, height 2s, opacity 900ms ease-in-out;
-
-}
-
-.text.appear{
-    opacity: 1;
-    width: 300px;
-    height: 300px;
-}
-
-
-.outer-wrapper{
-    width:100vh;
-    height: 100vw;
-    transform: rotate(-90deg) translateX(-100vh);
-    transform-origin: top left;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    position: absolute;
-    scrollbar-width:none;
-    -ms-overflow-style: none;
-}
-::-webkit-scrollbar{display: none;}
-
+/* ====================================================== */
 
 
 h1{
@@ -499,30 +462,27 @@ h1{
 
 
 
-.bottlesb{
-    position: relative;
-    transform: rotate(1deg);
-    left: 8em;
-}
-.Bagsb{
-    position: relative;
-    transform: rotate(1deg);
-    left: 8em;
-}
-.Strawsb{
-    position: relative;
-    transform: rotate(-23deg);
-    left: 10em;
-    /* width: 250%; */
-    height: 80%;
-}
-.Styrofoamb{
-    position: relative;
-    transform: rotate(1deg);
-    left: 8em;
-}
 
 
+/* Collected plastics */
+.collected{
+    position: absolute;
+    z-index: 100;
+   left: 94%; 
+   
+   top: 8%;
+  
+    font-size: 35px;
+    transition: left 1.9s;
+
+    
+  }
+  .collected2{
+    font-size: 10px;
+
+   
+  }
+  /* End of message */
 .lastmessage{
     position: relative;
     left: 64%;

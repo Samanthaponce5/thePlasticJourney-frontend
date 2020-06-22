@@ -4,7 +4,11 @@ import Home from './components/Home';
 import Resources from './components/Resources';
 import Navbar from './components/Navbar';
 import './App.css';
-
+import './Turtle.css'
+import './Journey.css'
+import './Chart.css'
+import './Ocean.css'
+import './PlasticParticles.css'
 import {BrowserRouter as Router,Switch,Route,HashRouter} from 'react-router-dom';
 import Journey from './components/Journey';
 import Feedback from './components/Feedback';

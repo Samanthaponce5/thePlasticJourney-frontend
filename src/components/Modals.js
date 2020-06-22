@@ -56,7 +56,7 @@ export default class Modals extends React.Component {
 									<li key={index}>{plastic}</li>
 								))}
 							</div>
-							<div className="vl"></div>
+							<div className="vs"></div>
 							<div className="alternativeInfo">
 								<img
 									className={`img ${this.props.mapPlastic.plastic}b`}

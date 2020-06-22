@@ -15,8 +15,7 @@ return (
   {names.map((name,index)=>
 <img className={`see ${name}`}key ={index}src={ require('../img/seeweed.gif')} alt=''/>
 )}
-  {/* <img className='fish-sec-s'src={ require('../img/fish.png')}/> */}
-  {/* <img className='fish-sec-s another'src={ require('../img/fish.png')}/> */}
+
 <h1 className='abouttitle'>What is this about?</h1>
 <div className='aboutpg'>
   <h3 className='firstparagraph'>      Jack's tales is a horizontal scrollable website.<span> </span>

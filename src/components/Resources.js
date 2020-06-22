@@ -21,8 +21,7 @@ import '../App.css'
     {names.map((name,index)=>
 <img className={`see ${name}`}key ={index}src={ require('../img/seeweed.gif')} alt=''/>
 )}
-    {/* <img className='fish-sec-s'src={ require('../img/fish.png')}/> */}
-    {/* <img className='fish-sec-s another'src={ require('../img/fish.png')}/> */}
+
     <h1 className="sourcetitle">Sources</h1>
   <div className='resource'>
 {this.state.sites.map((site)=><li className='links'><a href={site.weblink}>{site.weblink}</a></li>)}

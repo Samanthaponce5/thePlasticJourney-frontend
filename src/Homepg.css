@@ -63,6 +63,7 @@
 
 
 /* fish shadow swimming in journey */
+
 .fishy {
 
 	position: absolute;
@@ -109,15 +110,14 @@
 }
 /* end of the grey shadow swimming fish  */
 
-
+/* Swimming fish in landing page */
 .fish-sec-s {
-  /* border: solid red; */
 	left: 0%;
 	position: absolute;
 	width: 90px;
 	height: 90px;
 	transform: scaleX(-1);
-	top: 80%;
+  top: 37%;
 	z-index: 1004;
 	/* -webkit-animation:fly-turn .5s linear infinite, go-left-right 4s infinite alternate; */
 	/* -moz-animation:fly-turn .5s linear infinite, go-left-right 4s infinite alternate; */
@@ -125,18 +125,6 @@
 	animation: ani 7.7s infinite;
 }
 
-.fish-sec-s.home {
-	top: 37%;
-}
-
-.another {
-	position: relative;
-	top: 10px;
-	transition: all 1s ease-in-out;
-	animation: anit 15.7s infinite;
-	transform: scaleX(1);
-	/* left: 0%; */
-}
 @keyframes anit {
 	0% {
 		left: 100vw;
@@ -161,9 +149,9 @@
 		transform: scaleX(1);
 	}
 }
+/* end of landing page fish */
 
 
-/* ANIMATION */
 
 .seahorse {
 	position: absolute;
@@ -174,12 +162,14 @@
 	filter: grayscale(50%) brightness(79%) hue-rotate(211deg);
 	-webkit-filter: grayscale(50%) brightness(79%) hue-rotate(211deg);
 }
+/* seahorse in source */
 .seahorse.blues {
 	position: absolute;
 	top: 30%;
 	left: -4%;
 	transform: scaleX(-1);
 }
+/* seahorse family in journey */
 .fam {
 	position: absolute;
 	left: 67.2%;
@@ -197,7 +187,9 @@
 	top: 58%;
 	/* border: solid red; */
 }
+/* not a squid jsut another swimming grey fish in journey */
 .squid {
+
 	position: absolute;
 	width: 50px;
 	height: 40px;

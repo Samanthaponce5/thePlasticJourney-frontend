@@ -21,10 +21,7 @@ export default class Plants extends React.Component{
         let sings = nobottomr.map((name,index)=><img key={index} className={name} src={nobttm} alt=''/>)
         let seaRocks=["frock","srock","trock",'fourthrock','fifthrock',"sixrock"]
         let seaRocksthree = seaRocks.map((name,index)=> <img key={index} className={name} src={seaRock} alt=''/>)
-        let baginfo = this.props.plastics.map((plastic)=>{if(plastic.name==='Plastic bag info'){
-        return<h1 className='bageffect'>{plastic.info}</h1>
-        }})
-   
+      
        let slide2 = < img className='fam' src={require("../img/fam.gif")} alt=''/>
        let slide22 =< img className='fam triple'  src={require("../img/fam.gif")} alt=''/>
        let grey =  < img className='squid' src={require("../img/greyFish.png")} alt=''/>

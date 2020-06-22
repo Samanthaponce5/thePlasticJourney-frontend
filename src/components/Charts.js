@@ -4,22 +4,22 @@ export default class Charts extends React.Component{
 
   handleMouseEnter=(e)=>{
     if(e.target.className==='chart-center1'){
-      document.body.querySelector('.plasinfo.part1').style.opacity='1'
+      document.body.querySelector('.plasinfocharts.part1').style.opacity='1'
       document.body.querySelector('.hover.forcharts').style.opacity='0'
 
     }
     if(e.target.className==='chart-center3'){
-      document.body.querySelector('.plasinfo.part2').style.opacity='1'
+      document.body.querySelector('.plasinfocharts.part2').style.opacity='1'
       document.body.querySelector('.hover.forcharts').style.opacity='0'
 
     }
     if(e.target.className==='chart-center4'){
-      document.body.querySelector('.plasinfo.part3').style.opacity='1'
+      document.body.querySelector('.plasinfocharts.part3').style.opacity='1'
       document.body.querySelector('.hover.forcharts').style.opacity='0'
 
     }
     if(e.target.className==='chart-center2'){
-      document.body.querySelector('.plasinfo.part4').style.opacity='1'
+      document.body.querySelector('.plasinfocharts.part4').style.opacity='1'
       document.body.querySelector('.hover.forcharts').style.opacity='0'
 
     }
@@ -27,16 +27,16 @@ export default class Charts extends React.Component{
 
   handleMouseOut=(e)=>{
     if(e.target.className==='chart-center1'){
-      document.body.querySelector('.plasinfo.part1').style.opacity='0'
+      document.body.querySelector('.plasinfocharts.part1').style.opacity='0'
     }
     if(e.target.className==='chart-center3'){
-      document.body.querySelector('.plasinfo.part2').style.opacity='0'
+      document.body.querySelector('.plasinfocharts.part2').style.opacity='0'
     }
     if(e.target.className==='chart-center4'){
-      document.body.querySelector('.plasinfo.part3').style.opacity='0'
+      document.body.querySelector('.plasinfocharts.part3').style.opacity='0'
     }
     if(e.target.className==='chart-center2'){
-      document.body.querySelector('.plasinfo.part4').style.opacity='0'
+      document.body.querySelector('.plasinfocharts.part4').style.opacity='0'
     }
   }
 
@@ -66,7 +66,7 @@ export default class Charts extends React.Component{
      }})}
   </div>
 </div>
-    <h1 className='plasinfo part1'>{inf}</h1>
+    <h1 className='plasinfocharts part1'>{inf}</h1>
 
 
 
@@ -85,7 +85,7 @@ export default class Charts extends React.Component{
      }})}
   </div>
 </div>
-<h1 className='plasinfo part2'>{inf1}</h1>
+<h1 className='plasinfocharts part2'>{inf1}</h1>
 
 
 
@@ -103,7 +103,7 @@ export default class Charts extends React.Component{
      }})}
   </div>
 </div>
-<h1 className='plasinfo part3'>{inf2}</h1>
+<h1 className='plasinfocharts part3'>{inf2}</h1>
 
 <div className="card2">
   <div className="donut-chart fo">
@@ -119,7 +119,7 @@ export default class Charts extends React.Component{
      }})}
   </div>
 </div>
-<h1 className='plasinfo part4'>{inf3}</h1>
+<h1 className='plasinfocharts part4'>{inf3}</h1>
         </>
     )
 

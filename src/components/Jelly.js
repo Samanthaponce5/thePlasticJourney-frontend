@@ -57,7 +57,7 @@ export default class Jelly extends React.Component{
         })
     return(
         <>
-        <h3 className='hover'>Hover Over us!</h3>
+        <h3 className='hover jells'>Hover Over us!</h3>
         <div  id="containers" >
     <div className="fish f1">
         <div  className="bell " ><h1 onMouseEnter={this.handleMouseEnter} onMouseOut={this.handleMouseOut} className='jellyletters secondjelly'>Fact 2</h1></div>

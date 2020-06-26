@@ -78,6 +78,7 @@ body {
 .floatingfish.t53 {
 	position: relative;
 	left: 54%;
+	
 }
 /* third fish */
 .floatingfish.t5 {
@@ -135,10 +136,11 @@ body {
 .collectfirstplastic{
 	position: absolute;
 	left: 14.2%;
-	margin-top: 1.9%;
+	top: 45%;
 	-webkit-animation: action 1.5s infinite alternate;
 	animation: action 1.5s infinite alternate;
 }
+
 /* ===============================Entrance bubble message========================================= */
 .bubbletext {
 	position: relative;
@@ -181,6 +183,7 @@ body {
 	left: 32px;
 	bottom: -24px;
 }
+
 /* ========================================Entrance for circle mouse pulse====================================================== */
 .blob {
 	position: relative;
@@ -327,7 +330,7 @@ body {
 .all {
 	position: relative;
 	margin-top: -10px;
-	left: 39%;
+
 }
 /* ============================================End of first stats load=================================================================== */
 
@@ -364,6 +367,7 @@ body {
 	top: 5%;
   width: 800px;
 }
+
 /* ================================= End About Page=============================================== */
 
 
@@ -409,6 +413,119 @@ a {
 	cursor: pointer;
 	left: 25px;
 }
+/* seahorse in source */
+.seahorse.blues {
+	position: absolute;
+	top: 30%;
+	left: -4%;
+	transform: scaleX(-1);
+}
 /* =============================End of source page========================================== */
+/*============================ Phone view========================================== */
+@media only screen and (max-width: 414px){
+.resource{
+	top: 10%;
+	font-size: 15px;
+	width: 400px;
+	height: 700px;
+	left: -3%;
+    border-radius: 0;
+	border: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow:  none;
 
+}
+.sourcetitle{
+	font-size: 42px;
+	left: 25%;
+	top: 5%;
+}
+.seahorse.blues{
+	left: 2%;
+	width: 25%;
+	height: 15%;
+	top: 1px;
+}
+.aboutpg{
+	top: 20%;
+	font-size: 15px;
+	width: 400px;
+	height: 700px;
+	left: 3%;
+	border-radius: 0;
+	border: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow:  none;
+}
+.firstparagraph {
+	width: 350px;
+}
+.abouttitle{
+	font-size: 35px;
+	left: 5%;
+	top: 7%;
+}
+.seahorse.about{
+	left: 1%;
+	width: 25%;
+	height: 15%;
+	top: 1px;
+	transform: scaleX(-1);
+
+}
+.all{
+	font-size: 15px;
+}
+.statstar{
+	height: 80px;
+}
+.bubbletext {
+	width: 150px;
+	font-size: 12px;
+	top: 30%;
+}
+.collectfirstplastic {
+	left: 12.5%;
+	top: 42%;
+	font-size: 15px;
+}
+.floatingfish{
+	height: 100px;
+	width: 100px;
+}
+.floatingfish.t5{
+left: 90%;
+top: 18em;
+}
+.floatingfish.t53{
+left:63%;
+
+}
+.speech-bubble.fish1{
+	top: 25%;
+	left: 72%;
+	width: 100px;
+
+}
+.speech-bubble.fish2 {
+	left: 77%;
+	top: 5%;
+	width: 100px;
+}
+.speech-bubble.fish3 {
+	left: 77.5%;
+	top: 40%;
+	width: 100px;
+	
+}
+.speech-bubble {
+font-size: 12px;
+}
+.blob{
+display: none;
+}
+
+}
 

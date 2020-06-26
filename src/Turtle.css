@@ -197,3 +197,37 @@
         transform: scale(0.8) rotate(-28deg) translate(0, 0);
    }
 }
+
+@media only screen and (max-width: 414px){
+    .seaturtle .head {
+    width: 60px;
+    height: 65px;
+    margin-top: -16px;
+    right: 27px;
+    }
+    .casc{
+        width: 65px;
+        height: 60px;
+    }
+    .seaturtle .eye {
+        width: 10px;
+        height: 10px;
+        top: 22px;
+    }
+    @keyframes eyeBlink {
+        0% {
+          height: 0;
+        }
+        10% {
+          height: 10px;
+        }
+      }
+      .hands, .feets{
+        width: 40px;
+        height: 60px;
+      }
+      .background{
+        left: -50%;
+    }
+   
+}

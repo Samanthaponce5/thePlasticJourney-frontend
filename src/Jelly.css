@@ -144,6 +144,30 @@ opacity: 0;
         top: 0px;
     }
 }
+@media only screen and (max-width: 414px){
+    #containers2{
+        left: 30%;
+    }
+    #containers3{
+        left: -23%;
+    }
+    .factsjelly{
+        font-size: 20px;
+        top: 2em;
+    }
+    .hover{
+        visibility: hidden;
+    }
+    .hover::after{
+        visibility: visible;
+        content: "Click On Us";
+    }
+    .hover.jells{
+        left: 25%;
+    }
+  
+
+}
 /* ========================================================== */
 
 .bell {

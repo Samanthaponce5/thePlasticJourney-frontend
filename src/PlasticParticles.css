@@ -98,4 +98,20 @@
       /* box-shadow: 0px 0px 20px 6px rgba(255, 255, 255, 0.986); */
     }
   }
-  
+  @media only screen and (max-width: 414px){
+    .plastic{
+      width:50px;
+      height:50px;
+    }
+    .b-cup{
+      width:50px;
+    height:40px;
+    }
+    .plastic.bag{
+      left: 43.5%;
+    }
+    .plastic.straw{
+      top: 40%;
+      left: 66%;
+    }
+  }

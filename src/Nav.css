@@ -61,7 +61,7 @@ z-index: 1000;
   }
   .nav-item{
     /* border: solid red; */
-
+    
     list-style:none;
     margin:20px
   }
@@ -104,3 +104,23 @@ z-index: 1000;
   .nav-link:hover::after{
     transform:scaleX(1)
   }
+
+   @media only screen and (max-width: 414px){
+    .hamburger-menu{
+       position:fixed;
+      top:15px;
+      right:20px;
+    }
+    .navbar{
+      width:200px;
+      height:25%;
+    }
+    .nav-list{
+      top: 6%;
+      right: -20%;
+    }
+    .nav-item{
+      font-size: 18px;
+    }
+    
+  } 

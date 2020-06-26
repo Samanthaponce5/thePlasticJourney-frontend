@@ -18,7 +18,7 @@ export default class Journey extends React.Component{
         lastScroll:null,
         plastics:[],
         comparePlastics:[],
-        collect:true,
+    
         collected:0,
         modalIsOpen:false,
         mapPlastic:[]
@@ -31,7 +31,7 @@ this.setState({modalIsOpen:false})
 
     componentDidMount(){
         let options = {
-            // threshold:.25,
+            // threshold:1
             //  rootMargin: "-150px"
         
         }
@@ -119,8 +119,7 @@ handleClickfeedback=()=>{
 }
     handleClick=(e)=>{
         const{ collected}=this.state
-        // e.target.style.opacity = "0";
-        // this.setState({collect:false, collected:true})
+       
         if(e.target.className==='plastic bottle' ||e.target.className=== "img b-bottle " ){
             // console.log('plastic2')
             document.body.querySelector('.collectfirstplastic').style.opacity='0'

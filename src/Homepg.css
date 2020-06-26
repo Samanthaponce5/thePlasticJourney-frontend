@@ -1,3 +1,11 @@
+/* #root{
+    border: solid red;
+}
+#containing{
+    border: solid white;
+    width: 100%;
+} */
+
 /* Jack's Journey Title */
 .entrancetitle {
 	cursor: default;
@@ -62,53 +70,6 @@
 /* ==========================================End Seeweed gif for the source and about page================================================ */
 
 
-/* fish shadow swimming in journey */
-
-.fishy {
-
-	position: absolute;
-	top: 35em;
-	height: 50px;
-	opacity: 0.5;
-	transform: scaleX(1);
-	transition: all 44s ease-in-out;
-	animation: aniblur 8.7s infinite;
-}
-@keyframes aniblur {
-	0% {
-		left: 18%;
-	}
-	50% {
-		left: 12%;
-	}
-	100% {
-		left: 18%;
-		transform: scaleX(-1);
-	}
-}
-.twin {
-
-	position: absolute;
-	top: 400px;
-	z-index: 999;
-	left: -20px;
-	transform: scaleX(1);
-	transition: all 44s ease-in-out;
-	animation: twin 8.7s infinite;
-}
-@keyframes twin {
-	0% {
-		left: 70%;
-	}
-	50% {
-		left: 60%;
-	}
-	100% {
-		left: 70%;
-		transform: scaleX(-1);
-	}
-}
-/* end of the grey shadow swimming fish  */
 
 /* Swimming fish in landing page */
 .fish-sec-s {
@@ -152,7 +113,7 @@
 /* end of landing page fish */
 
 
-
+/* about page sea horse */
 .seahorse {
 	position: absolute;
 	width: 20%;
@@ -162,53 +123,99 @@
 	filter: grayscale(50%) brightness(79%) hue-rotate(211deg);
 	-webkit-filter: grayscale(50%) brightness(79%) hue-rotate(211deg);
 }
-/* seahorse in source */
-.seahorse.blues {
-	position: absolute;
-	top: 30%;
-	left: -4%;
-	transform: scaleX(-1);
-}
-/* seahorse family in journey */
-.fam {
-	position: absolute;
-	left: 67.2%;
-	width: 1%;
-	height: 20%;
-	top: 62%;
-	transform: scaleX(1);
-	transition: all 1s ease-in-out;
-	animation: ani-horse 7.7s infinite;
-	filter: grayscale(50%) brightness(79%) hue-rotate(211deg);
-	-webkit-filter: grayscale(50%) brightness(79%) hue-rotate(211deg);
-}
-.fam.triple {
-	left: 17.8%;
-	top: 58%;
-	/* border: solid red; */
-}
-/* not a squid jsut another swimming grey fish in journey */
-.squid {
 
-	position: absolute;
-	width: 50px;
-	height: 40px;
-	left: 75%;
-	top: 70%;
-	filter: grayscale(50%) brightness(70%) hue-rotate(88deg);
-	-webkit-filter: grayscale(50%) brightness(70%) hue-rotate(88deg);
-	animation: ani-squid 7.7s infinite;
-	transform: scaleX(-1);
+/* landing page input and bitton */
+@import url(https://fonts.googleapis.com/css?family=Lemon);
+
+.homeform{
+    /* border: solid red; */
+    position: absolute;
+    top: 50%;
+    left: 42%;
+    height: 200px;
+    z-index: 5;
 }
-@keyframes ani-squid {
-	0% {
-		left: 75%;
+.userform{
+    /* border: solid rgb(255, 0, 64); */
+   position: relative;
+   border: solid 2px rgba(255, 255, 255, 0.76);
+   border-radius: 20px;
+   height: 50px;
+   width: 200px;
+   font-size: 20px;
+   font-family: 'Lemon';
+   background: transparent;
+   color: white;
+   -moz-box-shadow: 0 0 6px #ccc;
+   -webkit-box-shadow: 0 0 6px #ccc;
+   box-shadow: 0 0 6px #ccc;
+   -webkit-animation: action 1s infinite  alternate;
+   animation: action 1s infinite  alternate;
+}
+.userbtn{
+  position: relative;
+    top:80px;
+    left: -50%; 
+    border: solid 2px rgba(255, 255, 255, 0.76);
+    border-radius: 50px;
+    width: 80px;
+    height: 50px;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.664);
+    font-family: 'Lemon';
+    -moz-box-shadow: 0 0 6px #ccc;
+    -webkit-box-shadow: 0 0 6px #ccc;
+    box-shadow: 0 0 6px #ccc;
+    outline: none;
+    -webkit-animation: action 1s infinite  alternate;
+    animation: action 1s infinite  alternate;
+    
+}
+
+
+
+
+
+
+textarea:focus, input:focus{
+    outline: none;
+  
+}
+input {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.425);
+        font-family: 'Lemon';
+  }
+  
+  ::-webkit-input-placeholder {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.425);
+        font-family: 'Lemon';
+  }
+  
+  :-moz-placeholder {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.425);
+        font-family: 'Lemon';
+  }
+
+@media only screen and (max-width: 414px){
+	.entrancetitle {
+		font-size:43px ;
 	}
-	50% {
-		left: 80%;
+	.fish-sec-s{
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	top: 33%;
 	}
-	100% {
-		left: 75%;
-		transform: scaleX(1);
+	.homeform{
+		position: absolute;
+		left: 23%;
+		height: 200px;
+		top: 45%;
 	}
+	
+	
+
 }

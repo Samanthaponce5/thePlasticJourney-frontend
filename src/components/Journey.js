@@ -71,8 +71,8 @@ listenScrollEvent=()=> {
     let{lastScroll}=this.state
     let wrapper = document.body.querySelector('.outer-wrapper')
     let currentScroll = wrapper.scrollTop
+    let maxScrollTop = wrapper.scrollHeight - wrapper.offsetHeight
   this.setState({lastScroll:currentScroll})
-
     if(currentScroll > 0 && lastScroll <= currentScroll){
         document.body.getElementsByClassName("seaturtle")[0].style.transform = "rotateY(180deg)";;
 
@@ -95,12 +95,12 @@ if(currentScroll === 0 ){
     document.body.getElementsByClassName("seaturtle")[0].style.transform = "rotateY(180deg)";
 
 }
-if(currentScroll >= 15700){
+if(currentScroll == maxScrollTop){
     document.body.getElementsByClassName("lastmessage")[0].style.opacity = "1";
     document.body.querySelector(".lastmessage.pa2").style.opacity = "1";
     document.body.querySelector(".lastmessage.pa1").style.opacity = "1";
     document.body.querySelector(".collected2").style.opacity = "0";
-    document.body.querySelector(".collected").style.left = "37%";
+    document.body.querySelector(".collected").style.left = "36%";
     document.body.querySelector(".collected").style.top = "4.7%";
 }else{
     document.body.getElementsByClassName("lastmessage")[0].style.opacity = "0";

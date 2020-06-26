@@ -593,12 +593,14 @@ h1 {
 	position: absolute;
 	z-index: 100;
 	left: 94%;
-	top: 8%;
-	font-size: 35px;
+    top: 8%;
+    font-size: 5.3vh;
+	/* font-size: 35px; */
 	transition: left 1.9s;
 }
 .collected2 {
-	font-size: 10px;
+    font-size: 1.5vh;
+	/* font-size: 10px; */
 }
 /* End of message */
 .lastmessage {

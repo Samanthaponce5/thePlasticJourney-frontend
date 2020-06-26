@@ -199,7 +199,7 @@ input {
         font-family: 'Lemon';
   }
 
-@media only screen and (max-width: 414px){
+@media only screen and (max-width: 500px){
 	.entrancetitle {
 		font-size:43px ;
 	}

@@ -105,7 +105,7 @@ z-index: 1000;
     transform:scaleX(1)
   }
 
-   @media only screen and (max-width: 414px){
+   @media only screen and (max-width: 500px){
     .hamburger-menu{
        position:fixed;
       top:15px;

@@ -76,11 +76,11 @@ listenScrollEvent=()=> {
     if(currentScroll > 0 && lastScroll <= currentScroll){
         document.body.getElementsByClassName("seaturtle")[0].style.transform = "rotateY(180deg)";;
 
-    console.log('Scroll down event detected!', wrapper.scrollTop);
+    // console.log('Scroll down event detected!', wrapper.scrollTop);
     }else {
         document.body.getElementsByClassName("seaturtle")[0].style.transform = "rotateY(360deg)";;
 
-        console.log('Scroll up event detected!', wrapper.scrollTop);
+        // console.log('Scroll up event detected!', wrapper.scrollTop);
     }
     if(currentScroll> 50){
         // console.log('greater')

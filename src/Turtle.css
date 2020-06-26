@@ -1,19 +1,4 @@
-.background{
-    /* border: solid red; */
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    left: 40%;
-}
-.seaturtle {
-    
-    position: relative;
-    z-index: 1;
-    transform: rotateY(180deg);
-    /* transform: rotateY(360deg); */
-    top: 500px;
-}
+
 
 .background{
     /* border: solid red; */
@@ -26,13 +11,16 @@
     -webkit-animation-delay: 2s;
     animation: slide 1.5s forwards;
     animation-delay: 0.5s;
+    top: 0;
+    margin-top: 34%;
 }
 .seaturtle {
     position: relative;
     z-index: 1;
     transform: rotateY(180deg);
     /* transform: rotateY(360deg); */
-    top: 500px;
+    /* top: 0em;
+    margin-top: 320%; */
 }
 @-webkit-keyframes slide {
     100% { left: 40%; }

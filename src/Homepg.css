@@ -31,41 +31,37 @@
 .see {
 	position: absolute;
 	width: 200px;
-	height: 200px;
-	top: 80%;
+	height: 250px;
+	top: 83%;
 }
 .see.seconds-s {
 	position: absolute;
 	transform: rotate(-30deg);
-	left: 1em;
-	top: 38.7em;
+	/* left: 1em; */
+	left: 1%;
 }
 .see.thirds-s {
 	position: absolute;
 	transform: rotate(40deg);
-	left: 7.2em;
-	top: 40em;
+	left: 9%;
 }
 .see.firsts-s {
 	position: absolute;
-	left: 4.2em;
-	top: 38em;
+	left: 4.9%;
 }
 .see.fourths-s {
 	position: absolute;
 	transform: rotate(-40deg);
-	left: 70em;
-	top: 40em;
+	left: 82.4%;
 }
 .see.fifths-s {
 	position: absolute;
 	transform: rotate(40deg);
-	left: 75.9em;
-	top: 39.4em;
+	left: 89%;
 }
 .see.sixths-s {
 	position: absolute;
-	left: 73em;
+	left: 85.5%;
 }
 /* ==========================================End Seeweed gif for the source and about page================================================ */
 

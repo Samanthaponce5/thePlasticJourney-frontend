@@ -428,7 +428,7 @@ a {
 	top: 10%;
 	font-size: 15px;
 	width: 400px;
-	height: 700px;
+	height: 550px;
 	left: -3%;
     border-radius: 0;
 	border: none;
@@ -449,19 +449,26 @@ a {
 	top: 1px;
 }
 .aboutpg{
+
 	top: 20%;
-	font-size: 15px;
-	width: 400px;
-	height: 700px;
-	left: 3%;
+	font-size: 13px;
+	width: 350px;
+	height: 500px;
+	left: 5%;
 	border-radius: 0;
-	border: none;
+	border:  none;
+	margin: 15px;
 	-moz-box-shadow: none;
 	-webkit-box-shadow: none;
 	box-shadow:  none;
+	overflow: scroll;
+
+
 }
 .firstparagraph {
-	width: 350px;
+	width: 295px;
+	left: 0%;
+
 }
 .abouttitle{
 	font-size: 35px;
@@ -469,7 +476,7 @@ a {
 	top: 7%;
 }
 .seahorse.about{
-	left: 1%;
+	left: -9%;
 	width: 25%;
 	height: 15%;
 	top: 1px;

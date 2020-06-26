@@ -72,7 +72,7 @@ li {
 	position: absolute;
 	width: 100%;
 	right: 0;
-	bottom: 0;
+	bottom: 0%;
 	left: 0;
 	z-index: 1000;
 }
@@ -449,8 +449,9 @@ li {
 /* the crab */
 .crab {
 	position: absolute;
-	height: 150px;
-	bottom: 0.5em;
+    height: 200px;
+    width: 170px;
+   bottom: -1.3em;
 	left: 28.3%;
 	animation-name: crabs;
 	animation-duration: 14s;

@@ -261,9 +261,11 @@ li {
 .fifthgrass,
 .sixthgrass {
 	z-index: 3;
-	position: absolute;
-	width: 200px;
-	height: 389px;
+    position: absolute;
+    height: 57vh;
+    width: 14.4vw;
+	/* width: 200px; */
+	/* height: 389px; */
 	transform: rotate(-6deg);
 }
 .thirdgrass,
@@ -271,8 +273,9 @@ li {
 .fifthgrass,
 .sixthgrass {
 	z-index: 3;
-	position: absolute;
-	height: 270px;
+    position: absolute;
+    height: 40vh;
+	/* height: 270px; */
 	transform: rotate(-6deg);
 }
 .thirdgrass {
@@ -284,7 +287,8 @@ li {
 	bottom: 1em;
 }
 .fifthgrass {
-	height: 380px;
+    height: 56vh;
+	/* height: 380px; */
 	left: 72.9%;
 	bottom: -3em;
 }
@@ -294,18 +298,22 @@ li {
 }
 .seventhgrass {
 	z-index: 3;
-	position: absolute;
-	width: 190px;
-	height: 325px;
+    position: absolute;
+    width:13.5vw ;
+    height: 48vh;
+	/* width: 190px; */
+	/* height: 325px; */
 	transform: rotate(-6deg);
 	bottom: -7%;
 	left: 66%;
 }
 .eighthgrass {
 	z-index: 3;
-	position: absolute;
-	width: 190px;
-	height: 389px;
+    position: absolute;
+    width: 13.5vw;
+    height: 57vh;
+	/* width: 190px; */
+	/* height: 389px; */
 	transform: rotate(-6deg);
 	bottom: -7%;
 	left: 59%;

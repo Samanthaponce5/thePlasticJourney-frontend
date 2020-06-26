@@ -19,7 +19,7 @@
 	display: block;
 
 	font-family: 'Lemon', cursive;
-	font-size: 70px;
+	font-size: 5.5vw;
 	color: #fff;
 	text-align: center;
 	line-height: 100px;
@@ -71,8 +71,11 @@
 .fish-sec-s {
 	left: 0%;
 	position: absolute;
-	width: 90px;
-	height: 90px;
+	width: 6.4vw;
+	height: 13vh;
+
+	/* width: 90px; */
+	/* height: 90px; */
 	transform: scaleX(-1);
   top: 37%;
 	z-index: 1004;
@@ -128,16 +131,17 @@
     position: absolute;
     top: 50%;
     left: 42%;
-    height: 200px;
+	/* height: 200px; */
+	height: 29vh;
     z-index: 5;
 }
 .userform{
-    /* border: solid rgb(255, 0, 64); */
    position: relative;
    border: solid 2px rgba(255, 255, 255, 0.76);
    border-radius: 20px;
-   height: 50px;
-   width: 200px;
+  
+	height: 50px;
+	width: 200px;
    font-size: 20px;
    font-family: 'Lemon';
    background: transparent;
@@ -147,6 +151,7 @@
    box-shadow: 0 0 6px #ccc;
    -webkit-animation: action 1s infinite  alternate;
    animation: action 1s infinite  alternate;
+
 }
 .userbtn{
   /* position: relative;
@@ -156,7 +161,7 @@
     top:80px;
 	left: 25%; 
     border: solid 2px rgba(255, 255, 255, 0.76);
-    border-radius: 50px;
+	border-radius: 50px;
     width: 80px;
     height: 50px;
     background: transparent;

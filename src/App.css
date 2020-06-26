@@ -355,10 +355,9 @@ body {
 }
 .abouttitle {
 	position: absolute;
-	top: 17%;
+	top: 15%;
 	left: 32%;
-	font-size: 50px;
-	font-size: 300%;
+	
 	font-size: 3.5vw;
 	text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
 		0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent,
@@ -383,8 +382,8 @@ body {
 	border: solid rgba(252, 250, 250, 0.384);
 	border-radius: 80px 80px 80px 80px;
 	top: 25%;
-	width: 1000px;
-	height: 500px;
+		width: 65%;
+	height: 60%;
 	overflow: scroll;
 	left: 15%;
 	-moz-box-shadow: 0 0 6px #ccc;
@@ -395,11 +394,11 @@ body {
 }
 .sourcetitle {
 	position: absolute;
-	top: 17%;
+	top: 15%;
 	left: 40%;
 	margin-right: -50%;
 	transform: translate(-50%, -50%);
-	font-size: 50px;
+	font-size: 3.5vw;
 	-webkit-animation: action 1s infinite alternate;
 	animation: action 1s infinite alternate;
 	text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,

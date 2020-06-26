@@ -153,9 +153,12 @@
    animation: action 1s infinite  alternate;
 }
 .userbtn{
-  position: relative;
+  /* position: relative;
     top:80px;
-    left: -50%; 
+	left: -50%;  */
+	position: absolute;
+    top:80px;
+	left: 25%; 
     border: solid 2px rgba(255, 255, 255, 0.76);
     border-radius: 50px;
     width: 80px;
@@ -199,9 +202,9 @@ input {
         font-family: 'Lemon';
   }
 
-@media only screen and (max-width: 500px){
+@media only screen and (min-width: 320px) and (max-width: 500px){
 	.entrancetitle {
-		font-size:43px ;
+		font-size:35px ;
 	}
 	.fish-sec-s{
 	position: absolute;
@@ -214,8 +217,8 @@ input {
 		left: 23%;
 		height: 200px;
 		top: 45%;
+	
 	}
-	
-	
+
 
 }

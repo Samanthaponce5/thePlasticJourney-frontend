@@ -620,7 +620,8 @@ h1 {
 	left: 71%;
 	width: 350px;
 }
-@media only screen and (max-width: 500px){
+
+@media only screen and (min-width: 320px) and (max-width: 500px){
     .collected{
         left: 85%;
         font-size: 20px;

@@ -144,7 +144,8 @@ opacity: 0;
         top: 0px;
     }
 }
-@media only screen and (max-width: 500px){
+
+@media only screen and (min-width: 320px) and (max-width: 500px){
     #containers2{
         left: 30%;
     }

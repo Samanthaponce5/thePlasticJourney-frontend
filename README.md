@@ -21,4 +21,4 @@ Vist [Jack's Journey](https://jacks-journey.herokuapp.com/) !
 -Rails API [Backend](https://github.com/Samanthaponce5/plasticTalesBackend)<br>
 -Custom CSS<br>
 
-<img src="./img/straw.png">
+<img src="./img/heroku.gif">

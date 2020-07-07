@@ -11,10 +11,10 @@ An educational project aiming to teach everyone more about plastic pollution, th
 Runs the app <br />
 Open [http://localhost:3001](http://localhost:3001) to view it in the browser.
 
-You can navigate to the backend for this porject  [Jack's Journey Backend](https://github.com/Samanthaponce5/plasticTalesBackend).
+You can navigate to the backend for this project  [Jack's Journey Backend](https://github.com/Samanthaponce5/plasticTalesBackend).
 
 ## Visit Site
-Vist [Jack's Journey](https://jacks-journey.herokuapp.com/) !
+Vist [Jack's Journey](https://jacks-journey.herokuapp.com/)!
 
 ## Built With
 -[ReactJs](https://reactjs.org/) Library <br>

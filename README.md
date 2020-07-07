@@ -17,8 +17,8 @@ You can navigate to the backend for this porject  [Jack's Journey Backend](https
 Vist [Jack's Journey](https://jacks-journey.herokuapp.com/) !
 
 ## Built With
--[ReactJs](https://reactjs.org/) Library
--Rails API [Backend](https://github.com/Samanthaponce5/plasticTalesBackend)
--Custom CSS
+-[ReactJs](https://reactjs.org/) Library <br>
+-Rails API [Backend](https://github.com/Samanthaponce5/plasticTalesBackend)<br>
+-Custom CSS<br>
 
-<img src="../img/straw.png"/>
+<img src="./img/straw.png">

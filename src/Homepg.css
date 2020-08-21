@@ -172,7 +172,8 @@
     box-shadow: 0 0 6px #ccc;
     outline: none;
     -webkit-animation: action 1s infinite  alternate;
-    animation: action 1s infinite  alternate;
+	animation: action 1s infinite  alternate;
+	cursor: pointer;
     
 }
 

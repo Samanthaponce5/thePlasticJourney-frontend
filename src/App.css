@@ -317,6 +317,7 @@ body {
 
 /* ============================================First stats load=================================================================== */
 .statstar {
+	cursor: pointer;
 	position: relative;
 	height: 90px;
 	left: -8%;

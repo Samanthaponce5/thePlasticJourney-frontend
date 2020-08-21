@@ -17,6 +17,7 @@
 .seaturtle {
     position: relative;
     z-index: 1;
+    pointer-events: none;
     transform: rotateY(180deg);
     /* transform: rotateY(360deg); */
     /* top: 0em;

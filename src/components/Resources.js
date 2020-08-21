@@ -19,6 +19,7 @@ import DotLoader from "react-spinners/DotLoader";
   display: block;
   margin: 0 auto;
   border-color: red;
+  opacity:0.5;
 `;
     let names=['firsts-s','seconds-s','thirds-s','fourths-s','fifths-s','sixths-s']
     // console.log(this.state.sites)

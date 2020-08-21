@@ -27,6 +27,11 @@
 		0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent,
 		0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.6);
 }
+.entrancetitle.load{
+	font-size: 4vw;
+	top: 150px;
+
+}
 /* ============================================Seeweed gif for the source and about page================================================ */
 .see {
 	position: absolute;

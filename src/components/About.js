@@ -1,6 +1,7 @@
 import React from 'react';
 import '../App.css';
-
+import { css } from "@emotion/core";
+import DotLoader from "react-spinners/DotLoader";
 
 
  class About extends React.Component{

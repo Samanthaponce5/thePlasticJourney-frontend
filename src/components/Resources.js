@@ -32,12 +32,12 @@ import DotLoader from "react-spinners/DotLoader";
 
     <h1 className="sourcetitle">Sources</h1>
   <div className='resource'>
-{this.state.loading ?  <DotLoader
+{this.state.loading ? <> <DotLoader
           css={override}
           size={150}
           color={"#FFFFFF"}
           loading={this.state.loading}
-        />  :this.state.sites.map((site)=><li className='links'><a href={site.weblink}>{site.weblink}</a></li>)}
+        /> <h1>Loading...</h1></> :this.state.sites.map((site)=><li className='links'><a href={site.weblink}>{site.weblink}</a></li>)}
 </div>
 </>
     );

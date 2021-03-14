@@ -32,7 +32,6 @@ export default class Plants extends React.Component{
         return(
             <>
             {grey} {slide2} {slide22} {greyfish} {allthree} {crab} {bluecorals} {seaRocksthree} {sings} {thethrees}{allpebbles}
-            
             </>
         )
     }

@@ -4,7 +4,6 @@ export default class UserInput extends React.Component{
 
 
     render(){
-        // console.log('userinput',this.props.name)
         return(
              <div className='homeform'>
                 <form onSubmit={this.props.handleSubmit}>

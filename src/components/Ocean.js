@@ -12,21 +12,20 @@ export default class Ocean extends React.Component{
 
         
     return(
-       <>
-
-        <div className="bubbles">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        {firstpg}
+      <>
+          <div className="bubbles">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          {firstpg}
         <div className='sand'></div>
-        </>
+      </>
 
         
      

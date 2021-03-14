@@ -7,6 +7,7 @@ export default class PlasticStats extends React.Component{
     if(e.target.className === 'statstar PlasticInfo5'){
       document.body.querySelector('.textPlasticInfo6').style.opacity = 1
     }
+
     if(e.target.className === 'statstar PlasticInfo6'){
       document.body.querySelector('.textPlasticInfo7').style.opacity = 1
     }
@@ -22,14 +23,15 @@ export default class PlasticStats extends React.Component{
       })
      
         return(
-            <>
-                 { filtered.map((plastic,index)=>{ return  <h2 key={index} className={'all' +' '+'text' + plastic.name}><CountUp  end={plastic.stats}>{({ countUpRef, start }) => (
-    <div>
-      <span  ref={countUpRef} />
-      <img  className={'statstar' + ' ' + plastic.name} src={require("../img/starFish.png")} onMouseDown={this.handleMouseDown} onClick={start} alt=''/> 
-    </div>
-  )}</CountUp> {plastic.info}</h2> })}
-            </>
+          <>
+            {
+             filtered.map((plastic,index)=>{ return  <h2 key={index} className={'all' +' '+'text' + plastic.name}><CountUp  end={plastic.stats}>{({ countUpRef, start }) => (
+              <div>
+                <span  ref={countUpRef} />
+                <img  className={'statstar' + ' ' + plastic.name} src={require("../img/starFish.png")} onMouseDown={this.handleMouseDown} onClick={start} alt=''/> 
+              </div>
+             )}</CountUp> {plastic.info}</h2> })}
+          </>
         )
     }
 }

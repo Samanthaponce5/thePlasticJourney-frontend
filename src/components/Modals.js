@@ -69,6 +69,7 @@ export default class Modals extends React.Component {
 							</div>
 						</div>
 					</div>
+					
 					<div>
 						<button className="modalbtn" onClick={this.props.handleClose}>
 							X

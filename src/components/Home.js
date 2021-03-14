@@ -36,31 +36,29 @@ import DotLoader from "react-spinners/DotLoader";
 render(){
   const override = css`
   display: block;
-  margin: 0 auto;
-  
-  
-`;
-return (
- <>
- <div className="bg"></div>
+  margin: 0 auto;`;
 
-{this.state.loading ? <> <DotLoader
-          css={override}
-          size={150}
-          color={"#FFFFFF"}
-          loading={this.state.loading}
-        />
-        <h1 className='entrancetitle load'>Loading...</h1></>
-        :
-        <>
-        <h1 className='entrancetitle'>Jack's Journey</h1>
-<UserInput name={this.props.name} handleSubmit={this.handleSubmit} handleChange={this.props.handleChange}/>
- <img className='fish-sec-s home'src={ require('../img/fish.png')} alt=''/>
- </>
- }
-<Ocean/>
-</>
- );
-}
+    return (
+      <>
+        <div className="bg"></div>
+    
+        {this.state.loading ? <> <DotLoader
+              css={override}
+              size={150}
+              color={"#FFFFFF"}
+              loading={this.state.loading}
+            />
+            <h1 className='entrancetitle load'>Loading...</h1></>
+            :
+            <>
+            <h1 className='entrancetitle'>Jack's Journey</h1>
+            <UserInput name={this.props.name} handleSubmit={this.handleSubmit} handleChange={this.props.handleChange}/>
+             <img className='fish-sec-s home'src={ require('../img/fish.png')} alt=''/>
+             </>
+             }
+            <Ocean/>
+        </>
+      );
+    }
 }
 export default Home;

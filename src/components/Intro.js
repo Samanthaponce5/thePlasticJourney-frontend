@@ -11,11 +11,11 @@ export default class Intro extends React.Component {
 							<p className="scrolltextentrance">Scroll To Explore</p>
 					</div>
 				</div>
-				
-        <div className="bubbletext bubble-bottom-left" >Hi {this.props.name.charAt(0).toUpperCase()+ this.props.name.slice(1)},
-          I'm Jack the seaturtle! Let's go on a journey together to learn why plastic is harming me
-          and my other marine friends and find out how <b>you</b> can make a change.
-		</div>
+
+        		<div className="bubbletext bubble-bottom-left" >Hi {this.props.name.charAt(0).toUpperCase()+ this.props.name.slice(1)},
+        		  I'm Jack the seaturtle! Let's go on a journey together to learn why plastic is harming me
+        		  and my other marine friends and find out how <b>you</b> can make a change.
+				</div>
             </>
 		);
 	}

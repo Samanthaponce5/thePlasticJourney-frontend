@@ -6,7 +6,6 @@ export default class Jelly extends React.Component{
     handleMouseEnter=(e)=>{
       
         if( e.target.className === 'jellyletters secondjelly'){
-            // document.body.cursor = 'pointer'
             document.body.querySelector('.factsjelly.facttwo').style.opacity='1'
             document.body.querySelector('.factsjelly.factthree').style.opacity='0'
             document.body.querySelector('.factsjelly.factone').style.opacity='0'

@@ -7,7 +7,9 @@ import '../App.css';
 
 
   render(){   
+    
    let names=['firsts-s','seconds-s','thirds-s','fourths-s','fifths-s','sixths-s']
+   
     return (
          <>
            <img className='seahorse about'src={ require('../img/horse.gif')} alt=''/>
@@ -24,8 +26,8 @@ import '../App.css';
             collecting plastic garbage reveals information about plastic pollution and how harmful it is to sea creatures. </h3>
             </div>
           </>
-  );
-}
+        );
+    }
 }
 
 export default About;

@@ -107,9 +107,9 @@ listenScrollEvent=()=> {
 }
 
 
-handleClickfeedback=()=>{
-    this.props.routerProps.history.push('/feedback')
-}
+    handleClickfeedback=()=>{
+        this.props.routerProps.history.push('/feedback')
+    }
 
     handleClick=(e)=>{
         const{ collected}=this.state
@@ -142,21 +142,16 @@ handleClickfeedback=()=>{
         }
 
         if(e.target.className==='plastic straw' ||e.target.className === "img b-straw" ){
-            // console.log('plastic3', e.target)
             document.body.querySelector('.plastic.straw').style.left = " 96.5%";
             document.body.querySelector('.plastic.straw').style.top = "34%";
-
             document.body.querySelector('.plastic.straw').classList.add('afterStraw')
             document.body.querySelector('.img.b-straw').classList.add('afterStrawImg')
             this.setState({collected:collected+1})
-
         }
 
         if(e.target.className==='plastic bag'|| e.target.className=== "img b-bag " ){
-            // console.log(e.target)
             document.body.querySelector('.plastic.bag').style.left = "93.3%";
             document.body.querySelector('.plastic.bag').style.top = " 34%";
-
             document.body.querySelector('.plastic.bag').classList.add('afterBag')
             document.body.querySelector('.img.b-bag').classList.add('afterBagImg')
             this.setState({collected:collected+1})

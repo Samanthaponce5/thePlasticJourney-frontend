@@ -12,7 +12,10 @@
     animation: slide 1.5s forwards;
     animation-delay: 0.5s;
     top: 0;
-    margin-top: 34%;
+    gap: 32vh;
+    margin-top: 5%;
+    flex-direction: column;
+    pointer-events: none;
 }
 .seaturtle {
     position: relative;

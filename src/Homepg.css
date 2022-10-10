@@ -121,6 +121,7 @@
 .seahorse {
 	position: absolute;
 	width: 20%;
+	object-fit: contain;
 	height: 50%;
 	left: 82%;
 	top: 30%;

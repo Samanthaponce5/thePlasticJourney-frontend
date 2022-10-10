@@ -28,7 +28,7 @@ import DotLoader from "react-spinners/DotLoader";
     <>
       <img className='seahorse blues'src={ require('../img/horse.gif')} alt=''/>
         {names.map((name,index)=>
-          <img className={`see ${name}`}key ={index}src={ require('../img/seeweed.gif')} alt=''/>
+          <img className={`see ${name}`} key={index}src={ require('../img/seeweed.gif')} alt=''/>
         )}
 
       <h1 className="sourcetitle">Sources</h1>

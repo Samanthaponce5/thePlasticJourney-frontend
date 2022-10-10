@@ -9,7 +9,7 @@ import './Journey.css'
 import './Chart.css'
 import './Ocean.css'
 import './PlasticParticles.css'
-import {BrowserRouter as Router,Switch,Route,HashRouter} from 'react-router-dom';
+import {Switch,Route,HashRouter} from 'react-router-dom';
 import Journey from './components/Journey';
 import Feedback from './components/Feedback';
 

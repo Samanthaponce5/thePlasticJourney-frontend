@@ -143,25 +143,28 @@ body {
 
 /* ===============================Entrance bubble message========================================= */
 .bubbletext {
-	position: relative;
-	font-family: 'Lemon';
-	font-size: 18px;
-	line-height: 20px;
-	width: 21vw;
-	/* width: 300px; */
-	background: #fff;
-	border-radius: 40px;
-	padding: 24px;
-	text-align: center;
-	color: rgb(77, 135, 168);
-	left: -30%;
-	transition: opacity 0.5s ease-in-out;
-	-webkit-animation: slide 0.5s forwards;
-	-webkit-animation-delay: 2s;
-	animation: slidey 1.5s forwards;
-	animation-delay: 0.5s;
-	top: 0;
-    margin-top: -0.1%;
+	z-index: 99;
+	position: absolute;
+    font-family: 'Lemon';
+    font-size: 18px;
+    line-height: 20px;
+    width: 21vw;
+    /* width: 300px; */
+    background: #fff;
+    border-radius: 40px;
+    padding: 24px;
+    text-align: center;
+    color: rgb(77, 135, 168);
+    transition: opacity 0.5s ease-in-out;
+    -webkit-animation: slide 0.5s forwards;
+    -webkit-animation-delay: 2s;
+    animation: slidey 1.5s forwards;
+    animation-delay: 0.5s;
+	margin-left:8rem;
+	top: 25vh;
+	margin-top: 3vh;
+
+    /* margin-top: -0.1%; */
 }
 @-webkit-keyframes slidey {
 	100% {
@@ -345,7 +348,10 @@ body {
 	width: 65%;
 	height: 60%;
 	font-size: 2.3vh;
+	display: flex;
+	flex-direction: column;
 
+	justify-content: center;
 	border: solid rgba(252, 250, 250, 0.384);
 	border-radius: 80px 80px 80px 80px;
 	top: 25%;
@@ -371,9 +377,7 @@ body {
 }
 .firstparagraph {
 	position: relative;
-	left: 3vw;
-	top: 5%;
-  width: 800px;
+    padding: 0 25px;
 }
 
 /* ================================= End About Page=============================================== */
@@ -431,13 +435,11 @@ a {
 /* =============================End of source page========================================== */
 /*============================ Phone view========================================== */
 
-@media only screen and (min-width: 320px) and (max-width: 500px){
+@media only screen and (max-width: 850px){
 .resource{
 	top: 10%;
 	font-size: 15px;
-	width: 400px;
 	height: 550px;
-	left: -3%;
     border-radius: 0;
 	border: none;
 	-moz-box-shadow: none;
@@ -459,29 +461,27 @@ a {
 .aboutpg{
 
 	top: 23%;
-	font-size: 13px;
-	width: 350px;
+	font-size: 14px;
 	height: 500px;
-	left: 5%;
 	border-radius: 0;
 	border:  none;
-	margin: 15px;
 	-moz-box-shadow: none;
 	-webkit-box-shadow: none;
 	box-shadow:  none;
 	overflow: scroll;
+	justify-content: flex-start;
 
 
 }
 .firstparagraph {
-	width: 295px;
 	left: 0%;
+	padding: 0;
 
 }
 .abouttitle{
 	font-size: 35px;
-	left: 5%;
-	top: 12%;
+	left: 15%;
+	top: 6%;
 }
 .seahorse.about{
 	left: -9%;
@@ -545,3 +545,11 @@ display: none;
 
 }
 
+@media only screen and (max-width: 385px){
+	.firstparagraph{
+		font-size: 12px;
+	}
+	.resource{
+		font-size: 10px;
+	}
+}
